@@ -40,7 +40,7 @@ colorscheme onedark
 let g:airline_section_c = '%t' "--filename
 let g:airline#extensions#tabline#enabled = 1 "                                --
 let g:airline#extensions#tabline#fnamemod = ':t' "-- Just show file name --
-let g:airline#extensions#tabline#formatter = 'unique_tail' "                  --
+" let g:airline#extensions#tabline#formatter = 'unique_tail' "                  --
 " let g:airline_inactive_collapse = 1  "-- Not show inactive buffer
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]' " Hide format type --
 
@@ -62,7 +62,7 @@ let g:airline_symbols.readonly = ''
 let g:airline#extensions#quickfix#quickfix_text = 'QF'
 let g:airline#extensions#quickfix#location_text = 'LL'
 
-" disable unused extensions (performance)
+" disable unused extensions (Improve Performance)
 let g:airline#extensions#ctrlp#color_template = 'insert'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#capslock#enabled   = 0
@@ -120,27 +120,37 @@ let g:used_javascript_libs = 'jquery,underscore,react,flux, angularui, angularui
 " ==================completion
 augroup omnifuncs
   autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css,scss,sass setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript,jsx setlocal omnifunc=tern#Complete
+  " autocmd FileType javascript,jsx setlocal omnifunc=tern#Complete
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
+
 augroup end
 
 " deoplete & neosnippets
 
 let g:deoplete#enable_at_startup = 1
+  let g:deoplete#auto_complete_delay = 0
+  let g:echodoc_enable_at_startup=1 " Print functions DOC to echo area
 let g:deoplete#auto_completion_start_length = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources.js = ['file', 'ultisnips', 'ternjs']
+" let g:deoplete#sources.js = ['file', 'ultisnips', 'ternjs']
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#docs = 1
 let g:neosnippet#enable_completed_snippet = 1
 
 
 "--- Tern
-let g:tern#command = ['tern']
-let g:tern#arguments = ['--persistent']
-let g:tern_request_timeout = 1
-
+if exists('g:plugs["tern_for_vim"]')
+ " Enable excellent keyboard shortcuts
+  let g:tern_map_keys=1
+  let g:tern#command = ['tern']
+  let g:tern#arguments = ['--persistent']
+  let g:tern_request_timeout = 1
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+  autocmd FileType javascript.jsx setlocal omnifunc=tern#Complete
+endif
 
 "========== Colorize
 " disable colorizer at startup
@@ -152,9 +162,22 @@ let g:colorizer_nomap = 1
 
 "=============== SuperTab
 autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType javascript.jsx let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType css let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType scss let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType html  let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType html,css,scss,sass,json let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 let g:UltiSnipsExpandTrigger="<C-j>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+
+"=============== ALE 
+
+" let g:ale_completion_enabled = 1  " Enable Autocomplete (Just support typescript right now)
+" change the signs ALE uses
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+"
+let g:airline#extensions#ale#enabled = 1 " Airline errors, warnings status
+let g:ale_sign_column_always = 1 " Always show sign columns
+let g:ale_lint_delay = 300 " Increase delay to not burn my laptop :))
+

@@ -86,8 +86,14 @@ set showcmd		" display incomplete commands
 " buffer settings
 set hid " buffer becomes hidden when abandoned
 
-" Complete Options show
-set completeopt=longest,menuone
+set completeopt=noselect,menuone
+set completeopt-=preview
+
+
+
+set shortmess+=c
+
+
 " Change the behavior of the <Enter> key when the popup menu is visible. 
 " The Enter key will simply select the highlighted menu item, just as <C-Y> does.
 :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

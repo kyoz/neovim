@@ -18,7 +18,6 @@
 "  pip install --upgrade neovim
 "           pip3 install --upgrade neovim
 " --- npm install -g tern " Source Javascript
-" ---  npm install -g prettier " Format code for a lot of languages
 
 " Required for pluggins
 "---------- Neoformat do need to install for formatter ( I do love prettier ) --
@@ -29,6 +28,18 @@
 " ------------------- Tern
 " Goto ..plugged/tern_for_vim folder, open terminal and run 'npm install'
 
+" Required to check syntax, autocomplete... :D
+" npm install -g flow-bin " Javascript
+" npm install -g tslint typescript " Javascript, Typescript
+" npm install -g htmlhint " HTML
+" npm install -g csslint " CSS
+" npm install -g sass-lint " Both Sass, Scss
+" npm install -g jsonlint " Json
+" JavaScript · Flow · TypeScript · CSS · SCSS · Less · JSX · Vue · GraphQL · JSON · Markdown
+" npm install -g prettier
+" https://github.com/w0rp/ale#usage-linting
+
+
 "                                                                             --
 call plug#begin('~/.config/nvim/plugged')          
 "     
@@ -38,6 +49,8 @@ Plug 'leafgarland/typescript-vim' " Typescript Syntax
 "            Syntax, Snippets for Libraries: Jquery, lodash, D3...
 Plug 'othree/javascript-libraries-syntax.vim' 
 
+" ------------------ Linting ----
+Plug 'w0rp/ale' " Asynchronous Lint Engine/ Support lots of languages
 
 "
 "--------------------              Autocomplete, Snippets           ----------------------
@@ -45,6 +58,9 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "-----------------
 Plug 'SirVer/ultisnips' " ultimate solution for snippets in Vim
 Plug 'honza/vim-snippets' " Large collection of snippets ready for you to use
+" HTML
+Plug 'othree/html5.vim'
+
 " JAVASCRIPT
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] } "
@@ -64,13 +80,6 @@ Plug 'fszymanski/deoplete-emoji' " Markdown Emoji
 Plug 'wokalski/autocomplete-flow'
 Plug 'Shougo/neosnippet' "--------------------For Function Argument Completion --
 Plug 'Shougo/neosnippet-snippets'
-
-
-
-Plug 'zchee/deoplete-jedi'
-
-" Plug 'Quramy/tsuquyomi' "-------------- 
-
 
 
 
@@ -115,6 +124,7 @@ Plug 'Yggdroot/indentLine' "-----------------------Indent code with v-line
 Plug 'ap/vim-css-color' " Help colorize text color
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 Plug 'bkad/CamelCaseMotion' " Help w,b,e with CamelCase Name
+Plug 'Shougo/echodoc.vim' " Print Functions Document to echo area
 "                                                                             --
 
 "                                                                             --
