@@ -122,47 +122,29 @@ augroup omnifuncs
   autocmd!
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript,jsx setlocal omnifunc=tern#Complete
 augroup end
 
-" tern
-if exists('g:plugs["tern_for_vim"]')
-  let g:deoplete#omni#functions = {}
-  let g:deoplete#omni#functions.javascript = [
-    \ 'tern#Complete',
-    \ 'jspc#omni'
-  \]
-  let g:deoplete#omni#functions.typescript = [
-    \ 'tern#Complete',
-    \ 'jspc#omni'
-  \]
-endif
+" deoplete & neosnippets
 
-" deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_completion_start_length = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
+let g:deoplete#sources.js = ['file', 'ultisnips', 'ternjs']
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:neosnippet#enable_completed_snippet = 1
+
+
+"--- Tern
 let g:tern#command = ['tern']
 let g:tern#arguments = ['--persistent']
 let g:tern_request_timeout = 1
-let g:SuperTabClosePreviewOnPopupClose = 1
 
-
-" VIM Default Syntax (Support a lot languages)
-" set omnifunc=syntaxcomplete#Complete
-" if has("autocmd") && exists("+omnifunc")
-" 	autocmd Filetype *
-" 		    \	if &omnifunc == "" |
-" 		    \		setlocal omnifunc=syntaxcomplete#Complete |
-" 		    \	endif
-"   au FileType javascript setl omnifunc=tern#Complete
-"   au FileType css,sass,scss,stylus,less setl omnifunc=csscomplete#CompleteCSS
-"   au FileType html,htmldjango,jinja,markdown setl omnifunc=emmet#completeTag
-
-"     endif
 
 "========== Colorize
 " disable colorizer at startup
-let g:colorizer_startup = 0
+" let g:colorizer_startup = 0
 let g:colorizer_nomap = 1
 
 " ============== emmet-vim settings
@@ -170,5 +152,9 @@ let g:colorizer_nomap = 1
 
 "=============== SuperTab
 autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType css let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType scss let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType html  let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:UltiSnipsExpandTrigger="<C-j>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"

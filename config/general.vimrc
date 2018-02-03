@@ -37,7 +37,6 @@ set formatoptions-=t "------------ do not automatically wrap text when typing --
 set colorcolumn=80 "--------------------------------------80 line column show --
 set number "------------------------------------------------ Show line number --
 set relativenumber "------------------------------------ Show relative number --
-
 set termguicolors "------------------------------------ True color for neovim --
 
 
@@ -87,8 +86,27 @@ set showcmd		" display incomplete commands
 " buffer settings
 set hid " buffer becomes hidden when abandoned
 
-" Complete Optiono
-set completeopt=longest,menuone,preview
+" Complete Options show
+set completeopt=longest,menuone
+" Change the behavior of the <Enter> key when the popup menu is visible. 
+" The Enter key will simply select the highlighted menu item, just as <C-Y> does.
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" The first will make <C-N> work the way it normally does; 
+" however, when the menu appears, the <Down> key will be simulated. 
+" What this accomplishes is it keeps a menu item always highlighted. 
+" This way you can keep typing characters to narrow the matches, 
+" and the nearest match will be selected so that you can hit Enter 
+" at any time to insert it. In the above mappings, 
+" the second one is a little more exotic: it simulates <C-X><C-O> 
+" to bring up the omni completion menu, 
+" then it simulates <C-N><C-P> to remove the longest common text, 
+" and finally it simulates <Down> again to keep a match highlighted.
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 
 "===============================================================================
@@ -97,8 +115,8 @@ set completeopt=longest,menuone,preview
 "                                                                             --
                                                            
 set termguicolors "------------------------------------ True color for neovim --
-let g:loaded_python_provider = 1 " Disabled python 2
-let g:python3_host_prog = '/usr/lib/python3.5' " Set python 3 provider
+" let g:loaded_python_provider = 1 " Disabled python 2
+" let g:python3_host_prog = '/usr/lib/python3.5' " Set python 3 provider
 
 "                                                                              --
 "===============================================================================

@@ -11,49 +11,67 @@
 "====================      VIM PLUGINS - ( VIM-PLUG )     ======================
 "===============================================================================
 
-" Need
+" Required for neovim
+"---- pip install neovim " Python 2
 " --- pip3 install neovim " Python 3
+
+"  pip install --upgrade neovim
 "           pip3 install --upgrade neovim
 " --- npm install -g tern " Source Javascript
 " ---  npm install -g prettier " Format code for a lot of languages
 
-" After install Pluggin
+" Required for pluggins
+"---------- Neoformat do need to install for formatter ( I do love prettier ) --
+"                                                                             --
+" npm install -g prettier "----------------- Can format a lot of languages :D --
+" https://github.com/sbdchd/neoformat "---------------------- Other languages --
+" 
+" ------------------- Tern
 " Goto ..plugged/tern_for_vim folder, open terminal and run 'npm install'
 
 "                                                                             --
 call plug#begin('~/.config/nvim/plugged')          
-"                                                                             --
+"     
+" ----------------------------- Syntax, Snippets                                                                       --
+Plug 'vim-scripts/SyntaxComplete' " Defautl Vim Syntax, A lots of languages
+Plug 'leafgarland/typescript-vim' " Typescript Syntax
+"            Syntax, Snippets for Libraries: Jquery, lodash, D3...
+Plug 'othree/javascript-libraries-syntax.vim' 
+
+
+"
 "--------------------              Autocomplete, Snippets           ----------------------
 "                                                                             --
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "-----------------
-"----------------------------------------- Async Autocomplete (Need Python 3) --
-
 Plug 'SirVer/ultisnips' " ultimate solution for snippets in Vim
 Plug 'honza/vim-snippets' " Large collection of snippets ready for you to use
+" JAVASCRIPT
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] } "
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] } " JavaScript Parameter Complete
+" TYPESCRIPT 
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript'
+
+" OTHER
 Plug 'othree/csscomplete.vim' " CSS, CSSS, LESS
 Plug 'mattn/emmet-vim' "--- Html, Markdown...----------- Html Fast Tags <C-y> , --
+Plug 'Shougo/neco-syntax'
+Plug 'fszymanski/deoplete-emoji' " Markdown Emoji
 
-" Plug 'vim-scripts/SyntaxComplete' " Defautl Vim Syntax, A lots of languages
-" Plug 'leafgarland/typescript-vim'
+
+" Other Autocomplete supports
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/neosnippet' "--------------------For Function Argument Completion --
+Plug 'Shougo/neosnippet-snippets'
 
 
-" Plug 'zchee/deoplete-jedi'
-" Plug 'wokalski/autocomplete-flow'
-" Plug 'Shougo/neosnippet' "-------------------- Function Argument Completion --
-" Plug 'Shougo/neosnippet-snippets'
 
-" Plug 'mhartington/nvim-typescript'
-" Plug 'Shougo/neco-syntax'
+Plug 'zchee/deoplete-jedi'
+
 " Plug 'Quramy/tsuquyomi' "-------------- 
-" Suport auto popup omnifunc
 
 
-
-"            Syntax, Snippets for Libraries: Jquery, lodash, D3...
-Plug 'othree/javascript-libraries-syntax.vim' " Libraries syntax for js,ts...
 
 
 
@@ -83,8 +101,7 @@ Plug 'tpope/vim-fugitive' "-------------------------------------- Git Wrapper --
 Plug 'sheerun/vim-polyglot' "------------ Support almost all code syntax these days
 " Plug 'leafgarland/typescript-vim' "------------ Typescript Syntax/ Hightlight --
 "                                                                             --
-" 
-"                                                                             --
+"                                                                           --
 "--------------------                 Utils               ----------------------
 "                                                                             --
 Plug 'jiangmiao/auto-pairs' "-------------------------- Auto pair brackets... --
@@ -95,12 +112,10 @@ Plug 'terryma/vim-multiple-cursors' "------------------------ Multiple Cursor --
 Plug 'sbdchd/neoformat' "---------------------------------------- Format Code --
 Plug 'NLKNguyen/copy-cut-paste.vim' "-- Copy, Paste with Clipboard
 Plug 'Yggdroot/indentLine' "-----------------------Indent code with v-line
-Plug 'lilydjwg/colorizer' " Help colorize text color
+Plug 'ap/vim-css-color' " Help colorize text color
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
+Plug 'bkad/CamelCaseMotion' " Help w,b,e with CamelCase Name
 "                                                                             --
-"---------- Neoformat do need to install for formatter ( I do love prettier ) --
-"                                                                             --
-" npm install -g prettier "----------------- Can format a lot of languages :D --
-" https://github.com/sbdchd/neoformat "---------------------- Other languages --
+
 "                                                                             --
 call plug#end() "------------------------------------- End of Vim-Plug define --

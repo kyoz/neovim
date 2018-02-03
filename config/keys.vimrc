@@ -21,3 +21,5 @@ map <F2> :NERDTreeToggle <CR> "-------------------- NERDTree Toggle Shortcut  --
 
 let g:ctrlp_map = '<c-p>' "-------------------------- CtrlP Default command mapping --
 let g:ctrlp_cmd = 'CtrlP' "--------------------------  --
+
+    
