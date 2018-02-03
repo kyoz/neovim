@@ -97,8 +97,10 @@ set completeopt=longest,menuone,preview
 "                                                                             --
                                                            
 set termguicolors "------------------------------------ True color for neovim --
-let g:python3_host_prog = '/usr/lib/python3.5'
-"                                                                             --
+let g:loaded_python_provider = 1 " Disabled python 2
+let g:python3_host_prog = '/usr/lib/python3.5' " Set python 3 provider
+
+"                                                                              --
 "===============================================================================
 
 

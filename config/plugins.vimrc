@@ -4,7 +4,7 @@
 "                                                                             --
 "--------------------              NERDTree               ----------------------
 "                                                                             --
-let g:NERDTreeWinSize=50 "----------------------------------- Default columns --
+let g:NERDTreeWinSize=30 "----------------------------------- Default columns --
 autocmd vimenter * NERDTree "------- Automatically open NERDTree on starts up --
 " Automatically open NERDTree on starts up if no files were specifed          --
 autocmd StdinReadPre * let s:std_in=1 "                                       --
@@ -17,7 +17,6 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) "                 --
 "                                                                             --
 "                                                                             --
 cd ./Desktop "----------------------------------- Set NERDTree Default folder --
-map <F2> :NERDTreeToggle <CR> "-------------------- NERDTree Toggle Shortcut  --
 "                                                                             -- 
 "                                                                             --
 "--------------------           Colors Solarized          ----------------------
@@ -93,8 +92,7 @@ set backspace=indent,eol,start "-------------- Allow backspace in insert mode --
 "                                                                             --
 "--------------------                Ctrl-P               ----------------------
 "                                                                             --
-let g:ctrlp_map = '<c-p>' "-------------------------- Default command mapping --
-let g:ctrlp_cmd = 'CtrlP' "-------------------------- Default command mapping --
+
 let g:ctrlp_working_path_mode = 'ra' "------------ Set local working diretory --
 "                                                                             --
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip "------- Ignore file on MacOSX/Linux --
@@ -133,6 +131,10 @@ if exists('g:plugs["tern_for_vim"]')
     \ 'tern#Complete',
     \ 'jspc#omni'
   \]
+  let g:deoplete#omni#functions.typescript = [
+    \ 'tern#Complete',
+    \ 'jspc#omni'
+  \]
 endif
 
 " deoplete
@@ -165,3 +167,8 @@ let g:colorizer_nomap = 1
 
 " ============== emmet-vim settings
 " let g:user_emmet_settings = { "html": { "quote_char": "'"} }
+
+"=============== SuperTab
+autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
