@@ -13,13 +13,15 @@
 " 
 " " deoplete & neosnippets
 " 
+" Use deoplete.
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
-let g:autocomplete_flow#insert_paren_after_function = 0
+" Use smartcase.
+let g:deoplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:deoplete#sources#syntax#min_keyword_length = 1
 
-
-
-
+au FileType javascript,jsx,javascript.jsx setl omnifunc=tern#Complete
 
 
 " let g:neosnippet#enable_completed_snippet = 1

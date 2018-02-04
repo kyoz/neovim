@@ -23,3 +23,5 @@ let g:ctrlp_map = '<c-p>' "-------------------------- CtrlP Default command mapp
 let g:ctrlp_cmd = 'CtrlP' "--------------------------  --
 
     
+"============== Airwrap
+nnoremap <silent> gw :ArgWrap<CR>

@@ -28,12 +28,28 @@ Plug 'w0rp/ale' " Asynchronous Lint Engine/ Support lots of languages
 "--------------------              Autocomplete, Snippets           ----------------------
 "                                                                             --
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "-----------------
+Plug 'roxma/nvim-yarp' " Need for deoplete
   " For func argument completion
-  Plug 'Shougo/neosnippet'
-  Plug 'Shougo/neosnippet-snippets'
+
+" JavaScript
+Plug 'ternjs/tern_for_vim'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'othree/jspc.vim' " JavaScript Parameter Complete
+
+" Typescript
+Plug 'mhartington/nvim-typescript'
+
+" HTML
+Plug 'othree/html5.vim' "HTML5 omnicomplete and syntax
+
+" \\\\\\
+Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 
 
-  Plug 'wokalski/autocomplete-flow'
+"====================== Snippets
+  Plug 'Shougo/neosnippet' | Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/context_filetype.vim'
+
 
 
 " Plug 'SirVer/ultisnips' " ultimate solution for snippets in Vim
@@ -95,16 +111,22 @@ Plug 'sheerun/vim-polyglot' "------------ Support almost all code syntax these d
 "                                                                             --
 Plug 'jiangmiao/auto-pairs' "-------------------------- Auto pair brackets... --
 Plug 'alvan/vim-closetag' "------------------------------ Auto close html tag --
+Plug 'tpope/vim-surround' "------------------------------- Auto surround --
 Plug 'tpope/vim-commentary' "---------------------------- Comment code faster --
+Plug 'tpope/vim-repeat' "--------------------------- dot repeat with pluggins--
+Plug 'wellle/targets.vim' "----------- Provides additional text object 
+Plug 'terryma/vim-expand-region' "-------- Expand region, Use + and -
 Plug 'easymotion/vim-easymotion' "-------------- EastMotion to support search --
 Plug 'terryma/vim-multiple-cursors' "------------------------ Multiple Cursor --
 Plug 'sbdchd/neoformat' "---------------------------------------- Format Code --
 Plug 'NLKNguyen/copy-cut-paste.vim' "-- Copy, Paste with Clipboard
 Plug 'Yggdroot/indentLine' "-----------------------Indent code with v-line
 Plug 'ap/vim-css-color' " Help colorize text color
-Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 Plug 'bkad/CamelCaseMotion' " Help w,b,e with CamelCase Name
 Plug 'Shougo/echodoc.vim' " Print Functions Document to echo area
+Plug 'joeytwiddle/sexy_scroller.vim' " Awesome scroll animation :D
+Plug 'Valloric/MatchTagAlways' " Always highlights the XML/HTML tags that enclose your cursor location
+Plug 'FooSoft/vim-argwrap'
 "                                                                             --
 
 "                                                                             --

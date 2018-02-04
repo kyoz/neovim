@@ -2,6 +2,9 @@
 
 ## :four_leaf_clover: Required for neovim
 
+Must install neovim provider so that neovim pluggin will work property.
+Python 2 is no actually required. But just install them all, for use work :laughing:
+
 ```sh
   # Install neovim for python 2
   pip install neovim
@@ -46,11 +49,26 @@ I'm a web developer so i usually use those
 ```
 
 ### :warning: **Notes:**
-To support js, jsx file, must install local eslint
+
+To support js, jsx, ts file, you must have eslint, tslint installed locally.
+First let make a package.js file
 
 ```sh
   # Init package.json config for local project
   npm init 
+```
+
+Then:
+To support js, jsx file, must install local eslint
+
+```sh
+  # Init eslint config for local project
+  eslint --init
+```
+
+To support ts (typescript) file, must install local tslint
+
+```sh
   # Init eslint config for local project
   eslint --init
 ```

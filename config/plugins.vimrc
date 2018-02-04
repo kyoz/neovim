@@ -135,5 +135,14 @@ let g:ale_sign_warning = '--'
 let g:airline#extensions#ale#enabled = 1 " Airline errors, warnings status
 let g:ale_sign_column_always = 1 " Always show sign columns
 let g:ale_lint_delay = 300 " Increase delay to not burn my laptop :))
-" let g:ale_linters = {'javascript': ['eslint']}
 
+" Set specific linter for ale
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'html': ['htmlhint'],
+\   'css': ['csslint'],
+\   'scss': ['sass-lint'],
+\   'sass': ['sass-lint'],
+\   'json': ['jsonlint'],
+\}

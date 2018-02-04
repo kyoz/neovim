@@ -76,6 +76,8 @@ set ttimeoutlen=100
 
 
 filetype plugin on "------------- Turn on Detection, Plugin and Intent --
+set omnifunc=syntaxcomplete#Complete " --------To turn on omni completion
+
 filetype indent off
 " set nohlsearch "-------------------------------------- No highlight on search --
 set noswapfile "--------------------------------------- Dont create wrap file --
@@ -104,8 +106,8 @@ set showcmd		" display incomplete commands
 " buffer settings
 set hid " buffer becomes hidden when abandoned
 
-set completeopt=noselect,menuone
-set completeopt-=preview
+" set completeopt=longest,menuone
+" set completeopt-=preview
 
 
 
