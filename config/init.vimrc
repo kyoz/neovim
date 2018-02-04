@@ -29,14 +29,19 @@
 " Goto ..plugged/tern_for_vim folder, open terminal and run 'npm install'
 
 " Required to check syntax, autocomplete... :D
-" npm install -g flow-bin " Javascript
+" npm install -g eslint " Javascript
 " npm install -g tslint typescript " Javascript, Typescript
 " npm install -g htmlhint " HTML
 " npm install -g csslint " CSS
 " npm install -g sass-lint " Both Sass, Scss
 " npm install -g jsonlint " Json
 " JavaScript · Flow · TypeScript · CSS · SCSS · Less · JSX · Vue · GraphQL · JSON · Markdown
-" npm install -g prettier
+" npm install -g prettier " Help format lots of languages
+" Notes:
+" - To support js, jsx file, must install local eslint
+"    $ npm --init 
+"    $ eslint --init
+" Other support languages
 " https://github.com/w0rp/ale#usage-linting
 
 

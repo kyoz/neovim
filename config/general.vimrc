@@ -3,6 +3,20 @@
 "===============================================================================
 "                                                                             --
 "                                                                             --
+"===============================================================================
+"====================            NEOVIM SETTING           ======================
+"===============================================================================
+"                                                                             --
+                                                           
+set termguicolors "------------------------------------ True color for neovim --
+" let g:loaded_python_provider = 1 " Disabled python 2
+let g:python3_host_prog = '/usr/bin/python3.5' " Set python 3 provider
+let g:python_host_prog = '/usr/bin/python' " Set python 3 provider
+
+"                                                                              --
+"===============================================================================
+
+
 " Always utf8
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -15,6 +29,7 @@ set fileencoding=utf-8
 
 syntax on "--------------------------------------- Enable Syntax for Code --
 syntax enable "------------------------------
+let g:jsx_ext_required = 1 " Dont detect js file as jsx
 
 set hlsearch
 set incsearch "--------------------------------------- Allow Insert higtlight --
@@ -114,18 +129,6 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-
-"===============================================================================
-"====================            NEOVIM SETTING           ======================
-"===============================================================================
-"                                                                             --
-                                                           
-set termguicolors "------------------------------------ True color for neovim --
-" let g:loaded_python_provider = 1 " Disabled python 2
-" let g:python3_host_prog = '/usr/lib/python3.5' " Set python 3 provider
-
-"                                                                              --
-"===============================================================================
 
 
 
