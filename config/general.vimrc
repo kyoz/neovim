@@ -7,6 +7,9 @@
 "====================            NEOVIM SETTING           ======================
 "===============================================================================
 "                                                                             --
+
+cd $HOME/Desktop "----------------------------------- Set Default folder as Desktop --
+
                                                            
 set termguicolors "------------------------------------ True color for neovim --
 " let g:loaded_python_provider = 1 " Disabled python 2

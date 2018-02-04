@@ -11,39 +11,6 @@
 "====================      VIM PLUGINS - ( VIM-PLUG )     ======================
 "===============================================================================
 
-" Required for neovim
-"---- pip install neovim " Python 2
-" --- pip3 install neovim " Python 3
-
-"  pip install --upgrade neovim
-"           pip3 install --upgrade neovim
-" --- npm install -g tern " Source Javascript
-
-" Required for pluggins
-"---------- Neoformat do need to install for formatter ( I do love prettier ) --
-"                                                                             --
-" npm install -g prettier "----------------- Can format a lot of languages :D --
-" https://github.com/sbdchd/neoformat "---------------------- Other languages --
-" 
-" ------------------- Tern
-" Goto ..plugged/tern_for_vim folder, open terminal and run 'npm install'
-
-" Required to check syntax, autocomplete... :D
-" npm install -g eslint " Javascript
-" npm install -g tslint typescript " Javascript, Typescript
-" npm install -g htmlhint " HTML
-" npm install -g csslint " CSS
-" npm install -g sass-lint " Both Sass, Scss
-" npm install -g jsonlint " Json
-" JavaScript · Flow · TypeScript · CSS · SCSS · Less · JSX · Vue · GraphQL · JSON · Markdown
-" npm install -g prettier " Help format lots of languages
-" Notes:
-" - To support js, jsx file, must install local eslint
-"    $ npm --init 
-"    $ eslint --init
-" Other support languages
-" https://github.com/w0rp/ale#usage-linting
-
 
 "                                                                             --
 call plug#begin('~/.config/nvim/plugged')          
@@ -54,37 +21,45 @@ Plug 'leafgarland/typescript-vim' " Typescript Syntax
 "            Syntax, Snippets for Libraries: Jquery, lodash, D3...
 Plug 'othree/javascript-libraries-syntax.vim' 
 
-" ------------------ Linting ----
+" ------------------ Linting, Error Detect, Fix... ----
 Plug 'w0rp/ale' " Asynchronous Lint Engine/ Support lots of languages
 
 "
 "--------------------              Autocomplete, Snippets           ----------------------
 "                                                                             --
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "-----------------
-Plug 'SirVer/ultisnips' " ultimate solution for snippets in Vim
-Plug 'honza/vim-snippets' " Large collection of snippets ready for you to use
-" HTML
-Plug 'othree/html5.vim'
-
-" JAVASCRIPT
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] } "
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] } " JavaScript Parameter Complete
-" TYPESCRIPT 
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript'
-
-" OTHER
-Plug 'othree/csscomplete.vim' " CSS, CSSS, LESS
-Plug 'mattn/emmet-vim' "--- Html, Markdown...----------- Html Fast Tags <C-y> , --
-Plug 'Shougo/neco-syntax'
-Plug 'fszymanski/deoplete-emoji' " Markdown Emoji
+  " For func argument completion
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
 
 
-" Other Autocomplete supports
-Plug 'wokalski/autocomplete-flow'
-Plug 'Shougo/neosnippet' "--------------------For Function Argument Completion --
-Plug 'Shougo/neosnippet-snippets'
+  Plug 'wokalski/autocomplete-flow'
+
+
+" Plug 'SirVer/ultisnips' " ultimate solution for snippets in Vim
+" Plug 'honza/vim-snippets' " Large collection of snippets ready for you to use
+" " HTML
+" Plug 'othree/html5.vim'
+" 
+" " JAVASCRIPT
+" Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] } "
+" Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] } " JavaScript Parameter Complete
+" " TYPESCRIPT 
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mhartington/nvim-typescript'
+" 
+" " OTHER
+" Plug 'othree/csscomplete.vim' " CSS, CSSS, LESS
+" Plug 'mattn/emmet-vim' "--- Html, Markdown...----------- Html Fast Tags <C-y> , --
+" Plug 'Shougo/neco-syntax'
+" Plug 'fszymanski/deoplete-emoji' " Markdown Emoji
+" 
+" 
+" " Other Autocomplete supports
+" Plug 'wokalski/autocomplete-flow'
+" Plug 'Shougo/neosnippet' "--------------------For Function Argument Completion --
+" Plug 'Shougo/neosnippet-snippets'
 
 
 
