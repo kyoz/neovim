@@ -78,11 +78,7 @@ let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
 "         
-  "                                                                          --
-"--------------------             Multicursor             ----------------------
-"                                                                             --
-set backspace=indent,eol,start "-------------- Allow backspace in insert mode --
-"                                                                             --
+  "                                                                                                                                         --
 "--------------------            Typescript-VIM           ----------------------
 "                                                                             --
 "let g:typescript_indent_disable = 1 "----------------- Disable default indent --

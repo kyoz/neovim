@@ -29,9 +29,18 @@ set fileencoding=utf-8
 "                                                                             --
 "===============================================================================
 	
+set nocompatible
+set backspace=indent,eol,start "-------------- Allow backspace in insert mode --
 
 syntax on "--------------------------------------- Enable Syntax for Code --
 syntax enable "------------------------------
+
+filetype plugin on "------------- Turn on Detection, Plugin and Intent --
+filetype indent off
+
+
+
+
 let g:jsx_ext_required = 1 " Dont detect js file as jsx
 
 set hlsearch
@@ -75,10 +84,6 @@ set ttimeout
 set ttimeoutlen=100
 
 
-filetype plugin on "------------- Turn on Detection, Plugin and Intent --
-set omnifunc=syntaxcomplete#Complete " --------To turn on omni completion
-
-filetype indent off
 " set nohlsearch "-------------------------------------- No highlight on search --
 set noswapfile "--------------------------------------- Dont create wrap file --
 set nobackup "---------------------------------------------- Dont save backup --
