@@ -29,7 +29,9 @@ Plug 'w0rp/ale' " Asynchronous Lint Engine/ Support lots of languages
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "-----------------
 Plug 'Shougo/neosnippet' | Plug 'Shougo/neosnippet-snippets'
  
-
+" ============ Javascript
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 "                                                                             --
 "--------------------                 Finder              ----------------------
 "                                                                             --

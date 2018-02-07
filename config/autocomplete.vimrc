@@ -21,8 +21,45 @@ let g:deoplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:deoplete#sources#syntax#min_keyword_length = 1
 
-au FileType javascript,jsx,javascript.jsx setl omnifunc=tern#Complete
+let g:deoplete#sources = {}
 
+" ====================== General
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
+
+" ====================   Javascript  ================ 
+
+let g:deoplete#sources.javascript = ['buffer', 'tern']
+
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+
+
+
+" tern
+if exists('g:plugs["tern_for_vim"]')
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 1
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+endif
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" tern
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
+"=============================================
 
 " let g:neosnippet#enable_completed_snippet = 1
 "   let g:deoplete#auto_complete_delay = 0
