@@ -19,6 +19,16 @@ Already installed python neovim ? Just upgrade it (To make sure everything work 
   # Upgrade neovim for python 3
   pip3 install --upgrade neovim
 ```
+
+Then you have to install those required pip modules
+
+```sh
+# jedi for python completion
+# psutil (optional)
+# setproctitle (optional)
+pip3 install --user neovim jedi psutil setproctitle
+```
+
 ## :four_leaf_clover: Required for pluggins
 
 Prettier to format code with Neoformat ( Can format a lots of languages :smile: )
