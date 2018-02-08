@@ -23,10 +23,10 @@ Already installed python neovim ? Just upgrade it (To make sure everything work 
 Then you have to install those required pip modules
 
 ```sh
-# jedi for python completion
-# psutil (optional)
-# setproctitle (optional)
-pip3 install --user neovim jedi psutil setproctitle
+  # jedi for python completion
+  # psutil (optional)
+  # setproctitle (optional)
+  pip3 install --user neovim jedi psutil setproctitle
 ```
 
 ## :four_leaf_clover: Required for pluggins
