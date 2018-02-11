@@ -12,6 +12,18 @@ cd $HOME/Desktop "----------------------------------- Set Default folder as Desk
 
                                                            
 set termguicolors "------------------------------------ True color for neovim --
+"--------------------           Colors Solarized          ----------------------
+"                                                                             --
+if (empty($TMUX)) "                                                           --
+  if (has("nvim")) "                                                          --
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1 "                                         --
+  endif "                                                                     --
+  if (has("termguicolors")) "                                                 --
+    set termguicolors "                                                       --
+  endif "                                                                     --
+endif "                                                                       --
+"           
+
 " let g:loaded_python_provider = 1 " Disabled python 2
 let g:python3_host_prog = '/usr/bin/python3.5' " Set python 3 provider
 let g:python_host_prog = '/usr/bin/python' " Set python 3 provider
