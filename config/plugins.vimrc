@@ -21,11 +21,6 @@ autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
 autocmd StdinReadPre * let s:std_in=1 "
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif
 
-" Automatically open NERDTREE on starts up on opening a directory
-autocmd StdinReadPre * let s:std_in=1 "
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) "
- \ && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
 "==============================[ Colors Solarized ]=============================
 
 let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
@@ -91,10 +86,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 "==================================[ Indent Line ]==============================
 
 let g:indentLine_char = '⎸'
-
-"================================[ Libraries Syntax ]===========================
-
-let g:used_javascript_libs = 'jquery,underscore,react,flux,angularui,angularuirouter,d3'
 
 "=====================================[ ALE ]===================================
 
