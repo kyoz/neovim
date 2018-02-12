@@ -1,4 +1,3 @@
-"===============================================================================
 "  _   __
 " | | / /
 " | |/ / _   _  ___ ____
@@ -9,10 +8,10 @@
 "        |___/
 "
 "===============================================================================
-"=====================           PLUGINS CONFIGS           =====================
+"==============================[ PLUGINS CONFIGS ]==============================
 "===============================================================================
 
-"=====================              NERDTree               =====================
+"=================================[ NERDTree ]==================================
 
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 
@@ -27,12 +26,12 @@ autocmd StdinReadPre * let s:std_in=1 "
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) "
  \ && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-"=====================           Colors Solarized          =====================
+"==============================[ Colors Solarized ]=============================
 
 let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 :silent! colorscheme onedark "-------------------------------- Set onedark theme
 
-"=====================               Airline               =====================
+"==================================[ Airline ]==================================
 
 let g:airline_section_c = '%t' "--filename "-------------- Only show file's name
 let g:airline#extensions#tabline#enabled = 1 "------------------- Enable tabline
@@ -45,7 +44,7 @@ let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
 let g:airline#extensions#tabline#enabled=1 "--------- Buffers at the top as tabs
 let g:airline#extensions#tabline#show_tab_type=0 "---------- Don't show tab type
 
-"=====================            Airline Symbols          =====================
+"===============================[ Airline Symbols ]=============================
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -58,8 +57,7 @@ let g:airline_symbols.readonly = ''
 let g:airline#extensions#quickfix#quickfix_text = 'QF'
 let g:airline#extensions#quickfix#location_text = 'LL'
 
-"---------       Disable unused extensions (Improve Performance)       ---------
-
+" Disable unused extensions (Improve Performance)
 let g:airline#extensions#ctrlp#color_template = 'insert'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#capslock#enabled   = 0
@@ -75,7 +73,7 @@ let g:airline#extensions#tagbar#enabled     = 0
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
-"=====================               Ctrl-P                =====================
+"==================================[ Ctrl-P ]===================================
 
 let g:ctrlp_working_path_mode = 'ra' "--------------- Set local working diretory
 
@@ -90,15 +88,15 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-"=====================               Indent Line           =====================
+"==================================[ Indent Line ]==============================
 
 let g:indentLine_char = '⎸'
 
-"=====================             Libraries Syntax        =====================
+"================================[ Libraries Syntax ]===========================
 
 let g:used_javascript_libs = 'jquery,underscore,react,flux,angularui,angularuirouter,d3'
 
-"=====================                  ALE                =====================
+"=====================================[ ALE ]===================================
 
 let g:ale_sign_error = '>>' "------------------------- Change the signs ALE uses
 let g:ale_sign_warning = '--'
