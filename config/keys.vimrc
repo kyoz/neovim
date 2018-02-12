@@ -1,32 +1,40 @@
 "===============================================================================
-"====================               MAPPINGS              ======================
+"  _   __
+" | | / /
+" | |/ / _   _  ___ ____
+" |    \| | | |/ _ \_  /  Author: Kyoz
+" | |\  \ |_| | (_) / /   Github: github.com/banminkyoz
+" \_| \_/\__, |\___/___|  Email : banminkyoz@gmail.com
+"         __/ |
+"        |___/
+"
 "===============================================================================
-"     
-" camelCase motion settings
+"=====================            KEYS MAPPINGS            =====================
+"===============================================================================
 
-  map <silent> w <Plug>CamelCaseMotion_w
-  map <silent> b <Plug>CamelCaseMotion_b
-  map <silent> e <Plug>CamelCaseMotion_e
-  sunmap w
-  sunmap b
-  sunmap e
+"=====================      camelCase motion settings      =====================
 
-"                                                                        --
-" map <F3> :tabprevious <CR> 
-" map <F4> :tabnext <CR>
-nnoremap  gB :bprevious <CR> " Preview Buffer
-nnoremap  gb :bnext <CR> " Next Buffer
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
 
-"=============== FUNCTION KEYS
+"=====================            Buffer motions           =====================
 
-  map <F2> :NERDTreeToggle <CR> "-------------------- NERDTree Toggle
+nnoremap gB :bprevious <CR> "----------------------------------- Previous Buffer
+nnoremap gb :bnext <CR> "------------------------------------------- Next Buffer
 
+"=====================               Airwrap               =====================
 
-  let g:ctrlp_map = '<c-p>' "-------------------------- CtrlP Default command mapping --
-  let g:ctrlp_cmd = 'CtrlP' "--------------------------  --
+nnoremap <silent> gw :ArgWrap<CR> "--------------------- Argwrap default mapping
 
-    
-"============== Airwrap
+"=====================               NERDTree              =====================
 
-nnoremap <silent> gw :ArgWrap<CR>
+map <F2> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
 
+"=====================                CtrlP                =====================
+
+let g:ctrlp_map = '<c-p>' "----------------------- CtrlP Default command mapping
+let g:ctrlp_cmd = 'CtrlP'
