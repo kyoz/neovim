@@ -7,23 +7,25 @@
 
 let g:NERDTreeWinSize=30 "----------------------------------- Default columns --
 
-autocmd vimenter * NERDTree "------- Automatically open NERDTree on starts up --
+" if exists('g:plugs["nerdtree"]')
+
+autocmd vimenter * silent! NERDTree "------- Automatically open NERDTree on starts up --
 " Automatically open NERDTree on starts up if no files were specifed          --
 autocmd StdinReadPre * let s:std_in=1 "                                       --
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " --
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif " --
 "                                                                             --
 " Automatically open NERDTREE on starts up on opening a directory             --
 autocmd StdinReadPre * let s:std_in=1 "                                       --
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) "                 --
  \ && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-"                                                                             --
+" endif                                        
 "                                                                             -- 
 "                                                                             --
 "--------------------           Colors Solarized               
 
 let g:onedark_terminal_italics = 1
-colorscheme onedark
+:silent! colorscheme onedark
 
 "                                                                             --
 "--------------------               Airline               ----------------------
