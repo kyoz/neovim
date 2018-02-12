@@ -38,6 +38,17 @@ map <F2> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
 let g:ctrlp_map = '<c-p>' "----------------------- CtrlP Default command mapping
 let g:ctrlp_cmd = 'CtrlP'
 
+"===================================[ TernJS ]===================================
+
+autocmd FileType javascript nnoremap <silent> <buffer> gd :TernDef<CR>
+
+"==================================[ Snippets ]===================================
+
+" let g:UltiSnipsExpandTrigger
+imap <C-j>     <Plug>(neosnippet_expand_or_jump)
+smap <C-j>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-j>     <Plug>(neosnippet_expand_target="<c-j>"
+
 "==================================[ Disable ]==================================
 
 nnoremap <c-z> <nop> "------------------------------------------- Disable Ctrl-Z
