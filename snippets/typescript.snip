@@ -1,25 +1,2 @@
-snippet     ngComponent
-abbr        Angular Component Snippet
-options     head
-	import { Component } from '@angular/core';
-
-	@Component({
-		selector: '${1:string}',
-		templateUrl: '${2:string}',
-		styleUrls: ['${3:string}']
-	})
-
-snippet     ngModule
-abbr        Angular Module Snippet
-options     head
-  import { NgModule } from '@angular/core';
-  import { CommonModule } from '@angular/common';
-
-  @NgModule({
-    imports: [
-      CommonModule
-    ],
-    declarations: []
-  })
-  export class ${1:className} {  }
-<`3 `>
+include javascript.snip
+include angular.snip

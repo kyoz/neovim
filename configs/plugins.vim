@@ -89,8 +89,8 @@ let g:indentLine_char = '⎸'
 
 "=====================================[ ALE ]===================================
 
-let g:ale_sign_error = '>>' "------------------------- Change the signs ALE uses
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = '>' "------------------------- Change the signs ALE uses
+let g:ale_sign_warning = '-'
 
 let g:airline#extensions#ale#enabled = 1 "------ Airline errors, warnings status
 let g:ale_sign_column_always = 1 "--------------------- Always show sign columns
@@ -107,3 +107,6 @@ let g:ale_linters = {
 \   'json': ['jsonlint'],
 \}
 
+"==================================[ ECHO DOC ]=================================
+
+set noshowmode

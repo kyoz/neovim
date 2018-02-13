@@ -1,0 +1,133 @@
+# Angular Snippets
+
+snippet    ngClass
+abbr       Angular Class
+options    head
+	export class ${1:className} {
+
+		${2:classContent}
+	}
+
+snippet    ngService
+abbr       Angular Service
+options    head
+	import { Injectable } from '@angular/core';
+
+	@Injectable()
+	export class ${1:serviceName} {
+
+  		constructor() { }
+	}
+
+snippet    ngPipe
+abbr       Angular Pipe
+options    head
+	import { Pipe, PipeTransform } from '@angular/core';
+
+	@Pipe({
+  		name: 'newPipe'
+	})
+	export class NewPipePipe implements PipeTransform {
+
+ 		transform(value: any, args?: any): any {
+   			return null;
+ 		}
+	}
+
+snippet    ngGuard
+abbr       Angular Guard
+options    head
+	import { Injectable } from '@angular/core';
+	import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+	import { Observable } from 'rxjs/Observable';
+
+	@Injectable()
+	export class ${1:GuardName} implements CanActivate {
+  		canActivate(
+    			next: ActivatedRouteSnapshot,
+    			state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    			return true;
+  		}
+	}
+
+snippet    ngInterface
+abbr       Angular Interface
+options    head
+	export interface ${1:interfaceName} {
+	}
+
+snippet    ngEnum
+abbr       Angular Enum
+options    head
+	export enum ${1:enumEnum} {
+	}
+
+snippet    ngDirective
+abbr       Angular Directive
+options    head
+	import { Directive } from '@angular/core';
+
+	@Directive({
+		selector: '[appNewDirective]'
+	})
+	export class NewDirectiveDirective {
+
+  	constructor() { }
+	}
+
+snippet    ngComponent
+abbr       Angular Component
+options    head
+	import { Component } from '@angular/core';
+
+	@Component({
+		selector: '${1:selectorName}',
+		templateUrl: '${2:templateUrl}',
+		styleUrls: ['${3:styleUrl}']
+	})
+
+snippet    ngModule
+abbr       Angular Module
+options    head
+	import { NgModule } from '@angular/core';
+	import { CommonModule } from '@angular/common';
+
+	@NgModule({
+		imports: [
+			CommonModule
+			],
+		declarations: []
+	})
+	export class ${1:className} {  }
+
+snippet    ngRouterModule
+abbr       Angular Router Module
+options    head
+	import { NgModule } from '@angular/core';
+	import { RouterModule, Routes } from '@angular/router';
+
+	import { DashboardComponent } from './dashboard/dashboard.component';
+
+	const appRoutes: Routes = [
+		{
+			path: '${2:routePath}',
+			redirectTo: '',
+			pathMatch: 'full'
+		}
+	];
+
+	@NgModule({
+  	imports: [
+			RouterModule.forRoot(
+				appRoutes
+			)
+		],
+		exports: [
+			RouterModule
+		],
+		providers: [
+		]
+	})
+	export class ${1:routerName} { }
+
+

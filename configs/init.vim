@@ -56,8 +56,6 @@ Plug 'wellle/targets.vim' "--------------------- Provides additional text object
 Plug 'terryma/vim-expand-region' "------------------- Expand region, Use + and -
 Plug 'terryma/vim-multiple-cursors' "--------------------------- Multiple Cursor
 
-" Plug 'bkad/CamelCaseMotion' "-------------------- Help w,b,e with CamelCase Name
-
 "===============================[ Beautify code ]===============================
 
 Plug 'sbdchd/neoformat' "------------------------------------------- Format Code
@@ -89,7 +87,6 @@ Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
 "===========================[ Autocomplete Supporters ]=========================
 
 Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
-" Plug 'Shougo/neosnippet-snippets' "---------------------------- Default snippets
 Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area
 
 call plug#end() "---------------------------------------- End of Vim-Plug define

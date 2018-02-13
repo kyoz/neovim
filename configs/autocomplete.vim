@@ -76,6 +76,9 @@ endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length = 0
 
+" Disable Preview Winndow
+set completeopt-=preview
+
 " Set source
 let g:deoplete#sources = {}
 let g:deoplete#sources.javascript = ['buffer', 'tern']
