@@ -49,6 +49,10 @@ imap <C-j>     <Plug>(neosnippet_expand_or_jump)
 smap <C-j>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-j>     <Plug>(neosnippet_expand_target="<c-j>"
 
+" Tab to select the next field to fill in the snippets
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
 "==================================[ Disable ]==================================
 
 nnoremap <c-z> <nop> "------------------------------------------- Disable Ctrl-Z

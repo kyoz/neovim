@@ -70,7 +70,7 @@ if exists('g:plugs["csscomplete.vim"]')
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
 endif
 
-"============================[ Deoplete Setting]================================
+"============================[ Deoplete Setting ]===============================
 
 " Have to set those at last
 let g:deoplete#enable_at_startup = 1
@@ -80,6 +80,15 @@ let g:deoplete#auto_completion_start_length = 0
 let g:deoplete#sources = {}
 let g:deoplete#sources.javascript = ['buffer', 'tern']
 let g:deoplete#sources.ts = ['buffer', 'nvim-typescript', 'tern']
+
+"============================[ Snippets Setting ]===============================
+
+" Not use default snippets
+let g:neosnippet#disable_runtime_snippets = {
+\   '_' : 1,
+\ }
+" Use my snippets instead :D
+let g:neosnippet#snippets_directory='$HOME/.config/nvim/snippets'
 
 "==============================[ SuperTab ]=====================================
 

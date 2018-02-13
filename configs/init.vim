@@ -89,7 +89,7 @@ Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
 "===========================[ Autocomplete Supporters ]=========================
 
 Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
-Plug 'Shougo/neosnippet-snippets'
+" Plug 'Shougo/neosnippet-snippets' "---------------------------- Default snippets
 Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area
 
 call plug#end() "---------------------------------------- End of Vim-Plug define
