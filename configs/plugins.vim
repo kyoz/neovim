@@ -7,11 +7,9 @@
 "         __/ |
 "        |___/
 "
-"===============================================================================
-"==============================[ PLUGINS CONFIGS ]==============================
-"===============================================================================
-
-"=================================[ NERDTree ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║                » NERDTREE «              ║
+"                ╚══════════════════════════════════════════╝
 
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 
@@ -21,12 +19,16 @@ autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
 autocmd StdinReadPre * let s:std_in=1 "
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif
 
-"==============================[ Colors Solarized ]=============================
+"                ╔══════════════════════════════════════════╗
+"                ║            » COLORS SOLARIZED «          ║
+"                ╚══════════════════════════════════════════╝
 
 let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 :silent! colorscheme onedark "-------------------------------- Set onedark theme
 
-"==================================[ Airline ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║                 » AIRLINE «              ║
+"                ╚══════════════════════════════════════════╝
 
 let g:airline_section_c = '%t' "--filename "-------------- Only show file's name
 let g:airline#extensions#tabline#enabled = 1 "------------------- Enable tabline
@@ -39,7 +41,9 @@ let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
 let g:airline#extensions#tabline#enabled=1 "--------- Buffers at the top as tabs
 let g:airline#extensions#tabline#show_tab_type=0 "---------- Don't show tab type
 
-"===============================[ Airline Symbols ]=============================
+"                ╔══════════════════════════════════════════╗
+"                ║             » AIRLINE SYMBOLS «          ║
+"                ╚══════════════════════════════════════════╝
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -68,7 +72,9 @@ let g:airline#extensions#tagbar#enabled     = 0
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
-"==================================[ Ctrl-P ]===================================
+"                ╔══════════════════════════════════════════╗
+"                ║                 » CTRL-P «               ║
+"                ╚══════════════════════════════════════════╝
 
 let g:ctrlp_working_path_mode = 'ra' "--------------- Set local working diretory
 
@@ -83,11 +89,15 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-"==================================[ Indent Line ]==============================
+"                ╔══════════════════════════════════════════╗
+"                ║             » INDENT LINE «              ║
+"                ╚══════════════════════════════════════════╝
 
 let g:indentLine_char = '⎸'
 
-"=====================================[ ALE ]===================================
+"                ╔══════════════════════════════════════════╗
+"                ║                 » ALE «                  ║
+"                ╚══════════════════════════════════════════╝
 
 let g:ale_sign_error = '>' "------------------------- Change the signs ALE uses
 let g:ale_sign_warning = '-'
@@ -107,6 +117,8 @@ let g:ale_linters = {
 \   'json': ['jsonlint'],
 \}
 
-"==================================[ ECHO DOC ]=================================
+"                ╔══════════════════════════════════════════╗
+"                ║               » ECHO DOC «               ║
+"                ╚══════════════════════════════════════════╝
 
 set noshowmode

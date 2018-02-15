@@ -7,31 +7,41 @@
 "         __/ |
 "        |___/
 "
-"===============================================================================
-"===========================[ PLUGINS - ( VIM-PLUG ) ]==========================
-"===============================================================================
+"                ╔══════════════════════════════════════════╗
+"                ║        » PLUGGINS (USE VIM-PLUG) «       ║
+"                ╚══════════════════════════════════════════╝
 
 call plug#begin('~/.config/nvim/plugged') "---------------------- Start vim plug
 
-"===============================[ Colors, Themes ]==============================
+"                ╔══════════════════════════════════════════╗
+"                ║             » COLORS, THEMES «           ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'joshdick/onedark.vim' "------------------------------------- Onedark theme
 
-"==================================[ Toolbar ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║                » TOOLBARS «              ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'bling/vim-airline' "---------------------------------- Status bar, Tabline
 Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
 
-"===================================[ Finder ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║                 » FINDER «               ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'kien/ctrlp.vim' "--------------------------------------------- File finder
 
-"================================[ GIT Support ]================================
+"                ╔══════════════════════════════════════════╗
+"                ║              » GIT SUPPORTS«             ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'tpope/vim-fugitive' "----------------------------------------- Git Wrapper
 
-"=============================[ Syntax, Highlight ]=============================
+"                ╔══════════════════════════════════════════╗
+"                ║            » SYNTAX HIGHTLIGHT «         ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'sheerun/vim-polyglot' "----------------- Almost all code syntax these days
 Plug 'othree/javascript-libraries-syntax.vim' "------------ Syntax for Libraries
@@ -39,12 +49,15 @@ Plug 'ap/vim-css-color' "------------------------------ Help colorize text color
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that
 "-------------------------------------------------- enclose your cursor location
 
-
-"========================[ Linting, Error Detect, Fix... ]======================
+"                ╔══════════════════════════════════════════╗
+"                ║        » LINTING, ERROR DETECT ...«      ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'w0rp/ale' "----------- Asynchronous Lint Engine/ Support lots of languages
 
-"================================[ Faster code ]================================
+"                ╔══════════════════════════════════════════╗
+"                ║              » FARTER CODE «             ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'jiangmiao/auto-pairs' "-------------------------------- Auto pair brackets
 Plug 'alvan/vim-closetag' "--------------------------------- Auto close html tag
@@ -56,22 +69,30 @@ Plug 'wellle/targets.vim' "--------------------- Provides additional text object
 Plug 'terryma/vim-expand-region' "------------------- Expand region, Use + and -
 Plug 'terryma/vim-multiple-cursors' "--------------------------- Multiple Cursor
 
-"===============================[ Beautify code ]===============================
+"                ╔══════════════════════════════════════════╗
+"                ║             » BEAUTIFY CODE «            ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'sbdchd/neoformat' "------------------------------------------- Format Code
 Plug 'FooSoft/vim-argwrap' "------ Wrap and unwrap function args, list, dicts...
 
-"===================================[ Utils ]===================================
+"                ╔══════════════════════════════════════════╗
+"                ║                 » UTILS «                ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
 
-"================================[ Autocomplete ]===============================
+"                ╔══════════════════════════════════════════╗
+"                ║              » AUTOCOMPLETE «            ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'Shougo/deoplete.nvim' , {'tag': '*'} "----- To use lastest release version
 
-"============================[ Autocomplete Languages]==========================
+"                ╔══════════════════════════════════════════╗
+"                ║         » AUTOCOMPLETE LANGUAGES «       ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } "---------------- Javascript
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
@@ -84,7 +105,9 @@ Plug 'Shougo/context_filetype.vim' "----------- Context filetype (eg js in html)
 Plug 'Shougo/neoinclude.vim' "--------------------------------- Support includes
 Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
 
-"===========================[ Autocomplete Supporters ]=========================
+"                ╔══════════════════════════════════════════╗
+"                ║        » AUTOCOMPLETE SUPPORTERS «       ║
+"                ╚══════════════════════════════════════════╝
 
 Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
 Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area

@@ -7,11 +7,9 @@
 "         __/ |
 "        |___/
 "
-"===============================================================================
-"============================[ AUTOCOMPLETES SETUP ]============================
-"===============================================================================
-
-"==================================[ Default ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║           » DEFAULTS SETTINGS «          ║
+"                ╚══════════════════════════════════════════╝
 
 set nocompatible
 
@@ -21,7 +19,9 @@ endif
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-"=============================[ Omnifunc settings ]=============================
+"                ╔══════════════════════════════════════════╗
+"                ║           » OMNIFUNC SETTINGS «          ║
+"                ╚══════════════════════════════════════════╝
 
 augroup omnifuncs
   autocmd!
@@ -32,11 +32,15 @@ augroup omnifuncs
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup end
 
-"================================[ Libraries]===================================
+"                ╔══════════════════════════════════════════╗
+"                ║           » LIBRARIES SYNTAX «           ║
+"                ╚══════════════════════════════════════════╝
 
 let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,d3'
 
-"===============================[ Javascript ]==================================
+"                ╔══════════════════════════════════════════╗
+"                ║               » JAVASCRIPT «             ║
+"                ╚══════════════════════════════════════════╝
 
 if exists('g:plugs["tern_for_vim"]')
   let g:tern_show_argument_hints = 'on_hold'
@@ -60,7 +64,9 @@ let g:deoplete#sources#ternjs#filetypes = [
 endif
 
 
-"e===============================[ Typescript]===================================
+"                ╔══════════════════════════════════════════╗
+"                ║               » TYPESCRIPT «             ║
+"                ╚══════════════════════════════════════════╝
 
 " let g:nvim_typescript#javascript_support = 1
 
@@ -70,7 +76,9 @@ if exists('g:plugs["csscomplete.vim"]')
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
 endif
 
-"============================[ Deoplete Setting ]===============================
+"                ╔══════════════════════════════════════════╗
+"                ║           » DEOPLETE SETTINGS «          ║
+"                ╚══════════════════════════════════════════╝
 
 " Have to set those at last
 let g:deoplete#enable_at_startup = 1
@@ -84,7 +92,9 @@ let g:deoplete#sources = {}
 let g:deoplete#sources.javascript = ['buffer', 'tern']
 let g:deoplete#sources.ts = ['buffer', 'nvim-typescript', 'tern']
 
-"============================[ Snippets Setting ]===============================
+"                ╔══════════════════════════════════════════╗
+"                ║           » SNIPPETS SETTINGS «          ║
+"                ╚══════════════════════════════════════════╝
 
 " Not use default snippets
 let g:neosnippet#disable_runtime_snippets = {
@@ -93,14 +103,18 @@ let g:neosnippet#disable_runtime_snippets = {
 " Use my snippets instead :D
 let g:neosnippet#snippets_directory='$HOME/.config/nvim/snippets'
 
-"==============================[ SuperTab ]=====================================
+"                ╔══════════════════════════════════════════╗
+"                ║               » SUPPER TAB «             ║
+"                ╚══════════════════════════════════════════╝
 
 autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType javascript.jsx let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType html,css,scss,sass,json let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
-"==============================[ Mappings ]=====================================
+"                ╔══════════════════════════════════════════╗
+"                ║                » MAPPINGS «              ║
+"                ╚══════════════════════════════════════════╝
 
 " Tab to forward cycle
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
