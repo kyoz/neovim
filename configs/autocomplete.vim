@@ -36,32 +36,32 @@ augroup end
 "                ║           » LIBRARIES SYNTAX «           ║
 "                ╚══════════════════════════════════════════╝
 
-let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,d3'
+" let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,d3'
 
 "                ╔══════════════════════════════════════════╗
 "                ║               » JAVASCRIPT «             ║
 "                ╚══════════════════════════════════════════╝
 
-if exists('g:plugs["tern_for_vim"]')
-  let g:tern_show_argument_hints = 'on_hold'
-  let g:tern_show_signature_in_pum = 1
-  autocmd FileType javascript setlocal omnifunc=tern#Complete
-endif
+" if exists('g:plugs["tern_for_vim"]')
+"  let g:tern_show_argument_hints = 'on_hold'
+"  let g:tern_show_signature_in_pum = 1
+"  autocmd FileType javascript setlocal omnifunc=tern#Complete
+" endif
 
-if exists('g:plugs["deoplete-ternjs"]')
+" if exists('g:plugs["deoplete-ternjs"]')
 
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
+" let g:tern#command = ["tern"]
+" let g:tern#arguments = ["--persistent"]
 
-let g:deoplete#sources#ternjs#docs = 1
+" let g:deoplete#sources#ternjs#docs = 1
 
 " Add extra filetypes
-let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue'
-                \ ]
-endif
+" let g:deoplete#sources#ternjs#filetypes = [
+"                \ 'jsx',
+"                 \ 'javascript.jsx',
+"                \ 'vue'
+"                \ ]
+" endif
 
 
 "                ╔══════════════════════════════════════════╗
@@ -72,9 +72,9 @@ endif
 
 "==================================[ CSS ]======================================
 
-if exists('g:plugs["csscomplete.vim"]')
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
-endif
+" if exists('g:plugs["csscomplete.vim"]')
+"  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+" endif
 
 "                ╔══════════════════════════════════════════╗
 "                ║           » DEOPLETE SETTINGS «          ║

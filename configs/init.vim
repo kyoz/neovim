@@ -53,7 +53,7 @@ Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that
 "                ║        » LINTING, ERROR DETECT ...«      ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'w0rp/ale' "----------- Asynchronous Lint Engine/ Support lots of languages
+" Plug 'w0rp/ale' "----------- Asynchronous Lint Engine/ Support lots of languages
 
 "                ╔══════════════════════════════════════════╗
 "                ║              » FARTER CODE «             ║
@@ -94,22 +94,22 @@ Plug 'Shougo/deoplete.nvim' , {'tag': '*'} "----- To use lastest release version
 "                ║         » AUTOCOMPLETE LANGUAGES «       ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } "---------------- Javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' } "Typescript
-Plug 'othree/html5.vim' "-------------------------------------------------- html
-Plug 'othree/csscomplete.vim' "--------------------------------- css, scss, sass
-Plug 'othree/javascript-libraries-syntax.vim' "---------------- Libraries syntax
-Plug 'Shougo/neco-syntax' "---------------------------------- Source from syntax
-Plug 'Shougo/context_filetype.vim' "----------- Context filetype (eg js in html)
-Plug 'Shougo/neoinclude.vim' "--------------------------------- Support includes
-Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } "---------------- Javascript
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' } "Typescript
+" Plug 'othree/html5.vim' "-------------------------------------------------- html
+" Plug 'othree/csscomplete.vim' "--------------------------------- css, scss, sass
+" Plug 'othree/javascript-libraries-syntax.vim' "---------------- Libraries syntax
+" Plug 'Shougo/neco-syntax' "---------------------------------- Source from syntax
+" Plug 'Shougo/context_filetype.vim' "----------- Context filetype (eg js in html)
+" Plug 'Shougo/neoinclude.vim' "--------------------------------- Support includes
+" Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
 "                ╚══════════════════════════════════════════╝
 
 Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
-Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area
+" Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area
 
 call plug#end() "---------------------------------------- End of Vim-Plug define
