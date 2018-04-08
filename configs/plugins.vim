@@ -36,10 +36,10 @@ let g:airline#extensions#tabline#fnamemod = ':t' "--- Just show file name in tab
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]' "- Hide format type
 
 let g:airline_theme='onedark' "-------------------------- Set status bar's theme
-let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
+" let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
 
 let g:airline#extensions#tabline#enabled=1 "--------- Buffers at the top as tabs
-let g:airline#extensions#tabline#show_tab_type=0 "---------- Don't show tab type
+let g:airline#extensions#tabline#show_tab_type=1 "---------- Don't show tab type
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » AIRLINE SYMBOLS «          ║
@@ -99,23 +99,23 @@ let g:indentLine_char = '⎸'
 "                ║                 » ALE «                  ║
 "                ╚══════════════════════════════════════════╝
 
-let g:ale_sign_error = '>' "------------------------- Change the signs ALE uses
-let g:ale_sign_warning = '-'
+"let g:ale_sign_error = '>' "------------------------- Change the signs ALE uses
+"let g:ale_sign_warning = '-'
 
-let g:airline#extensions#ale#enabled = 1 "------ Airline errors, warnings status
-let g:ale_sign_column_always = 1 "--------------------- Always show sign columns
-let g:ale_lint_delay = 300 "----------- Increase delay to not burn my laptop :))
+"let g:airline#extensions#ale#enabled = 1 "------ Airline errors, warnings status
+"let g:ale_sign_column_always = 1 "--------------------- Always show sign columns
+"let g:ale_lint_delay = 300 "----------- Increase delay to not burn my laptop :))
 
-"--------------------------------------------------- Set specific linter for ale
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'typescript': ['tslint'],
-\   'html': ['htmlhint'],
-\   'css': ['csslint'],
-\   'scss': ['sass-lint'],
-\   'sass': ['sass-lint'],
-\   'json': ['jsonlint'],
-\}
+""--------------------------------------------------- Set specific linter for ale
+"let g:ale_linters = {
+"\   'javascript': ['eslint'],
+"\   'typescript': ['tslint'],
+"\   'html': ['htmlhint'],
+"\   'css': ['csslint'],
+"\   'scss': ['sass-lint'],
+"\   'sass': ['sass-lint'],
+"\   'json': ['jsonlint'],
+"\}
 
 "                ╔══════════════════════════════════════════╗
 "                ║               » ECHO DOC «               ║
