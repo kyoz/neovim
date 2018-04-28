@@ -3,7 +3,7 @@
 ## :four_leaf_clover: Required for neovim
 
 Must install neovim provider so that neovim pluggin will work property.
-Python 2 is no actually required. But just install them all, for use work :laughing:
+Python 2 is no actually required. But some plugin may need it, so just install them all :laughing:
 
 ```sh
   # Install neovim for python 2
