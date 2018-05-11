@@ -1,5 +1,7 @@
 # KYOZ NEOVIM
 
+![Preview on Ubuntu 18.04](./images/preview.png)
+
 ## :four_leaf_clover: Required for neovim
 
 Must install neovim provider so that neovim pluggin will work property.
