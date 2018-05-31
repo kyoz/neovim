@@ -8,10 +8,15 @@ Must install neovim provider so that neovim pluggin will work property.
 Python 2 is no actually required. But some plugin may need it, so just install them all :laughing:
 
 ```sh
+  # Installing python 2.7 and pip for it
+  sudo apt install python2.7 python-pip
+  # Installing python-pip for 3.6
+  sudo apt install python3-pip
+
   # Install neovim for python 2
-  pip install neovim
+  pip2 install neovim
   # Install neovim for python 3
-  pip3 install neovim
+  pip install neovim
 ```
 Already installed python neovim ? Just upgrade it (To make sure everything work properly):
 
@@ -28,7 +33,7 @@ Then you have to install those required pip modules
   # jedi for python completion
   # psutil (optional)
   # setproctitle (optional)
-  pip3 install --user neovim jedi psutil setproctitle
+  pip install --user neovim jedi psutil setproctitle
 ```
 
 ## :four_leaf_clover: Required for pluggins
