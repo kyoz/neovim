@@ -83,6 +83,7 @@ Plug 'FooSoft/vim-argwrap' "------ Wrap and unwrap function args, list, dicts...
 Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
+Plug 'vimlab/split-term.vim' "------------------ Make neovim's terminal powerful
 
 "                ╔══════════════════════════════════════════╗
 "                ║              » AUTOCOMPLETE «            ║
