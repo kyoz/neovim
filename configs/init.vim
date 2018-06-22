@@ -43,11 +43,10 @@ Plug 'tpope/vim-fugitive' "----------------------------------------- Git Wrapper
 "                ║            » SYNTAX HIGHTLIGHT «         ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'sheerun/vim-polyglot' "----------------- Almost all code syntax these days
-Plug 'othree/javascript-libraries-syntax.vim' "------------ Syntax for Libraries
-Plug 'ap/vim-css-color' "------------------------------ Help colorize text color
-Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that
-"-------------------------------------------------- enclose your cursor location
+Plug 'othree/javascript-libraries-syntax.vim' "------------ Libraries's Syntax
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "--------- Markdown's Syntax
+Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'sass'] } "--Help colorize text color
+Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » LINTING, ERROR DETECT ...«      ║
@@ -88,7 +87,7 @@ Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
 "                ║              » AUTOCOMPLETE «            ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'Shougo/deoplete.nvim' , {'tag': '*'} "----- To use lastest release version
+Plug 'Shougo/deoplete.nvim'"--------------------- Best Asynchronous Autocomplete
 
 "                ╔══════════════════════════════════════════╗
 "                ║         » AUTOCOMPLETE LANGUAGES «       ║

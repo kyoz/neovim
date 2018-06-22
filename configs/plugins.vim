@@ -72,6 +72,8 @@ let g:airline#extensions#tagbar#enabled     = 0
 let g:airline#extensions#virtualenv#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
+set noshowmode "----------------- Don't show mode (Normal, Insert...) in airline
+
 "                ╔══════════════════════════════════════════╗
 "                ║                 » CTRL-P «               ║
 "                ╚══════════════════════════════════════════╝
@@ -96,6 +98,21 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:indentLine_char = '⎸'
 
 "                ╔══════════════════════════════════════════╗
+"                ║            » MARKDOWN SYNTAX «           ║
+"                ╚══════════════════════════════════════════╝
+
+autocmd FileType markdown let g:indentLine_enabled=0 " Prevent markdown side effect
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_fenced_languages = ['coffee', 'css', 'js=javascript', 'ruby', 'sass', 'xml', 'html']
+
+"                ╔══════════════════════════════════════════╗
+"                ║           » LIBRARIES SYNTAX «           ║
+"                ╚══════════════════════════════════════════╝
+
+let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,jasmine,d3'
+
+"                ╔══════════════════════════════════════════╗
 "                ║                 » ALE «                  ║
 "                ╚══════════════════════════════════════════╝
 
@@ -116,9 +133,3 @@ let g:indentLine_char = '⎸'
 "\   'sass': ['sass-lint'],
 "\   'json': ['jsonlint'],
 "\}
-
-"                ╔══════════════════════════════════════════╗
-"                ║               » ECHO DOC «               ║
-"                ╚══════════════════════════════════════════╝
-
-set noshowmode

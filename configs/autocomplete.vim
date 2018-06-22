@@ -33,12 +33,6 @@ augroup omnifuncs
 augroup end
 
 "                ╔══════════════════════════════════════════╗
-"                ║           » LIBRARIES SYNTAX «           ║
-"                ╚══════════════════════════════════════════╝
-
-" let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,d3'
-
-"                ╔══════════════════════════════════════════╗
 "                ║               » JAVASCRIPT «             ║
 "                ╚══════════════════════════════════════════╝
 

@@ -93,7 +93,7 @@ if (empty($TMUX))
 endif
 
 "                ╔══════════════════════════════════════════╗
-"                ║           » FILE, FILE'S TYPES«          ║
+"                ║          » FILE, FILE'S TYPES «          ║
 "                ╚══════════════════════════════════════════╝
 
 set autoread "---------------------------------------- Auto reloaded Edited File
