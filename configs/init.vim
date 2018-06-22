@@ -45,6 +45,7 @@ Plug 'tpope/vim-fugitive' "----------------------------------------- Git Wrapper
 
 Plug 'othree/javascript-libraries-syntax.vim' "------------ Libraries's Syntax
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "--------- Markdown's Syntax
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' } " --- Typescript's Syntax
 Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'sass'] } "--Help colorize text color
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 
@@ -87,22 +88,14 @@ Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
 "                ║              » AUTOCOMPLETE «            ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'Shougo/deoplete.nvim'"--------------------- Best Asynchronous Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }"--------------------- Best Asynchronous Autocomplete
 
 "                ╔══════════════════════════════════════════╗
 "                ║         » AUTOCOMPLETE LANGUAGES «       ║
 "                ╚══════════════════════════════════════════╝
 
-" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } "---------------- Javascript
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' } "Typescript
-" Plug 'othree/html5.vim' "-------------------------------------------------- html
-" Plug 'othree/csscomplete.vim' "--------------------------------- css, scss, sass
-" Plug 'othree/javascript-libraries-syntax.vim' "---------------- Libraries syntax
-" Plug 'Shougo/neco-syntax' "---------------------------------- Source from syntax
-" Plug 'Shougo/context_filetype.vim' "----------- Context filetype (eg js in html)
-" Plug 'Shougo/neoinclude.vim' "--------------------------------- Support includes
-" Plug 'fszymanski/deoplete-emoji' "------------------------------- Markdown Emoji
+" Typescript
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh && npm install -g typescript neovim', 'for': 'typescript' }
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
