@@ -13,7 +13,7 @@
 
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 
-autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
+" autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
 
 " Automatically open NERDTree on starts up if no files were specifed
 autocmd StdinReadPre * let s:std_in=1 "
@@ -89,7 +89,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » INDENT LINE «              ║

@@ -11,7 +11,7 @@
 "                ║             » DEFAULT FOLDER «           ║
 "                ╚══════════════════════════════════════════╝
 
-cd $HOME/Desktop "-------------------------------- Set Default folder as Desktop
+" cd $HOME/Desktop "-------------------------------- Set Default folder as Desktop
 
 "                ╔══════════════════════════════════════════╗
 "                ║            » PYTHON PROVIDERS «          ║

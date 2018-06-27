@@ -99,7 +99,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }"------------------
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh && npm install -g typescript neovim', 'for': 'typescript' }
 
 " Javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install && npm install -g tern', 'for': 'javascript' } 
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install && npm install -g tern', 'for': 'javascript' }
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
