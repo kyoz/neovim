@@ -25,6 +25,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | en
 
 let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 :silent! colorscheme onedark "-------------------------------- Set onedark theme
+hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
+
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » AIRLINE «              ║
