@@ -25,7 +25,7 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 augroup omnifuncs
   autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
@@ -36,33 +36,29 @@ augroup end
 "                ║               » JAVASCRIPT «             ║
 "                ╚══════════════════════════════════════════╝
 
-" if exists('g:plugs["tern_for_vim"]')
-"  let g:tern_show_argument_hints = 'on_hold'
-"  let g:tern_show_signature_in_pum = 1
-"  autocmd FileType javascript setlocal omnifunc=tern#Complete
-" endif
-
-" if exists('g:plugs["deoplete-ternjs"]')
+if exists('g:plugs["deoplete-ternjs"]')
 
 " let g:tern#command = ["tern"]
 " let g:tern#arguments = ["--persistent"]
+"
+  let g:deoplete#sources#javascript = ['buffer', 'tern']
+  let g:deoplete#sources#ternjs#types = 1
+  let g:deoplete#sources#ternjs#docs = 1
 
-" let g:deoplete#sources#ternjs#docs = 1
-
-" Add extra filetypes
-" let g:deoplete#sources#ternjs#filetypes = [
-"                \ 'jsx',
-"                 \ 'javascript.jsx',
-"                \ 'vue'
-"                \ ]
-" endif
+  " Add extra filetypes
+  let g:deoplete#sources#ternjs#filetypes = [
+    \ 'html',
+    \ 'jsx',
+    \ 'javascript.jsx'
+    \ ]
+endif
 
 
 "                ╔══════════════════════════════════════════╗
 "                ║               » TYPESCRIPT «             ║
 "                ╚══════════════════════════════════════════╝
 
-" let g:nvim_typescript#javascript_support = 1
+let g:nvim_typescript#javascript_support = 1
 
 "==================================[ CSS ]======================================
 
