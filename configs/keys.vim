@@ -24,20 +24,14 @@ nnoremap <silent> gw :ArgWrap<CR> "--------------------- Argwrap default mapping
 "                ║                » NERDTREE «              ║
 "                ╚══════════════════════════════════════════╝
 
-map <F2> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
+map <C-b> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » CTRL-P «               ║
 "                ╚══════════════════════════════════════════╝
 
-let g:ctrlp_map = '<c-p>' "----------------------- CtrlP Default command mapping
+let g:ctrlp_map = '<C-p>' "----------------------- CtrlP Default command mapping
 let g:ctrlp_cmd = 'CtrlP'
-
-"                ╔══════════════════════════════════════════╗
-"                ║                 » TERNJS «               ║
-"                ╚══════════════════════════════════════════╝
-
-autocmd FileType javascript nnoremap <silent> <buffer> gd :TernDef<CR>
 
 "                ╔══════════════════════════════════════════╗
 "                ║                » SNIPPETS «              ║

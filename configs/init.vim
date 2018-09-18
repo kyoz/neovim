@@ -34,12 +34,6 @@ Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'kien/ctrlp.vim' "--------------------------------------------- File finder
 
 "                ╔══════════════════════════════════════════╗
-"                ║              » GIT SUPPORTS«             ║
-"                ╚══════════════════════════════════════════╝
-
-Plug 'tpope/vim-fugitive' "----------------------------------------- Git Wrapper
-
-"                ╔══════════════════════════════════════════╗
 "                ║            » SYNTAX HIGHTLIGHT «         ║
 "                ╚══════════════════════════════════════════╝
 
@@ -56,7 +50,7 @@ Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that
 " Plug 'w0rp/ale' "----------- Asynchronous Lint Engine/ Support lots of languages
 
 "                ╔══════════════════════════════════════════╗
-"                ║              » FARTER CODE «             ║
+"                ║              » FASTER CODE «             ║
 "                ╚══════════════════════════════════════════╝
 
 Plug 'jiangmiao/auto-pairs' "-------------------------------- Auto pair brackets
@@ -89,23 +83,32 @@ Plug 'vimlab/split-term.vim' "------------------ Make neovim's terminal powerful
 "                ║              » AUTOCOMPLETE «            ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }"--------------------- Best Asynchronous Autocomplete
+Plug 'ncm2/ncm2' "------------------------------ Slim, Fast Completion Framework
+Plug 'roxma/nvim-yarp' "----------------------- Remote Plugin Framework for ncm2
 
 "                ╔══════════════════════════════════════════╗
-"                ║         » AUTOCOMPLETE LANGUAGES «       ║
+"                ║         » AUTOCOMPLETE SOURCES «         ║
 "                ╚══════════════════════════════════════════╝
 
-" Typescript
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh && npm install -g typescript neovim', 'for': 'typescript' }
+" General
+Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
+Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
+Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
+Plug 'ncm2/ncm2-html-subscope' "---------------------------------- Html Subscope
+Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
+Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
+Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source
 
-" Javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install && npm install -g tern', 'for': 'javascript' }
+" Languages
+Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
+Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
+Plug 'ncm2/nvim-typescript', {'do': './install.sh'} "---------------- Typescript
+Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' " ---------------------- Vimscript
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
 "                ╚══════════════════════════════════════════╝
 
 Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
-" Plug 'Shougo/echodoc.vim' "--------------- Print Functions Document to echo area
 
 call plug#end() "---------------------------------------- End of Vim-Plug define

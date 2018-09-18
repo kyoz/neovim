@@ -8,79 +8,42 @@
 "        |___/
 "
 "                ╔══════════════════════════════════════════╗
-"                ║           » DEFAULTS SETTINGS «          ║
+"                ║             » NCM2 SETTINGS «            ║
 "                ╚══════════════════════════════════════════╝
 
-set nocompatible
-
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
-
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+set shortmess+=c
 
 "                ╔══════════════════════════════════════════╗
 "                ║           » OMNIFUNC SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
 
-augroup omnifuncs
-  autocmd!
-  autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-augroup end
+  " augroup omnifuncs
+  "   autocmd!
+  "   autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+  "   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  "   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  "   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  "   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  " augroup end
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » JAVASCRIPT «             ║
-"                ╚══════════════════════════════════════════╝
-
-if exists('g:plugs["deoplete-ternjs"]')
-
-" let g:tern#command = ["tern"]
-" let g:tern#arguments = ["--persistent"]
-"
-  let g:deoplete#sources#javascript = ['buffer', 'tern']
-  let g:deoplete#sources#ternjs#types = 1
-  let g:deoplete#sources#ternjs#docs = 1
-
-  " Add extra filetypes
-  let g:deoplete#sources#ternjs#filetypes = [
-    \ 'html',
-    \ 'jsx',
-    \ 'javascript.jsx'
-    \ ]
-endif
-
-
-"                ╔══════════════════════════════════════════╗
-"                ║               » TYPESCRIPT «             ║
-"                ╚══════════════════════════════════════════╝
-
-let g:nvim_typescript#javascript_support = 1
-
-"==================================[ CSS ]======================================
-
-" if exists('g:plugs["csscomplete.vim"]')
-"  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
-" endif
-
-"                ╔══════════════════════════════════════════╗
-"                ║           » DEOPLETE SETTINGS «          ║
-"                ╚══════════════════════════════════════════╝
-
-" Have to set those at last
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_completion_start_length = 0
-
-" Disable Preview Winndow
-set completeopt-=preview
-
+" au User Ncm2Plugin call ncm2#register_source({
+  " \ 'name' : 'html',
+  " \ 'priority': 9,
+  " \ 'subscope_enable': 1,
+  " \ 'scope': ['html'],
+  " \ 'mark': 'html',
+  " \ 'word_pattern': '[\w\-]+',
+  " \ 'complete_pattern': ':\s*',
+  " \ 'on_complete': ['ncm2#on_complete#omni', 'htmlcomplete#CompleteTags'],
+  " \ })
 
 "                ╔══════════════════════════════════════════╗
 "                ║           » SNIPPETS SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
+
+" https://github.com/ncm2/ncm2/issues/31
 
 let g:neosnippet#enable_completed_snippet = 1
 " Not use default snippets
@@ -94,17 +57,16 @@ let g:neosnippet#snippets_directory='$HOME/.config/nvim/snippets'
 "                ║               » SUPPER TAB «             ║
 "                ╚══════════════════════════════════════════╝
 
-autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType javascript.jsx let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType html,css,scss,sass,json let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" autocmd FileType javascript.jsx let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" autocmd FileType html,css,scss,sass,json let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 "                ╔══════════════════════════════════════════╗
 "                ║                » MAPPINGS «              ║
 "                ╚══════════════════════════════════════════╝
 
-" Tab to forward cycle
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-" Tab to backward cycle
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" Use <TAB> to select the popup menu (Forward and Backward):
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
