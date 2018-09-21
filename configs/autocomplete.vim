@@ -28,16 +28,16 @@ set shortmess+=c
   "   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   " augroup end
 
-" au User Ncm2Plugin call ncm2#register_source({
-  " \ 'name' : 'html',
-  " \ 'priority': 9,
-  " \ 'subscope_enable': 1,
-  " \ 'scope': ['html'],
-  " \ 'mark': 'html',
-  " \ 'word_pattern': '[\w\-]+',
-  " \ 'complete_pattern': ':\s*',
-  " \ 'on_complete': ['ncm2#on_complete#omni', 'htmlcomplete#CompleteTags'],
-  " \ })
+au User Ncm2Plugin call ncm2#register_source({
+  \ 'name' : 'html',
+  \ 'priority': 9,
+  \ 'subscope_enable': 1,
+  \ 'scope': ['html'],
+  \ 'mark': 'html',
+  \ 'word_pattern': '[\w\-]+',
+  \ 'complete_pattern': '<',
+  \ 'on_complete': ['ncm2#on_complete#omni', 'htmlcomplete#CompleteTags'],
+  \ })
 
 "                ╔══════════════════════════════════════════╗
 "                ║           » SNIPPETS SETTINGS «          ║
