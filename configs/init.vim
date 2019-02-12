@@ -103,7 +103,7 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
 " Languages
 Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
-Plug 'ncm2/nvim-typescript', {'do': './install.sh'} "---------------- Typescript
+Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' " ---------------------- Vimscript
 
 "                ╔══════════════════════════════════════════╗
