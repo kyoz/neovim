@@ -96,9 +96,9 @@ Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 
 Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
 Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
-Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
 Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source
+Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
 
 " Languages
 Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
@@ -110,6 +110,7 @@ Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' " ---------------------- Vimscript
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'Shougo/neosnippet' "---------------------------- Snippets for autocomplete
+Plug 'ncm2/ncm2-neosnippet'
+Plug 'Shougo/neosnippet.vim'
 
 call plug#end() "---------------------------------------- End of Vim-Plug define

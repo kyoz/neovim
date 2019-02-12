@@ -12,7 +12,7 @@
 "                ╚══════════════════════════════════════════╝
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+set completeopt=noinsert,menuone
 set shortmess+=c
 
 "                ╔══════════════════════════════════════════╗
@@ -43,24 +43,28 @@ au User Ncm2Plugin call ncm2#register_source({
 "                ║           » SNIPPETS SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
 
-" https://github.com/ncm2/ncm2/issues/31
-
 let g:neosnippet#enable_completed_snippet = 1
 " Not use default snippets
 let g:neosnippet#disable_runtime_snippets = {
 \   '_' : 1,
 \ }
+
 " Use my snippets instead :D
 let g:neosnippet#snippets_directory='$HOME/.config/nvim/snippets'
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » SUPPER TAB «             ║
-"                ╚══════════════════════════════════════════╝
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-j> <Plug>(neosnippet_expand_or_jump)
+smap <C-j> <Plug>(neosnippet_expand_or_jump)
+xmap <C-j> <Plug>(neosnippet_expand_target)
 
-" autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-" autocmd FileType javascript.jsx let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-" autocmd FileType typescript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-" autocmd FileType html,css,scss,sass,json let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Press enter to trigger snippet expansion
+inoremap <silent> <expr> <CR> ncm2_neosnippet#expand_or("\<CR>", 'n')
 
 "                ╔══════════════════════════════════════════╗
 "                ║                » MAPPINGS «              ║
