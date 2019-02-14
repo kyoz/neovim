@@ -19,15 +19,6 @@ set shortmess+=c
 "                ║           » OMNIFUNC SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
 
-  " augroup omnifuncs
-  "   autocmd!
-  "   autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
-  "   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  "   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  "   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  "   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  " augroup end
-
 au User Ncm2Plugin call ncm2#register_source({
   \ 'name' : 'html',
   \ 'priority': 9,
@@ -38,6 +29,65 @@ au User Ncm2Plugin call ncm2#register_source({
   \ 'word_pattern': '[\w-]+',
   \ 'on_complete': ['ncm2#on_complete#omni', 'htmlcomplete#CompleteTags'],
   \ })
+
+"                ╔══════════════════════════════════════════╗
+"                ║        » LANGUAGE SERVER PROTOCOL «      ║
+"                ╚══════════════════════════════════════════╝
+
+" Sign
+let g:lsp_signs_enabled = 1         " enable signs
+let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+
+let g:lsp_signs_error = {'text': 'x'}
+let g:lsp_signs_warning = {'text': '!'}
+let g:lsp_signs_hint = {'text': '.'}
+
+" Mapping
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gd :LspDefinition<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gh :LspHover<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gf :LspDocumentFormat<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gr :LspRename<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> ge :LspNextError<CR>
+au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gE :LspPreviousError<CR>
+
+" Typescript
+if executable('typescript-language-server')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'typescript-language-server',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+    \ 'whitelist': ['typescript', 'typescript.tsx'],
+    \ })
+endif
+
+" Javascript
+if executable('typescript-language-server')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'javascript support using typescript-language-server',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+    \ 'whitelist': ['javascript', 'javascript.jsx', 'html'],
+    \ })
+endif
+
+" Html
+if executable('html-languageserver')
+  au User lsp_setup call lsp#register_server({
+      \ 'name': 'html-languageserver',
+      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+      \ 'whitelist': ['html'],
+      \ })
+endif
+
+" CSS, SASS, LESS
+if executable('css-languageserver')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'css-languageserver',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+    \ 'whitelist': ['css', 'scss', 'less', 'sass'],
+    \ })
+endif
 
 "                ╔══════════════════════════════════════════╗
 "                ║           » SNIPPETS SETTINGS «          ║

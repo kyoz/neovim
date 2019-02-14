@@ -101,11 +101,24 @@ Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source
 Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
 
+
 " Languages
 Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' " ---------------------- Vimscript
+Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
+
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp', {
+  \  'do': 'npm install -g typescript
+     \ typescript-language-server
+     \ vscode-css-languageserver-bin
+     \ vscode-html-languageserver-bin
+     \'}
+  \
+
+" Typescript & Javascript
+Plug 'ryanolsonx/vim-lsp-typescript' | Plug 'ryanolsonx/vim-lsp-javascript'
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
