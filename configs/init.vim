@@ -53,7 +53,7 @@ Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that
 "                ║              » FASTER CODE «             ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'jiangmiao/auto-pairs' "-------------------------------- Auto pair brackets
+Plug 'tmsvg/pear-tree' "------------------------------------- Auto pair brackets
 Plug 'alvan/vim-closetag' "--------------------------------- Auto close html tag
 Plug 'tpope/vim-surround' "--------------------------------------- Auto surround
 Plug 'tpope/vim-commentary' "------------------------------- Comment code faster
@@ -95,6 +95,7 @@ Plug 'ncm2/ncm2-html-subscope' "---------------------------------- Html Subscope
 Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 
 Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
+Plug 'fgrsnau/ncm2-otherbuf' "---------------------------------------- Other Buf
 Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
 Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source

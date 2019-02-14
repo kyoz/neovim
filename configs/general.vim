@@ -117,7 +117,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab "------------------------------------------ Add tab in insert mode
 set smarttab
-filetype indent off "------------------------------------ Turn of default indent
+filetype indent on "------------------------------------- Turn on default indent
 set autoindent
 set smartindent
 
