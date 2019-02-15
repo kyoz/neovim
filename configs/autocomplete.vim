@@ -43,13 +43,13 @@ let g:lsp_signs_warning = {'text': '!'}
 let g:lsp_signs_hint = {'text': '.'}
 
 " Mapping
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gd :LspDefinition<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gh :LspHover<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gf :LspDocumentFormat<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gr :LspRename<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> ge :LspNextError<CR>
-au FileType html,css,scss,less,sass,typescript,javascript nnoremap <buffer><silent> gE :LspPreviousError<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gd :LspDefinition<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gh :LspHover<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gf :LspDocumentFormat<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gr :LspRename<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> ge :LspNextError<CR>
+au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gE :LspPreviousError<CR>
 
 " Typescript
 if executable('typescript-language-server')
@@ -86,6 +86,15 @@ if executable('css-languageserver')
     \ 'name': 'css-languageserver',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
     \ 'whitelist': ['css', 'scss', 'less', 'sass'],
+    \ })
+endif
+
+"JSON
+if executable('json-languageserver')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'json-languageserver',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'json-languageserver --stdio']},
+    \ 'whitelist': ['json'],
     \ })
 endif
 

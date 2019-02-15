@@ -39,7 +39,7 @@ Plug 'kien/ctrlp.vim' "--------------------------------------------- File finder
 
 Plug 'othree/javascript-libraries-syntax.vim' "------------ Libraries's Syntax
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "--------- Markdown's Syntax
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' } " --- Typescript's Syntax
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }" -- Typescript's Syntax
 Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'sass'] } "--Help colorize text color
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 
@@ -114,6 +114,7 @@ Plug 'prabirshrestha/vim-lsp', {
      \ typescript-language-server
      \ vscode-css-languageserver-bin
      \ vscode-html-languageserver-bin
+     \ vscode-json-languageserver-bin
      \'}
   \
 
