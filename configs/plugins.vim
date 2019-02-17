@@ -100,6 +100,13 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 let g:indentLine_char = '⎸'
 
 "                ╔══════════════════════════════════════════╗
+"                ║               » ACK.VIM «                ║
+"                ╚══════════════════════════════════════════╝
+
+" Replace Ack with Ack! to prevent replace NERDTRee when open
+:ca search Ack!
+
+"                ╔══════════════════════════════════════════╗
 "                ║             » TREE PAIRS «               ║
 "                ╚══════════════════════════════════════════╝
 

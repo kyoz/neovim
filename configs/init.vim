@@ -78,6 +78,9 @@ Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
 Plug 'vimlab/split-term.vim' "------------------ Make neovim's terminal powerful
+" Need to install ack via apt install ack (ubuntu) or brew install ack (osx)
+Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
+
 
 "                ╔══════════════════════════════════════════╗
 "                ║              » AUTOCOMPLETE «            ║
