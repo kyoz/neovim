@@ -104,7 +104,8 @@ let g:indentLine_char = '⎸'
 "                ╚══════════════════════════════════════════╝
 
 " Replace Ack with Ack! to prevent replace NERDTRee when open
-:ca search Ack!
+:ca gs Ack!
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » TREE PAIRS «               ║
