@@ -30,8 +30,16 @@ Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
 "                ║                 » FINDER «               ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'kien/ctrlp.vim' "--------------------------------------------- File finder
+" Use with the silver searcher (https://github.com/ggreer/the_silver_searcher)
+Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
+
+"                ╔══════════════════════════════════════════╗
+"                ║               » NAVIGATES «              ║
+"                ╚══════════════════════════════════════════╝
+
+Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
+Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 
 "                ╔══════════════════════════════════════════╗
 "                ║            » SYNTAX HIGHTLIGHT «         ║
@@ -74,12 +82,8 @@ Plug 'FooSoft/vim-argwrap' "------ Wrap and unwrap function args, list, dicts...
 "                ║                 » UTILS «                ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
-Plug 'vimlab/split-term.vim' "------------------ Make neovim's terminal powerful
-" Use with the silver searcher (https://github.com/ggreer/the_silver_searcher)
-Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 
 
 "                ╔══════════════════════════════════════════╗

@@ -26,7 +26,8 @@ map <C-b> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggl
 "                ║            » COLORS SOLARIZED «          ║
 "                ╚══════════════════════════════════════════╝
 
-let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
+" let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
+let g:onedark_termcolors=256
 :silent! colorscheme onedark "-------------------------------- Set onedark theme
 hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
 
