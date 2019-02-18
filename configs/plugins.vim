@@ -19,6 +19,9 @@ let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 autocmd StdinReadPre * let s:std_in=1 "
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif
 
+" Mappings
+map <C-b> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
+
 "                ╔══════════════════════════════════════════╗
 "                ║            » COLORS SOLARIZED «          ║
 "                ╚══════════════════════════════════════════╝
@@ -93,6 +96,10 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 
+" Mappings
+let g:ctrlp_map = '<C-p>' "----------------------- CtrlP Default command mapping
+let g:ctrlp_cmd = 'CtrlP'
+
 "                ╔══════════════════════════════════════════╗
 "                ║             » INDENT LINE «              ║
 "                ╚══════════════════════════════════════════╝
@@ -100,12 +107,38 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 let g:indentLine_char = '⎸'
 
 "                ╔══════════════════════════════════════════╗
+"                ║             » EASY MOTION «              ║
+"                ╚══════════════════════════════════════════╝
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap S <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" Mappings
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>s <Plug>(easymotion-overwin-f)
+map <Leader>S <Plug>(easymotion-overwin-f2)
+
+"                ╔══════════════════════════════════════════╗
 "                ║               » ACK.VIM «                ║
 "                ╚══════════════════════════════════════════╝
 
-" Replace Ack with Ack! to prevent replace NERDTRee when open
-:ca gs Ack!
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" Note: Replace Ack with Ack! to prevent replace NERDTRee when open
+cnoreabbrev Ack Ack!
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column' "-------------- Use Ag instead
+endif
+nnoremap <Leader>a :Ack!<Space>
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » TREE PAIRS «               ║
@@ -122,6 +155,12 @@ let g:pear_tree_pairs = {
   \ }
 
 let g:pear_tree_repeatable_expand = 0
+
+"                ╔══════════════════════════════════════════╗
+"                ║                 » AIRWRAP «              ║
+"                ╚══════════════════════════════════════════╝
+
+nnoremap <silent> gw :ArgWrap<CR> "--------------------- Argwrap default mapping
 
 "                ╔══════════════════════════════════════════╗
 "                ║            » MARKDOWN SYNTAX «           ║
@@ -158,4 +197,4 @@ let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,jasmin
 "\   'scss': ['sass-lint'],
 "\   'sass': ['sass-lint'],
 "\   'json': ['jsonlint'],
-"\}
+"\
