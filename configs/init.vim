@@ -70,6 +70,7 @@ Plug 'Yggdroot/indentLine' "---------------------------- Indent code with v-line
 Plug 'wellle/targets.vim' "--------------------- Provides additional text object
 Plug 'terryma/vim-expand-region' "------------------- Expand region, Use + and -
 Plug 'terryma/vim-multiple-cursors' "--------------------------- Multiple Cursor
+Plug 'mattn/emmet-vim' "------------------------------------------ Emmet for vim
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » BEAUTIFY CODE «            ║

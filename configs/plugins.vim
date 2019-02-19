@@ -104,8 +104,20 @@ let g:ctrlp_cmd = 'CtrlP'
 "                ╔══════════════════════════════════════════╗
 "                ║             » INDENT LINE «              ║
 "                ╚══════════════════════════════════════════╝
-
+"
 let g:indentLine_char = '⎸'
+
+"                ╔══════════════════════════════════════════╗
+"                ║                » EMMET «                 ║
+"                ╚══════════════════════════════════════════╝
+
+" Enable just for html, css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+let g:user_emmet_leader_key=',' " Trigger emmet with ,,
+
+autocmd FileType html,css,scss,sass,less,typescript EmmetInstall " Support files
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » EASY MOTION «              ║
