@@ -30,7 +30,7 @@ Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
 "                ║                 » FINDER «               ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'kien/ctrlp.vim' "--------------------------------------------- File finder
+Plug 'ctrlpvim/ctrlp.vim' "--------------------------------------------- File finder
 " Use with the silver searcher (https://github.com/ggreer/the_silver_searcher)
 Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 
@@ -39,6 +39,7 @@ Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 "                ╚══════════════════════════════════════════╝
 
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
+Plug 'ryanoasis/vim-devicons' "------------------------------------------- Icons
 Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 
 "                ╔══════════════════════════════════════════╗

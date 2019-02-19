@@ -44,6 +44,7 @@ endif
 "                ║                 » DISPLAY «              ║
 "                ╚══════════════════════════════════════════╝
 
+set encoding=utf8
 set number "--------------------------------------------------- Show line number
 set ruler "------------ Line number, column's number, virtual column's number...
 set nowrap "---------------------------------- do not automatically wrap on load
@@ -68,6 +69,8 @@ set laststatus=2 "-------------------------------------- Always show status line
 set showtabline=2 "----------------------------------------- Always show tabline
 set noshowmode "--------------------------- Hide default mode text (e.g. INSERT)
 set display+=lastline "--------------------- As must as possible of the lastline
+set signcolumn=yes "---------------------------------- Always open gutter column
+
 "------------------------------------------------- in a window will be displayed
 
 "                ╔══════════════════════════════════════════╗
