@@ -25,6 +25,7 @@ Plug 'joshdick/onedark.vim' "------------------------------------- Onedark theme
 
 Plug 'bling/vim-airline' "---------------------------------- Status bar, Tabline
 Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
+Plug 'tpope/vim-fugitive' "---------- Just use to show git status in Vim-Airline
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » FINDER «               ║
