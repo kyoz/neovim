@@ -50,7 +50,9 @@ map <C-b> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggl
 
 " Fix folders and files weird align
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+" let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
 
 "                ╔══════════════════════════════════════════╗
 "                ║            » COLORS SOLARIZED «          ║
