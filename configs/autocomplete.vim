@@ -43,13 +43,31 @@ let g:lsp_signs_warning = {'text': '!'}
 let g:lsp_signs_hint = {'text': '.'}
 
 " Mapping
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gd :LspDefinition<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gh :LspHover<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gf :LspDocumentFormat<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gr :LspRename<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> ge :LspNextError<CR>
-au FileType html,css,scss,less,sass,typescript,javascript,json nnoremap <buffer><silent> gE :LspPreviousError<CR>
+function! LSP_Register(fileType)
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gd :LspDefinition<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gh :LspHover<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gf :LspDocumentFormat<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gr :LspRename<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> ge :LspNextError<CR>'
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gE :LspPreviousError<CR>'
+endfunction
+
+let registerList = [
+  \ 'html',
+  \ 'css',
+  \ 'scss',
+  \ 'less',
+  \ 'sass',
+  \ 'typescript',
+  \ 'javascript',
+  \ 'json'
+  \ ]
+
+for item in registerList
+  call LSP_Register(item)
+endfor
+
 
 " Typescript
 if executable('typescript-language-server')
