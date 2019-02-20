@@ -53,6 +53,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "--------- Markdown's Synt
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }" -- Typescript's Syntax
 Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'sass'] } "--Help colorize text color
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
+Plug 'digitaltoad/vim-pug' "----------------------------------------- Pug Syntax
 
 "                ╔══════════════════════════════════════════╗
 "                ║        » LINTING, ERROR DETECT ...«      ║

@@ -19,6 +19,8 @@ set shortmess+=c
 "                ║           » OMNIFUNC SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
 
+set pumheight=10 "--------------------------------- Limit autocomple candidates
+
 au User Ncm2Plugin call ncm2#register_source({
   \ 'name' : 'html',
   \ 'priority': 9,
