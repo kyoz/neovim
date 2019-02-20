@@ -72,7 +72,7 @@ endfor
 " Typescript
 if executable('typescript-language-server')
   au User lsp_setup call lsp#register_server({
-    \ 'name': 'typescript-language-server',
+    \ 'name': 'lsp-ts',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
     \ 'whitelist': ['typescript', 'typescript.tsx'],
@@ -80,19 +80,19 @@ if executable('typescript-language-server')
 endif
 
 " Javascript
-if executable('typescript-language-server')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'javascript support using typescript-language-server',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
-    \ 'whitelist': ['javascript', 'javascript.jsx', 'html'],
-    \ })
-endif
+" if executable('typescript-language-server')
+"   au User lsp_setup call lsp#register_server({
+"     \ 'name': 'lsp-js',
+"     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+"     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+"     \ 'whitelist': ['javascript', 'javascript.jsx', 'html'],
+"     \ })
+" endif
 
 " Html
 " if executable('html-languageserver')
 "   au User lsp_setup call lsp#register_server({
-"       \ 'name': 'html-languageserver',
+"       \ 'name': 'lsp-html',
 "       \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
 "       \ 'whitelist': ['html'],
 "       \ })
@@ -101,7 +101,7 @@ endif
 " CSS, SASS, LESS
 if executable('css-languageserver')
   au User lsp_setup call lsp#register_server({
-    \ 'name': 'css-languageserver',
+    \ 'name': 'lsp-css',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
     \ 'whitelist': ['css', 'scss', 'less', 'sass'],
     \ })
@@ -110,7 +110,7 @@ endif
 "JSON
 if executable('json-languageserver')
   au User lsp_setup call lsp#register_server({
-    \ 'name': 'json-languageserver',
+    \ 'name': 'lsp-json',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'json-languageserver --stdio']},
     \ 'whitelist': ['json'],
     \ })

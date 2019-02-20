@@ -131,9 +131,6 @@ Plug 'prabirshrestha/vim-lsp', {
      \'}
   \
 
-" Typescript & Javascript
-Plug 'ryanolsonx/vim-lsp-typescript' | Plug 'ryanolsonx/vim-lsp-javascript'
-
 "                ╔══════════════════════════════════════════╗
 "                ║        » AUTOCOMPLETE SUPPORTERS «       ║
 "                ╚══════════════════════════════════════════╝
