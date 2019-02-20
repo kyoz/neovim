@@ -205,7 +205,7 @@ let g:pear_tree_repeatable_expand = 0
 "                ║                 » AIRWRAP «              ║
 "                ╚══════════════════════════════════════════╝
 
-nnoremap <silent> gw :ArgWrap<CR> "--------------------- Argwrap default mapping
+nnoremap <silent> gw :ArgWrap<CR>
 
 "                ╔══════════════════════════════════════════╗
 "                ║            » MARKDOWN SYNTAX «           ║
