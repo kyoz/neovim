@@ -118,6 +118,9 @@ if executable('json-languageserver')
     \ })
 endif
 
+" Workaround
+call ncm2#override_source('lsp-ts', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
+
 "                ╔══════════════════════════════════════════╗
 "                ║           » SNIPPETS SETTINGS «          ║
 "                ╚══════════════════════════════════════════╝
