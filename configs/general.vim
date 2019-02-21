@@ -74,6 +74,7 @@ set signcolumn=yes "---------------------------------- Always open gutter column
 
 syntax on "---------------------------------------------- Enable Syntax for Code
 syntax enable
+set foldmethod=manual "---------------------------------- Support fold by indent
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » COLOR SOLARIZE «           ║
