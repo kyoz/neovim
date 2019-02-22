@@ -19,3 +19,14 @@ nnoremap gb :bnext <CR> "------------------------------------------- Next Buffer
 "                ╚══════════════════════════════════════════╝
 
 nnoremap <c-z> <nop> "------------------------------------------- Disable Ctrl-Z
+
+"                ╔══════════════════════════════════════════╗
+"                ║             » WINDOW RESIZE «            ║
+"                ╚══════════════════════════════════════════╝
+
+if bufwinnr(1)
+  noremap <silent> <C-H> :vertical resize -2<CR>
+  noremap <silent> <C-L> :vertical resize +2<CR>
+  noremap <silent> <C-J> :resize -2<CR>
+  noremap <silent> <C-K> :resize +2<CR>
+endif
