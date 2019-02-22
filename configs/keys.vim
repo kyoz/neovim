@@ -11,22 +11,24 @@
 "                ║             » BUFFER MOTIONS «           ║
 "                ╚══════════════════════════════════════════╝
 
-nnoremap gB :bprevious <CR> "----------------------------------- Previous Buffer
-nnoremap gb :bnext <CR> "------------------------------------------- Next Buffer
+nnoremap gB :bprevious <CR> 
+nnoremap gb :bnext <CR>
 
 "                ╔══════════════════════════════════════════╗
 "                ║                » DISABLED «              ║
 "                ╚══════════════════════════════════════════╝
 
-nnoremap <c-z> <nop> "------------------------------------------- Disable Ctrl-Z
+" Disable Ctrl-Z
+nnoremap <c-z> <nop>
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » WINDOW RESIZE «            ║
 "                ╚══════════════════════════════════════════╝
 
 if bufwinnr(1)
-  noremap <silent> <C-H> :vertical resize -2<CR>
-  noremap <silent> <C-L> :vertical resize +2<CR>
-  noremap <silent> <C-J> :resize -2<CR>
-  noremap <silent> <C-K> :resize +2<CR>
+  noremap <silent> <C-H> :vertical resize -4<CR>
+  noremap <silent> <C-L> :vertical resize +4><CR>
+  noremap <silent> <C-J> :resize -4<CR>
+  noremap <silent> <C-K> :resize +4<CR>
 endif
+

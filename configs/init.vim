@@ -91,7 +91,6 @@ Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'joeytwiddle/sexy_scroller.vim' "-------------- Awesome scroll animation :D
 Plug 'banminkyoz/ezbuf.vim' "------------------------- Fast and easy use buffers
 
-
 "                ╔══════════════════════════════════════════╗
 "                ║              » AUTOCOMPLETE «            ║
 "                ╚══════════════════════════════════════════╝
