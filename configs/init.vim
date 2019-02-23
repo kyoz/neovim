@@ -51,12 +51,15 @@ Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 Plug 'othree/javascript-libraries-syntax.vim' "-------------- Libraries's Syntax
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
-Plug 'ap/vim-css-color', { 'for': [ "------------------ Help colorize text color
-  \ 'html',
-  \ 'css',
-  \ 'scss',
-  \ 'sass',
-  \ 'less' ] }
+" Help colorize text color
+Plug 'ap/vim-css-color', {
+  \ 'for': [
+    \ 'html',
+    \ 'css',
+    \ 'scss',
+    \ 'sass',
+    \ 'less'
+    \ ] }
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 Plug 'digitaltoad/vim-pug' "----------------------------------------- Pug Syntax
 
