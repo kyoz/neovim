@@ -13,6 +13,11 @@
 
 let mapleader = "\<Space>" 
 
+" Use black hole for delete. Don't want to store in register with dd.
+" For cut, use visual and x instead
+nnoremap d "_d
+vnoremap d "_d
+
 "                ╔══════════════════════════════════════════╗
 "                ║             » BUFFER MOTIONS «           ║
 "                ╚══════════════════════════════════════════╝
