@@ -48,7 +48,7 @@ Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 "                ║            » SYNTAX HIGHTLIGHT «         ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'othree/javascript-libraries-syntax.vim' "-------------- Libraries's Syntax
+Plug 'sheerun/vim-polyglot'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
 " Help colorize text color
@@ -61,13 +61,6 @@ Plug 'ap/vim-css-color', {
     \ 'less'
     \ ] }
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
-Plug 'digitaltoad/vim-pug' "----------------------------------------- Pug Syntax
-
-"                ╔══════════════════════════════════════════╗
-"                ║        » LINTING, ERROR DETECT ...«      ║
-"                ╚══════════════════════════════════════════╝
-
-" Plug 'w0rp/ale' "----------- Asynchronous Lint Engine/ Support lots of languages
 
 "                ╔══════════════════════════════════════════╗
 "                ║              » FASTER CODE «             ║

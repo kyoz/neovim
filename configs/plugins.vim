@@ -194,13 +194,6 @@ nnoremap <silent> gw :ArgWrap<CR>
 autocmd FileType markdown let g:indentLine_enabled=0 " Prevent markdown side effect
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_fenced_languages = ['coffee', 'css', 'js=javascript', 'ruby', 'sass', 'xml', 'html']
-
-"                ╔══════════════════════════════════════════╗
-"                ║           » LIBRARIES SYNTAX «           ║
-"                ╚══════════════════════════════════════════╝
-
-let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,jasmine,d3'
 
 "                ╔══════════════════════════════════════════╗
 "                ║                » PRETTIER «              ║
