@@ -61,6 +61,7 @@ set showtabline=2 "----------------------------------------- Always show tabline
 set noshowmode "--------------------------- Hide default mode text (e.g. INSERT)
 set display+=lastline "--------------------- As must as possible of the lastline
 set signcolumn=yes "---------------------------------- Always open gutter column
+set previewheight=3 "------------------------------------ Smaller preview height
 
 " Disable for performance
 " set number "--------------------------------------------------- Show line number
