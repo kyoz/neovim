@@ -206,11 +206,10 @@ let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,jasmin
 "                ║                » PRETTIER «              ║
 "                ╚══════════════════════════════════════════╝
 
-" Use Prettier to format instead of lsp format
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
 let g:prettier#config#single_quote = 'true'
-nmap <Leader>gf <Plug>(Prettier)
+let g:prettier#config#bracket_spacing = 'false'
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » ALE «                  ║

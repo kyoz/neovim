@@ -31,7 +31,7 @@ Plug 'tpope/vim-fugitive' "---------- Just use to show git status in Vim-Airline
 "                ║                 » FINDER «               ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'ctrlpvim/ctrlp.vim' "--------------------------------------------- File finder
+Plug 'ctrlpvim/ctrlp.vim' "----------------------------------------- File finder
 " Use with the silver searcher (https://github.com/ggreer/the_silver_searcher)
 Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 
@@ -48,10 +48,15 @@ Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
 "                ║            » SYNTAX HIGHTLIGHT «         ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'othree/javascript-libraries-syntax.vim' "------------ Libraries's Syntax
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "--------- Markdown's Syntax
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }" -- Typescript's Syntax
-Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'sass'] } "--Help colorize text color
+Plug 'othree/javascript-libraries-syntax.vim' "-------------- Libraries's Syntax
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
+Plug 'ap/vim-css-color', { 'for': [ "------------------ Help colorize text color
+  \ 'html',
+  \ 'css',
+  \ 'scss',
+  \ 'sass',
+  \ 'less' ] }
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 Plug 'digitaltoad/vim-pug' "----------------------------------------- Pug Syntax
 

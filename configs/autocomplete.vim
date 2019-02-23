@@ -52,6 +52,8 @@ function! LSP_Register(fileType)
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gr :LspRename<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> ge :LspNextError<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gE :LspPreviousError<CR>'
+  " Use Prettier to format instead of lsp format
+  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gf :Prettier<CR>'
 endfunction
 
 let registerList = [
@@ -91,13 +93,13 @@ if executable('typescript-language-server')
 endif
 
 " Html
-" if executable('html-languageserver')
-"   au User lsp_setup call lsp#register_server({
-"       \ 'name': 'lsp-html',
-"       \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
-"       \ 'whitelist': ['html'],
-"       \ })
-" endif
+if executable('html-languageserver')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'lsp-html',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+    \ 'whitelist': ['html'],
+    \ })
+endif
 
 " CSS, SASS, LESS
 if executable('css-languageserver')
