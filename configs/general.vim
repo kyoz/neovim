@@ -40,18 +40,14 @@ endif
 "                ╚══════════════════════════════════════════╝
 
 set encoding=utf8
-set number "--------------------------------------------------- Show line number
-set ruler "------------ Line number, column's number, virtual column's number...
 set nowrap "---------------------------------- do not automatically wrap on load
 set colorcolumn=80 "---------------------------------------- 80 line column show
 set nospell "-------------------------------------------------- Disable spelling
 set formatoptions-=t "--------------- Do not automatically wrap text when typing
-set relativenumber "--------------------------------------- Show relative number
-set cursorline "---------------------- Highlight the current line for the cursor
 set listchars=tab:\|\ ,trail:▫
 set formatoptions=tcqronj "-------------------- Set vims text formatting options
 set title "-------------------------------------- Let vim set the terminal title
-set updatetime=100 "-------------------------------- Redraw the status bar often
+set updatetime=500 "-------------------------------- Redraw the status bar often
 set list "--------------------------------------------- Show trailing whitespace
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« "-- Unprintable chars mapping
 set showcmd	"--------------------------------------- Display incomplete commands
@@ -66,7 +62,11 @@ set noshowmode "--------------------------- Hide default mode text (e.g. INSERT)
 set display+=lastline "--------------------- As must as possible of the lastline
 set signcolumn=yes "---------------------------------- Always open gutter column
 
-"------------------------------------------------- in a window will be displayed
+" Disable for performance
+" set number "--------------------------------------------------- Show line number
+" set ruler "------------ Line number, column's number, virtual column's number...
+" set relativenumber "--------------------------------------- Show relative number
+" set cursorline "---------------------- Highlight the current line for the cursor
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » SYNTAX «               ║

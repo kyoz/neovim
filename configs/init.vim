@@ -80,8 +80,20 @@ Plug 'mattn/emmet-vim' "------------------------------------------ Emmet for vim
 "                ║             » BEAUTIFY CODE «            ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'sbdchd/neoformat' "------------------------------------------- Format Code
 Plug 'FooSoft/vim-argwrap' "------ Wrap and unwrap function args, list, dicts...
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'sass',
+    \ 'scss',
+    \ 'json',
+    \ 'markdown',
+    \ 'html' ] }
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » UTILS «                ║

@@ -49,7 +49,6 @@ function! LSP_Register(fileType)
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gd :LspDefinition<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gh :LspHover<CR>'
-  exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gf :LspDocumentFormat<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gr :LspRename<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> ge :LspNextError<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gE :LspPreviousError<CR>'

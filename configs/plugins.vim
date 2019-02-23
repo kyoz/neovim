@@ -203,6 +203,16 @@ let g:vim_markdown_fenced_languages = ['coffee', 'css', 'js=javascript', 'ruby',
 let g:used_javascript_libs = 'jquery,underscore,angularui,angularuirouter,jasmine,d3'
 
 "                ╔══════════════════════════════════════════╗
+"                ║                » PRETTIER «              ║
+"                ╚══════════════════════════════════════════╝
+
+" Use Prettier to format instead of lsp format
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#single_quote = 'true'
+nmap <Leader>gf <Plug>(Prettier)
+
+"                ╔══════════════════════════════════════════╗
 "                ║                 » ALE «                  ║
 "                ╚══════════════════════════════════════════╝
 
