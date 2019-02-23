@@ -115,9 +115,6 @@ Plug 'roxma/nvim-yarp' "----------------------- Remote Plugin Framework for ncm2
 "                ╚══════════════════════════════════════════╝
 
 " General
-Plug 'ncm2/ncm2-html-subscope' "---------------------------------- Html Subscope
-Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
-
 Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
 Plug 'fgrsnau/ncm2-otherbuf' "---------------------------------------- Other Buf
 Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
@@ -127,7 +124,9 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
 
 
 " Languages
+Plug 'ncm2/ncm2-html-subscope' "---------------------------------- Html Subscope
 Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
+Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
