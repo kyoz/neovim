@@ -113,6 +113,9 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 let g:ctrlp_map = '<C-p>' "----------------------- CtrlP Default command mapping
 let g:ctrlp_cmd = 'CtrlP'
 
+" Map for faster buffer selection
+nnoremap <Leader>bl :CtrlPBuffer<CR>
+
 "                ╔══════════════════════════════════════════╗
 "                ║             » INDENT LINE «              ║
 "                ╚══════════════════════════════════════════╝
