@@ -30,7 +30,9 @@ au User Ncm2Plugin call ncm2#register_source({
   \ 'complete_length': -1,
   \ 'complete_pattern': ['\<'],
   \ 'word_pattern': '[\w-]+',
-  \ 'on_complete': ['ncm2#on_complete#omni', 'htmlcomplete#CompleteTags'],
+  \ 'on_complete': ['ncm2#on_complete#delay', 180,
+                  \ 'ncm2#on_complete#omni',
+                  \ 'htmlcomplete#CompleteTags'],
   \ })
 
 "                ╔══════════════════════════════════════════╗
