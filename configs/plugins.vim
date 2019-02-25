@@ -22,7 +22,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | en
 highlight! link NERDTreeFlags NERDTreeDir
 
 " Mappings
-map <C-b> :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
+map <Leader>t :NERDTreeToggle <CR> "--------------------------------- NERDTree Toggle
 
 "                ╔══════════════════════════════════════════╗
 "                ║               » DEVICIONS «              ║
