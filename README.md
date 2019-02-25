@@ -14,17 +14,17 @@ Python 2 is no actually required. But some plugin may need it, so just install t
   sudo apt install python3-pip
 
   # Install neovim for python 2
-  pip2 install neovim
+  pip2 install pynvim
   # Install neovim for python 3
-  pip3 install neovim
+  pip3 install pynvim
 ```
-Already installed python neovim ? You just need to upgrade it (Some plugins need latest versions)
+Already installed python neovim ? Then upgrade it (Some plugins need latest versions)
 
 ```sh
   # Upgrade neovim for python 2
-  pip2 install --upgrade neovim
+  pip2 install --upgrade pynvim
   # Upgrade neovim for python 3
-  pip3 install --upgrade neovim
+  pip3 install --upgrade pynvim
 ```
 
 ## :four_leaf_clover: Install Plugins
