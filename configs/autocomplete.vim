@@ -96,15 +96,15 @@ if executable('typescript-language-server')
 endif
 
 " Html
-" if executable('html-languageserver')
-  " au User lsp_setup call lsp#register_server({
-  "   \ 'name': 'lsp-html',
-  "   \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
-  "   \ 'whitelist': ['html'],
-  "   \ })
-" endif
+if executable('html-languageserver')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'lsp-html',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+    \ 'whitelist': ['html'],
+    \ })
+endif
 
-" CSS, SASS, LESS
+" Css, Scss, Sass, Less
 if executable('css-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-css',
@@ -113,7 +113,7 @@ if executable('css-languageserver')
     \ })
 endif
 
-"JSON
+"Json
 if executable('json-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-json',
