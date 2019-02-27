@@ -67,7 +67,8 @@ let registerList = [
   \ 'sass',
   \ 'typescript',
   \ 'javascript',
-  \ 'json'
+  \ 'json',
+  \ 'sh'
   \ ]
 
 for item in registerList
@@ -113,7 +114,7 @@ if executable('css-languageserver')
     \ })
 endif
 
-"Json
+" Json
 if executable('json-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-json',
@@ -122,7 +123,16 @@ if executable('json-languageserver')
     \ })
 endif
 
-" Workaround
+" Bash
+if executable('bash-language-server')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'lsp-bash',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+    \ 'whitelist': ['sh'],
+    \ })
+endif
+
+" Workaround (Fix duplicate in typescript lsp)
 call ncm2#override_source('lsp-ts', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
 
 "                ╔══════════════════════════════════════════╗

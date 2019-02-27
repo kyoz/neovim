@@ -140,6 +140,7 @@ Plug 'prabirshrestha/vim-lsp', {
      \ vscode-css-languageserver-bin
      \ vscode-html-languageserver-bin
      \ vscode-json-languageserver-bin
+     \ bash-language-server
      \'}
   \
 
