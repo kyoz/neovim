@@ -116,7 +116,7 @@ Plug 'roxma/nvim-yarp' "----------------------- Remote Plugin Framework for ncm2
 
 " General
 Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
-Plug 'fgrsnau/ncm2-otherbuf' "---------------------------------------- Other Buf
+Plug 'fgrsnau/ncm2-otherbuf', {'branch': 'ncm2'} "-------------------- Other Buf
 Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
 Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source
