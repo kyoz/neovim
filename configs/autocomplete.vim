@@ -28,7 +28,6 @@ au User Ncm2Plugin call ncm2#register_source({
   \ 'subscope_enable': 1,
   \ 'scope': ['html'],
   \ 'mark': 'html',
-  \ 'complete_length': -1,
   \ 'complete_pattern': ['\<'],
   \ 'word_pattern': '[\w-]+',
   \ 'on_complete': ['ncm2#on_complete#delay', 180,
