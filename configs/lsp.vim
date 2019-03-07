@@ -105,5 +105,6 @@ if executable('bash-language-server')
 endif
 
 " Workaround (Fix duplicate in typescript lsp)
+call ncm2#override_source('lsp-js', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
 call ncm2#override_source('lsp-ts', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
 
