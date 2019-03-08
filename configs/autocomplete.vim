@@ -69,3 +69,9 @@ inoremap <silent> <expr> <CR> ncm2_neosnippet#expand_or("\<CR>", 'n')
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+"                ╔══════════════════════════════════════════╗
+"                ║          » NCM2 FLOAT PREVIEW «          ║
+"                ╚══════════════════════════════════════════╝
+
+let g:float_preview#height = 1
+
