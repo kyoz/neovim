@@ -149,7 +149,7 @@ Plug 'prabirshrestha/vim-lsp', {
 "                ╚══════════════════════════════════════════╝
 
 Plug 'ncm2/ncm2-neosnippet'
-Plug 'ncm2/float-preview.nvim'
+" Plug 'ncm2/float-preview.nvim'
 Plug 'Shougo/neosnippet.vim'
 
 call plug#end() "---------------------------------------- End of Vim-Plug define
