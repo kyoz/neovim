@@ -7,6 +7,10 @@
 #					__/ |
 #				 |___/
 
+#                ╔══════════════════════════════════════════╗
+#                ║               » DEFINING «               ║
+#                ╚══════════════════════════════════════════╝
+
 snippet		 c
 abbr			 Class
 options		 head
@@ -34,6 +38,30 @@ options		 head
 	function ${1:name} {
 		${2:// Content}
 	}
+
+snippet		 af
+abbr			 Arrow function
+options		 word
+  (${1}) => {${2}}
+
+snippet		 ime
+abbr			 Import Everything
+options		 head
+	import * as ${2:alias} from '${1:path}'
+
+snippet		 imp
+abbr			 Import
+options		 head
+	import { ${2:module} } from '${1:path}';
+
+snippet		 rq
+abbr			 Require
+options		 head
+	require('${1:package}')
+
+#                ╔══════════════════════════════════════════╗
+#                ║               » ITERABLE «               ║
+#                ╚══════════════════════════════════════════╝
 
 snippet		 for
 abbr			 Iterating over iterable objects by index
@@ -63,6 +91,10 @@ options		 head
 		${2:// Content}
 	}
 
+#                ╔══════════════════════════════════════════╗
+#                ║            » GET DOM ELEMENT «           ║
+#                ╚══════════════════════════════════════════╝
+
 snippet		 getAll
 abbr			 Find HTML element by CSS selectors
 options		 word
@@ -83,6 +115,10 @@ abbr			 Find HTML element by tag name
 options		 word
 	document.getElementByTagName('${1:tagName}');
 
+#                ╔══════════════════════════════════════════╗
+#                ║              » CONDITIONS «              ║
+#                ╚══════════════════════════════════════════╝
+
 snippet		 iff
 abbr			 If statement
 options		 head
@@ -91,7 +127,7 @@ options		 head
 	}
 
 snippet		 ife
-abbr			 If statement
+abbr			 If else statement
 options		 head
 	if (${1:condition}) {
 		${2:// If Content}
@@ -99,22 +135,23 @@ options		 head
 		${3:// Else Content}
 	}
 
-snippet		 ime
-abbr			 Import Everything
+snippet		 switch
+abbr			 Perform different actions based on different conditions
 options		 head
-	import * as ${2:alias} from '${1:path}'
+	switch(${1:statement}) {
+		case valueOne:
+		  // Code block
+			break;
+		case valueTwo:
+		  // Code block
+			break;
+		default:
+			${4:codeBlock}
+	}
 
-snippet		 imp
-abbr			 Import
-options		 head
-	import { ${2:module} } from '${1:path}';
-
-snippet		 interval
-abbr			 Executes the given function after at specified intervals 
-options		 head
-	setInterval(() => {
-		${2:// Content}
-	}, ${1:miliseconds})
+#                ╔══════════════════════════════════════════╗
+#                ║             » CONSOLE LOG «              ║
+#                ╚══════════════════════════════════════════╝
 
 snippet		 log
 abbr			 Console Log
@@ -141,24 +178,9 @@ abbr			 Log with background
 options		 head
 	console.log('%c ${1:logContent} ', 'background: #222; color: #bada55');
 
-snippet		 rq
-abbr			 Require
-options		 head
-	require('${1:package}')
-
-snippet		 switch
-abbr			 Perform different actions based on different conditions
-options		 head
-	switch(${1:statement}) {
-		case valueOne:
-		  // Code block
-			break;
-		case valueTwo:
-		  // Code block
-			break;
-		default:
-			${4:codeBlock}
-	}
+#                ╔══════════════════════════════════════════╗
+#                ║          » INTERVAL & TIMEOUT «          ║
+#                ╚══════════════════════════════════════════╝
 
 snippet		 timeout
 abbr			 Executes the given function after the specified delay miliseconds
@@ -166,3 +188,12 @@ options		 head
 	setTimeout(() => {
 		${2:// Content}
 	}, ${1:miliseconds})
+
+snippet		 interval
+abbr			 Executes the given function after at specified intervals 
+options		 head
+	setInterval(() => {
+		${2:// Content}
+	}, ${1:miliseconds})
+
+
