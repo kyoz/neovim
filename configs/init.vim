@@ -39,6 +39,7 @@ Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 "                ║               » NAVIGATES «              ║
 "                ╚══════════════════════════════════════════╝
 
+Plug 'chaoren/vim-wordmotion' "------------------------- More useful word motion
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "-------------------- Icon colors
 Plug 'ryanoasis/vim-devicons' "------------------------------------------- Icons
