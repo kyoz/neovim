@@ -39,7 +39,6 @@ Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 "                ║               » NAVIGATES «              ║
 "                ╚══════════════════════════════════════════╝
 
-Plug 'chaoren/vim-wordmotion' "------------------------- More useful word motion
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "-------------------- Icon colors
 Plug 'ryanoasis/vim-devicons' "------------------------------------------- Icons
@@ -131,6 +130,7 @@ Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
+Plug 'ncm2/ncm2-pyclang' "----------------------------------------------- C/ C++
 Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
 
 " Language Server Protocol
