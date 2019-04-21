@@ -12,6 +12,7 @@
 "                ╚══════════════════════════════════════════╝
 
 let mapleader = "\<Space>" 
+let maplocalleader = "\\"
 
 " Use black hole for delete. Don't want to store in register with dd.
 " For cut, use visual and x instead
