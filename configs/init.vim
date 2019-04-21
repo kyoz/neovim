@@ -130,6 +130,8 @@ Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
+Plug 'ncm2/ncm2-jedi' "-------------------------------------------------- Python
+" Need to install jedi: pip install jedi
 Plug 'ncm2/ncm2-pyclang' "----------------------------------------------- C/ C++
 Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
 
