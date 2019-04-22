@@ -152,8 +152,6 @@ map <Leader>S <Plug>(easymotion-overwin-f2)
 " Powerful mapping, just type s, S, J, K is enough :))
 nmap s <Plug>(easymotion-overwin-f)
 nmap S <Plug>(easymotion-overwin-f2)
-nmap J <Plug>(easymotion-j)
-nmap K <Plug>(easymotion-k)
 
 "                ╔══════════════════════════════════════════╗
 "                ║               » ACK.VIM «                ║
