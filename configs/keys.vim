@@ -14,10 +14,16 @@
 let mapleader = "\<Space>" 
 let maplocalleader = "\\"
 
+" Use jk to exit insert mode instead of esc
+inoremap jk <ESC>l
+
 " Use black hole for delete. Don't want to store in register with dd.
 " For cut, use visual and x instead
 nnoremap d "_d
 vnoremap d "_d
+
+" Save and close current buffer
+nnoremap zz :wa<CR>:bd<CR>
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » BUFFER MOTIONS «           ║
@@ -31,7 +37,13 @@ nnoremap gb :bnext <CR>
 "                ╚══════════════════════════════════════════╝
 
 " Disable Ctrl-Z
-nnoremap <c-z> <nop>
+nnoremap <c-z> <NOP>
+
+" Disable arrow keys (Vim don't need this)
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » WINDOW RESIZE «            ║
