@@ -141,6 +141,13 @@ set undolevels=100 "------------------------------- Default is 1000 -> Too large
 set undoreload=1000 "----------------------------- Default is 10000 -> Too large
 set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 
+" FOLDING {{{
+augroup folding_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
 "                ╔══════════════════════════════════════════╗
 "                ║              » ENABLE MOUSE «            ║
 "                ╚══════════════════════════════════════════╝
