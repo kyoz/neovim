@@ -23,7 +23,7 @@ nnoremap d "_d
 vnoremap d "_d
 
 " Save and close current buffer
-nnoremap zz :wa<CR>:bd<CR>
+nnoremap <leader>z :wa<CR>:bd<CR>
 
 "                ╔══════════════════════════════════════════╗
 "                ║             » BUFFER MOTIONS «           ║
