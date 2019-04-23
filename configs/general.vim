@@ -7,9 +7,7 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║            » PYTHON PROVIDERS «          ║
-"                ╚══════════════════════════════════════════╝
+" PYTHON PROVIDERS {{{
 
 if has('macunix')
   " OSX
@@ -23,20 +21,18 @@ elseif has('win32') || has('win64')
   " Window
 endif
 
+" }}}
 
-
-"                ╔══════════════════════════════════════════╗
-"                ║                » INTERFACE «             ║
-"                ╚══════════════════════════════════════════╝
+" INTERFACE {{{
 
 :set guioptions-=m "-------------------------------------------- Remove menu bar
 :set guioptions-=T "--------------------------------------------- Remove toolbar
 :set guioptions-=r "------------------------------- Remove right-hand scroll bar
 :set guioptions-=L "-------------------------------- Remove left-hand scroll bar
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » DISPLAY «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" DISPLAY {{{
 
 set encoding=utf8
 set nowrap "---------------------------------- do not automatically wrap on load
@@ -68,17 +64,17 @@ set previewheight=3 "------------------------------------ Smaller preview height
 " set relativenumber "------------------------------------- Show relative number
 " set cursorline "-------------------- Highlight the current line for the cursor
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » SYNTAX «               ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" SYNTAX {{{
 
 syntax on "---------------------------------------------- Enable Syntax for Code
 syntax enable
 set foldmethod=manual "---------------------------------- Support fold by indent
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » COLOR SOLARIZE «           ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" COLOR SOLARIZE {{{
 
 set termguicolors "--------------------------------------- True color for neovim
 
@@ -91,9 +87,9 @@ if (empty($TMUX))
   endif
 endif
 
-"                ╔══════════════════════════════════════════╗
-"                ║          » FILE, FILE'S TYPES «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" FILE, FILE'S TYPES {{{
 
 set autoread "---------------------------------------- Auto reloaded Edited File
 set noswapfile "------------------------------------------ Dont create wrap file
@@ -101,15 +97,15 @@ set nobackup "------------------------------------------------- Dont save backup
 filetype plugin on "--------------------------------------------- Turn on plugin
 let g:jsx_ext_required = 1 "------------------------- Dont detect js file as jsx
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » TYPINGS «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" TYPINGS {{{
 
 set backspace=indent,eol,start "----------------- Allow backspace in insert mode
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » TAB, INDENT «            ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" TAB, INDENT {{{
 
 set tabstop=2 "---------------------------------------------- 2 spaces for 1 tab
 set softtabstop=2
@@ -120,39 +116,44 @@ filetype indent on "------------------------------------- Turn on default indent
 set autoindent
 set smartindent
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » SEARCH «               ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" SEARCH {{{
 
 set hlsearch "------------------------------------------ Highlight search result
 set incsearch "------------------------------------------ Allow Insert higtlight
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » FORMAT «               ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" FORMAT {{{
 
 set nrformats-=octal "----------------------------------- Format number as octal
 
-"                ╔══════════════════════════════════════════╗
-"                ║                  » UNDO «                ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" UNDO {{{
 
 set undolevels=100 "------------------------------- Default is 1000 -> Too large
 set undoreload=1000 "----------------------------- Default is 10000 -> Too large
 set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 
-" FOLDING {{{
-augroup folding_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
 " }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║              » ENABLE MOUSE «            ║
-"                ╚══════════════════════════════════════════╝
+" FOLDING {{{
+
+augroup folding_vim
+  autocmd!
+  autocmd FileType vim        setlocal foldmethod=marker
+  autocmd FileType neosnippet setlocal foldmethod=marker
+augroup END
+
+" }}}
+
+" ENABLE MOUSE {{{
 
 if has('mouse')
     set mouse=a "----------------------------- Allow use mouse, possible in nvim
 endif
+
+" }}}
 

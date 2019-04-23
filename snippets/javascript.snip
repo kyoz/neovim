@@ -7,9 +7,7 @@
 #					__/ |
 #				 |___/
 
-#                ╔══════════════════════════════════════════╗
-#                ║               » DEFINING «               ║
-#                ╚══════════════════════════════════════════╝
+#  DEFINING {{{
 
 snippet		 c
 abbr			 Class
@@ -59,9 +57,9 @@ abbr			 Require
 options		 head
 	require('${1:package}')
 
-#                ╔══════════════════════════════════════════╗
-#                ║               » ITERABLE «               ║
-#                ╚══════════════════════════════════════════╝
+#  }}}
+
+# ITERABLE {{{
 
 snippet		 for
 abbr			 Iterating over iterable objects by index
@@ -91,9 +89,9 @@ options		 head
 		${2:// Content}
 	}
 
-#                ╔══════════════════════════════════════════╗
-#                ║            » GET DOM ELEMENT «           ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# GET DOM ELEMENT {{{
 
 snippet		 getAll
 abbr			 Find HTML element by CSS selectors
@@ -115,9 +113,9 @@ abbr			 Find HTML element by tag name
 options		 word
 	document.getElementByTagName('${1:tagName}');
 
-#                ╔══════════════════════════════════════════╗
-#                ║              » CONDITIONS «              ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# CONDITIONS {{{
 
 snippet		 iff
 abbr			 If statement
@@ -149,9 +147,9 @@ options		 head
 			${4:codeBlock}
 	}
 
-#                ╔══════════════════════════════════════════╗
-#                ║             » CONSOLE LOG «              ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# CONSOLE LOG {{{
 
 snippet		 log
 abbr			 Console Log
@@ -178,9 +176,9 @@ abbr			 Log with background
 options		 head
 	console.log('%c ${1:logContent} ', 'background: #222; color: #bada55');
 
-#                ╔══════════════════════════════════════════╗
-#                ║          » INTERVAL & TIMEOUT «          ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# INTERVAL & TIMEOUT {{{
 
 snippet		 timeout
 abbr			 Executes the given function after the specified delay miliseconds
@@ -196,4 +194,5 @@ options		 head
 		${2:// Content}
 	}, ${1:miliseconds})
 
+# }}}
 

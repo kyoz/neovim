@@ -7,17 +7,15 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » NCM2 SETTINGS «            ║
-"                ╚══════════════════════════════════════════╝
+" NCM2 SETTINGS {{{
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 
-"                ╔══════════════════════════════════════════╗
-"                ║           » OMNIFUNC SETTINGS «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" OMNIFUNC SETTINGS {{{
 
 set pumheight=10 "--------------------------------- Limit autocomple candidates
 
@@ -34,9 +32,9 @@ au User Ncm2Plugin call ncm2#register_source({
                    \ 'htmlcomplete#CompleteTags'],
   \ })
 
-"                ╔══════════════════════════════════════════╗
-"                ║           » SNIPPETS SETTINGS «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" SNIPPETS SETTINGS {{{
 
 let g:neosnippet#enable_completed_snippet = 1
 " Not use default snippets
@@ -61,17 +59,19 @@ endif
 " Press enter to trigger snippet expansion
 inoremap <silent> <expr> <CR> ncm2_neosnippet#expand_or("\<CR>", 'n')
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » MAPPINGS «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" MAPPINGS {{{
 
 " Use <TAB> to select the popup menu (Forward and Backward):
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-"                ╔══════════════════════════════════════════╗
-"                ║          » NCM2 FLOAT PREVIEW «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" NCM2 FLOAT PREVIEW {{{
 
 let g:float_preview#height = 1
+
+" }}}
 

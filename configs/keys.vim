@@ -7,9 +7,7 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » GENERAL «               ║
-"                ╚══════════════════════════════════════════╝
+" GENERAL {{{
 
 let mapleader = "\<Space>" 
 let maplocalleader = "\\"
@@ -24,17 +22,15 @@ vnoremap d "_d
 
 " Save and close current buffer
 nnoremap <leader>z :wa<CR>:bd<CR>
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » BUFFER MOTIONS «           ║
-"                ╚══════════════════════════════════════════╝
-
+" BUFFER MOTIONS {{{
 nnoremap gB :bprevious <CR> 
 nnoremap gb :bnext <CR>
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » DISABLED «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" DISABLED {{{
 
 " Disable Ctrl-Z
 nnoremap <c-z> <NOP>
@@ -45,9 +41,9 @@ nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » WINDOW RESIZE «            ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" WINDOW RESIZE {{{
 
 if bufwinnr(1)
   noremap <silent> <C-H> :vertical resize -4<CR>
@@ -55,4 +51,6 @@ if bufwinnr(1)
   noremap <silent> <C-J> :resize -4<CR>
   noremap <silent> <C-K> :resize +4<CR>
 endif
+
+" }}}
 

@@ -7,11 +7,8 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║        » LANGUAGE SERVER PROTOCOL «      ║
-"                ╚══════════════════════════════════════════╝
+" ERROR SIGN {{{
 
-" Error Sign
 let g:lsp_signs_enabled = 1           " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 
@@ -19,7 +16,10 @@ let g:lsp_signs_error = {'text': 'x'}
 let g:lsp_signs_warning = {'text': '!'}
 let g:lsp_signs_hint = {'text': '.'}
 
-" Mapping
+" }}}
+
+" MAPPINGS {{{
+
 function! LSP_Register(fileType)
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gd :LspDefinition<CR>'
   exec 'au FileType '. a:fileType .' nnoremap <buffer><silent> gD :LspDocumentDiagnostics<CR>'
@@ -47,8 +47,10 @@ for item in registerList
   call LSP_Register(item)
 endfor
 
+" }}}
 
-" Typescript
+" TYPESCRIPT {{{
+
 if executable('typescript-language-server')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-ts',
@@ -58,7 +60,10 @@ if executable('typescript-language-server')
     \ })
 endif
 
-" Javascript
+" }}} 
+
+" JAVASCRIPT {{{
+
 if executable('typescript-language-server')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-js',
@@ -68,7 +73,10 @@ if executable('typescript-language-server')
     \ })
 endif
 
-" Html
+" }}}
+
+" HTML {{{
+
 if executable('html-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-html',
@@ -77,7 +85,10 @@ if executable('html-languageserver')
     \ })
 endif
 
-" Css, Scss, Sass, Less
+" }}}
+
+" CSS, SCSS, SASS, LESS {{{
+
 if executable('css-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-css',
@@ -86,7 +97,10 @@ if executable('css-languageserver')
     \ })
 endif
 
-" Json
+" }}}
+
+" JSON {{{
+
 if executable('json-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-json',
@@ -95,7 +109,10 @@ if executable('json-languageserver')
     \ })
 endif
 
-" Bash
+" }}}
+
+" BASH {{{
+
 if executable('bash-language-server')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-bash',
@@ -104,7 +121,13 @@ if executable('bash-language-server')
     \ })
 endif
 
-" Workaround (Fix duplicate in typescript lsp)
+" }}}
+
+" WORKAROUND {{{
+
+" Fix duplicate in typescript lsp
 call ncm2#override_source('lsp-js', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
 call ncm2#override_source('lsp-ts', {'filter': [{'name': 'set_dup', 'value': 0}]}) 
+
+" }}}
 

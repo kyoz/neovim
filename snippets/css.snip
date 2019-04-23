@@ -7,9 +7,7 @@
 #         __/ |
 #        |___/
 
-#                ╔══════════════════════════════════════════╗
-#                ║               » POSITION «               ║
-#                ╚══════════════════════════════════════════╝
+# POSITION {{{
 
 snippet    rel
 abbr       Position Relative
@@ -29,9 +27,9 @@ options    head
   left: 0px;
   right: 0px;${1}
 
-#                ╔══════════════════════════════════════════╗
-#                ║           » MARGIN & PADDING «           ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# MARGIN & PADDING {{{
 
 snippet    pad
 abbr       Padding for all directions
@@ -49,9 +47,9 @@ options    head
   margin-left: ${3:NUM}px;
   margin-right: ${4:NUM}px;
 
-#                ╔══════════════════════════════════════════╗
-#                ║               » ANIMATION «              ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# ANIMATION {{{
 
 snippet    anim
 abbr       Animation
@@ -75,9 +73,9 @@ options    head
     100%  { ${4} }
   }
 
-#                ╔══════════════════════════════════════════╗
-#                ║              » RESPONSIVE «              ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# RESPONSIVE {{{
 
 snippet    media:min-width
 abbr       If screen size is larger than..., then do...
@@ -93,9 +91,9 @@ options    head
     ${2}
   }
 
-#                ╔══════════════════════════════════════════╗
-#                ║               » FLEXBOX «                ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# FLEXBOX {{{
 
 snippet    flex
 abbr       Flex Layout
@@ -107,9 +105,9 @@ options    head
   align-items: ${4:flex-start | flex-end | center | stretch | baseline};
   align-content: ${4:flex-start | flex-end | center | stretch | space-between | space-around};
 
-#                ╔══════════════════════════════════════════╗
-#                ║                 » UTILS «                ║
-#                ╚══════════════════════════════════════════╝
+# }}}
+
+# UTILS {{{
 
 snippet    truncate
 abbr       Truncate string with ellipsis
@@ -117,4 +115,6 @@ options    head
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+# }}}
 

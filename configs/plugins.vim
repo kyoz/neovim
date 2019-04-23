@@ -7,9 +7,7 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » NERDTREE «              ║
-"                ╚══════════════════════════════════════════╝
+" NERDTREE {{{
 
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 
@@ -24,9 +22,9 @@ highlight! link NERDTreeFlags NERDTreeDir
 " Mappings
 noremap <Leader>t :NERDTreeToggle<CR> "----------------------------- NERDTree Toggle
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » DEVICIONS «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" DEVICIONS {{{
 
 " Fix folders and files weird align
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
@@ -34,19 +32,18 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
-"                ╔══════════════════════════════════════════╗
-"                ║            » COLORS SOLARIZED «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" COLORS SOLARIZED {{{
 
 " let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 let g:onedark_termcolors=256
 :silent! colorscheme onedark "-------------------------------- Set onedark theme
 hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
 
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » AIRLINE «              ║
-"                ╚══════════════════════════════════════════╝
+" AIRLINE {{{
 
 let g:airline_section_c = '%t' "--filename "-------------- Only show file's name
 let g:airline#extensions#tabline#enabled = 1 "------------------- Enable tabline
@@ -59,9 +56,9 @@ let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
 let g:airline#extensions#tabline#enabled=1 "--------- Buffers at the top as tabs
 let g:airline#extensions#tabline#show_tab_type=1 "---------- Don't show tab type
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » AIRLINE SYMBOLS «          ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" AIRLINE SYMBOLS {{{
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -92,9 +89,9 @@ let g:airline#extensions#whitespace#enabled = 0
 
 set noshowmode "----------------- Don't show mode (Normal, Insert...) in airline
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » CTRL-P «               ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" CTRL-P {{{
 
 let g:ctrlp_working_path_mode = 'ra' "--------------- Set local working diretory
 
@@ -116,15 +113,15 @@ let g:ctrlp_cmd = 'CtrlP'
 " Map for faster buffer selection
 nnoremap <Leader>bl :CtrlPBuffer<CR>
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » INDENT LINE «              ║
-"                ╚══════════════════════════════════════════╝
-"
+" }}}
+
+" INDENT LINE {{{
+
 let g:indentLine_char = '┆'
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » EMMET «                 ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" EMMET {{{
 
 " Enable just for html, css
 let g:user_emmet_install_global = 0
@@ -134,9 +131,9 @@ let g:user_emmet_leader_key=',' " Trigger emmet with ,,
 
 autocmd FileType html,css,scss,sass,less,typescript EmmetInstall " Support files
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » EASY MOTION «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" EASY MOTION {{{
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
@@ -153,9 +150,9 @@ map <Leader>S <Plug>(easymotion-overwin-f2)
 nmap s <Plug>(easymotion-overwin-f)
 nmap S <Plug>(easymotion-overwin-f2)
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » ACK.VIM «                ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" ACK.VIM {{{
 
 " Note: Replace Ack with Ack! to prevent replace NERDTRee when open
 cnoreabbrev Ack Ack!
@@ -164,9 +161,9 @@ if executable('ag')
 endif
 nnoremap <Leader>a :Ack!<Space>
 
-"                ╔══════════════════════════════════════════╗
-"                ║             » TREE PAIRS «               ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" TREE PAIRS {{{
 
 let g:pear_tree_pairs = {
   \ '(':    {'closer': ')'},
@@ -180,27 +177,29 @@ let g:pear_tree_pairs = {
 
 let g:pear_tree_repeatable_expand = 0
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » AIRWRAP «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" AIRWRAP {{{
 
 nnoremap <silent> gw :ArgWrap<CR>
 
-"                ╔══════════════════════════════════════════╗
-"                ║            » MARKDOWN SYNTAX «           ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" MARKDOWN SYNTAX {{{
 
 autocmd FileType markdown let g:indentLine_enabled=0 " Prevent markdown side effect
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » PRETTIER «              ║
-"                ╚══════════════════════════════════════════╝
+" }}}
+
+" PRETTIER {{{
 
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#bracket_spacing = 'false'
+
+" }}}
 
