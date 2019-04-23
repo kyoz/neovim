@@ -63,10 +63,10 @@ set signcolumn=yes "---------------------------------- Always open gutter column
 set previewheight=3 "------------------------------------ Smaller preview height
 
 " Disable for performance
-" set number "--------------------------------------------------- Show line number
-" set ruler "------------ Line number, column's number, virtual column's number...
-" set relativenumber "--------------------------------------- Show relative number
-" set cursorline "---------------------- Highlight the current line for the cursor
+" set number "------------------------------------------------- Show line number
+" set ruler "---------- Line number, column's number, virtual column's number...
+" set relativenumber "------------------------------------- Show relative number
+" set cursorline "-------------------- Highlight the current line for the cursor
 
 "                ╔══════════════════════════════════════════╗
 "                ║                 » SYNTAX «               ║
