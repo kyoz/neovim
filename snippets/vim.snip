@@ -23,6 +23,27 @@ options			head
     ${0:TARGET}
   endfunction
 
+snippet			if
+abbr				Vim if
+options			head
+  if ${1:condition}
+    ${0:TARGET}
+  endif
+
+snippet			for
+abbr				Vim for
+options			head
+  for ${1:condition}
+    ${0:TARGET}
+  endfor
+
+snippet			while
+abbr				Vim while
+options			head
+  while ${1:condition}
+    ${0:TARGET}
+  endwhile
+
 snippet			augroup
 abbr				Vim augroup
 options			head
