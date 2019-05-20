@@ -99,6 +99,31 @@ endif
 
 " }}}
 
+" PYTHON {{{
+
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'lsp-py',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
+" }}}
+
+" DOCKER {{{
+
+if executable('docker-langserver')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'lsp-docker',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'docker-langserver --stdio']},
+        \ 'whitelist': ['dockerfile'],
+        \ })
+endif
+
+" }}}
+
 " JSON {{{
 
 if executable('json-languageserver')

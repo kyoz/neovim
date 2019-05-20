@@ -125,8 +125,6 @@ Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
-Plug 'ncm2/ncm2-jedi' "-------------------------------------------------- Python
-" Need to install jedi: pip install jedi
 Plug 'ncm2/ncm2-pyclang' "----------------------------------------------- C/ C++
 Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
 
@@ -134,20 +132,21 @@ Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp', {
   \  'do': 'npm install -g typescript
-     \ typescript-language-server
-     \ vscode-css-languageserver-bin
-     \ vscode-html-languageserver-bin
-     \ vscode-json-languageserver-bin
-     \ bash-language-server
-     \'}
-  \
+    \ typescript-language-server
+    \ vscode-css-languageserver-bin
+    \ vscode-html-languageserver-bin
+    \ vscode-json-languageserver-bin
+    \ bash-language-server
+    \ dockerfile-language-server-nodejs
+    \'}
+    \
 
 " }}}
 
 " AUTOCOMPLETE SUPPORTERS {{{
 
 Plug 'ncm2/ncm2-neosnippet'
-" Plug 'ncm2/float-preview.nvim'
+Plug 'ncm2/float-preview.nvim'
 Plug 'Shougo/neosnippet.vim'
 
 " }}}
