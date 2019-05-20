@@ -32,15 +32,11 @@ function! LSP_Register(fileType)
 endfunction
 
 let registerList = [
-  \ 'html',
-  \ 'css',
-  \ 'scss',
-  \ 'less',
-  \ 'sass',
-  \ 'typescript',
-  \ 'javascript',
-  \ 'json',
-  \ 'sh'
+  \ 'html', 'css', 'scss', 'less', 'sass',
+  \ 'typescript', 'javascript',
+  \ 'dockerfile', 'json', 'sh',
+  \ 'vim',
+  \ 'py'
   \ ]
 
 for item in registerList
@@ -56,7 +52,7 @@ if executable('typescript-language-server')
     \ 'name': 'lsp-ts',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-    \ 'whitelist': ['typescript', 'typescript.tsx'],
+    \ 'whitelist': ['typescript', 'typescript.tsx']
     \ })
 endif
 
@@ -69,7 +65,7 @@ if executable('typescript-language-server')
     \ 'name': 'lsp-js',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
-    \ 'whitelist': ['javascript', 'javascript.jsx'],
+    \ 'whitelist': ['javascript', 'javascript.jsx']
     \ })
 endif
 
@@ -81,7 +77,7 @@ if executable('html-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-html',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
-    \ 'whitelist': ['html'],
+    \ 'whitelist': ['html']
     \ })
 endif
 
@@ -99,7 +95,7 @@ endif
 
 " }}}
 
-" VIM {{
+" VIM {{{
 
 if executable('vim-language-server')
   au User lsp_setup call lsp#register_server({
@@ -118,7 +114,7 @@ if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'lsp-py',
         \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
+        \ 'whitelist': ['python']
         \ })
 endif
 
@@ -130,7 +126,7 @@ if executable('docker-langserver')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'lsp-docker',
         \ 'cmd': {server_info->[&shell, &shellcmdflag, 'docker-langserver --stdio']},
-        \ 'whitelist': ['dockerfile'],
+        \ 'whitelist': ['dockerfile']
         \ })
 endif
 
@@ -142,7 +138,7 @@ if executable('json-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-json',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'json-languageserver --stdio']},
-    \ 'whitelist': ['json'],
+    \ 'whitelist': ['json']
     \ })
 endif
 
@@ -154,7 +150,7 @@ if executable('bash-language-server')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-bash',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
-    \ 'whitelist': ['sh'],
+    \ 'whitelist': ['sh']
     \ })
 endif
 
