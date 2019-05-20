@@ -71,7 +71,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " NCM2 FLOAT PREVIEW {{{
 
-let g:float_preview#docked = 0
+let g:float_preview#docked = 1
 
 " }}}
 

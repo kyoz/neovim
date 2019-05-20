@@ -124,7 +124,8 @@ Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
 Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
 Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
 Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
+" Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim' "----------------------- Vimscript
+Plug 'iamcco/vim-language-server'
 Plug 'ncm2/ncm2-pyclang' "----------------------------------------------- C/ C++
 Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
 
@@ -136,10 +137,10 @@ Plug 'prabirshrestha/vim-lsp', {
     \ vscode-css-languageserver-bin
     \ vscode-html-languageserver-bin
     \ vscode-json-languageserver-bin
+    \ vim-language-server
     \ bash-language-server
     \ dockerfile-language-server-nodejs
     \'}
-    \
 
 " }}}
 

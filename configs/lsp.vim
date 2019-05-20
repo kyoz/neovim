@@ -93,7 +93,19 @@ if executable('css-languageserver')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'lsp-css',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
-    \ 'whitelist': ['css', 'scss', 'less', 'sass'],
+    \ 'whitelist': ['css', 'scss', 'less', 'sass']
+    \ })
+endif
+
+" }}}
+
+" VIM {{
+
+if executable('vim-language-server')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'lsp-vim',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'vim-language-server --stdio']},
+    \ 'whitelist': ['vim']
     \ })
 endif
 
