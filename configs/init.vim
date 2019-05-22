@@ -97,6 +97,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'banminkyoz/ezbuf.vim' "------------------------- Fast and easy use buffers
 Plug 'banminkyoz/npm.vim' "-------------------- Work with npm more easier in Vim
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
 " }}}
 

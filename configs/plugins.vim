@@ -194,6 +194,12 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 " }}}
 
+" MARDOWN-PREVIEW {{{
+
+nmap <leader>m <Plug>MarkdownPreviewToggle
+
+" }}}
+
 " PRETTIER {{{
 
 let g:prettier#autoformat = 0
