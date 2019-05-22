@@ -84,6 +84,15 @@ npm install -g neovim
 
 ### Clone Configuration
 
+Download everything and put em in the `.nvim` folder of yours. Or clone it with git:
+
+```
+git clone git@github.com:banminkyoz/neovim.git ~/path_to_your_nvim_folder
+
+" Example
+git clone git@github.com:banminkyoz/neovim.git ~/.config/nvim
+```
+
 ### Install Plugins
 
 Before starting with this step, you must make sure that you'v read and install everything required in above steps.
