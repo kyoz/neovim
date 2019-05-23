@@ -39,6 +39,8 @@
     * [Mappings](#mappings)
         * [General](#general)
         * [Plugins](#plugins)
+        * [Autocomplete](#autocomplete)
+        * [Language Server Protocol](#language-server-protocol)
   * [License](#license)
 ---
 
@@ -223,6 +225,7 @@ If you read my configuration, you'll see that i use [ncm2](https://github.com/nc
 |:-------------|:--------------------------------------------------------------|
 |[sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) | Syntax for almost all language that exist |
 |[leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim) | Typescript's Syntax |
+|[plasticboy/vim-markdown](plasticboy/vim-markdown) | Markdown's Syntax	]
 |[ap/vim-css-color](https://github.com/ap/vim-css-color) | Help colorize text color |
 |[Valloric/MatchTagAlways](https://github.com/Valloric/MatchTagAlways) | Always highlights the XML/HTML tags that enclose your cursor location |
 
@@ -359,21 +362,73 @@ So, in order to easily customize those configuration. You must understand the st
 
 #### General
 
-| Mapping          | Actions & Meaning                                         |
-|:-----------------|:----------------------------------------------------------|
-| <kbd>space</kbd> | Leader key |
-| <kbd>\\</kbd>    | Local Leader key |
-| <kbd>jk</kbd>    | Exist insert mode faster |
-| <kbd>dd</kbd>    | Delete but don't store deleted lines in register |
-| <kbd>space</kbd><kbd>z</kbd> | Save and close current buffer |
-| <kbd>gb</kbd>    | Jump to next buffer |
-| <kbd>gB</kbd>    | Jump to previous buffer |
-| <kbd>ctrl</kbd><kbd>h</kbd> | Resize window (Reduce width) |
-| <kbd>ctrl</kbd><kbd>l</kbd> | Resize window (Expand width) |
-| <kbd>ctrl</kbd><kbd>j</kbd> | Resize window (Reduce height) |
-| <kbd>ctrl</kbd><kbd>k</kbd> | Resize window (Expand height) |
+All general custom mappings is place in [configs/keys.vim](https://github.com/banminkyoz/neovim/blob/master/configs/keys.vim)
+
+Leader key: <kbd>space</kbd>   
+Local leader key: <kbd>\\</kbd>
+
+| Mapping                       | Mode | Actions                               |
+|:------------------------------|:-----|:--------------------------------------|
+| <kbd>jk</kbd>                 | i    | Exist insert mode faster |
+| <kbd>dd</kbd>                 | n    | Delete but don't store deleted lines in register |
+| <kbd>space</kbd><kbd>z</kbd>  | n    | Save and close current buffer |
+| <kbd>gb</kbd>                 | n    | Jump to next buffer |
+| <kbd>gB</kbd>                 | n    | Jump to previous buffer |
+| <kbd>ctrl</kbd><kbd>h</kbd>   | n    | Resize window (Reduce width) |
+| <kbd>ctrl</kbd><kbd>l</kbd>   | n    | Resize window (Expand width) |
+| <kbd>ctrl</kbd><kbd>j</kbd>   | n    | Resize window (Reduce height) |
+| <kbd>ctrl</kbd><kbd>k</kbd>   | n    | Resize window (Expand height) |
 
 #### Plugins
+
+All plugins custom mappings is place in [configs/plugins.vim](https://github.com/banminkyoz/neovim/blob/master/configs/plugins.vim)
+
+| Mapping                       | Mode |                                       |
+|:------------------------------|:-----|:--------------------------------------|
+| <kbd>ctrl</kbd><kbd>p</kbd>   | n | Open Ctrl-P |
+| <kbd>space</kbd><kbd>a</kbd>  | n | Start global search with ack.vim |
+| <kbd>space</kbd><kbd>b</kbd><kbd>x</kbd>  | n | Close current buffer |
+| <kbd>space</kbd><kbd>b</kbd><kbd>X</kbd>  | n | Close all buffers |
+| <kbd>space</kbd><kbd>b</kbd><kbd>o</kbd>  | n | Close other buffers |
+| <kbd>space</kbd><kbd>b</kbd><kbd>s</kbd>  | n | Close all saved buffers |
+| <kbd>space</kbd><kbd>s</kbd>  | n | Start Easymotion |
+| <kbd>space</kbd><kbd>S</kbd>  | n | Start Easymotion (two characters) |
+| <kbd>space</kbd><kbd>j</kbd>  | n | Start Easymotion (search below rows) |
+| <kbd>space</kbd><kbd>k</kbd>  | n | Start Easymotion (search above rows) |
+| <kbd>space</kbd><kbd>m</kbd>  | n | Open markdown live preview (When in markdown file buffer) |
+| <kbd>space</kbd><kbd>t</kbd>  | n | Toggle NerdTree |
+| <kbd>g</kbd><kbd>w</kbd>  | n | Run AirWrap |
+| <kbd>,</kbd><kbd>,</kbd>  | n | Run Emmet |
+| <kbd>Q</kbd><kbd>C</kbd>  | n | Copy whole line to system clipboard |
+| <kbd>Q</kbd><kbd>C</kbd>  | v | Copy selected text to system clipboard |
+| <kbd>Q</kbd><kbd>X</kbd>  | n | Cut whole line to system clipboard |
+| <kbd>Q</kbd><kbd>X</kbd>  | v | Cut selected text to system clipboard |
+| <kbd>Q</kbd><kbd>V</kbd>  | n | Paste from system clipboard |
+
+#### Autocomplete
+
+All autocomplete mappings is place in [configs/autocomplete.vim](https://github.com/banminkyoz/neovim/blob/master/configs/autocomplete.vim)
+
+| Mapping                       | Mode |                                       |
+|:------------------------------|:-----|:--------------------------------------|
+| <kbd>tab</kbd>                | i    | Go to next autocomplete candidate |
+| <kbd>shift</kbd><kbd>tab</kbd>| i    | Go to previous autocomplete candidate |
+| <kbd>ctrl</kbd><kbd>j</kbd>   | i    | Expand snippet (if possible) |
+
+#### Language Server Protocol
+
+All lsp mappings is place in [configs/lsp.vim](https://github.com/banminkyoz/neovim/blob/master/configs/lsp.vim)
+
+| Mapping                       | Mode |                                       |
+|:------------------------------|:-----|:--------------------------------------|
+| <kbd>tab</kbd>                | i    | Go to next autocomplete candidate |
+| <kbd>g</kbd><kbd>d</kbd>      | n    | View Definition for word under cursor |
+| <kbd>g</kbd><kbd>D</kbd>      | n    | View Document Diagnostics |
+| <kbd>g</kbd><kbd>h</kbd>      | n    | View LSP Hover result for word under cursor |
+| <kbd>g</kbd><kbd>r</kbd>      | n    | Rename for word (variable) under cursor |
+| <kbd>g</kbd><kbd>e</kbd>      | n    | Go to next error |
+| <kbd>g</kbd><kbd>E</kbd>      | n    | Go to previous error |
+| <kbd>g</kbd><kbd>f</kbd>      | n    | Format for current buffer with prettier |
 
 ## License
 

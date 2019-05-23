@@ -44,6 +44,7 @@ Plug 'easymotion/vim-easymotion' "----------- Jump around the screen like a boss
 
 Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax	
 " Help colorize text color
 Plug 'ap/vim-css-color', {
   \ 'for': [
