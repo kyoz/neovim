@@ -1,7 +1,9 @@
 # KYOZ NEOVIM
 > Cool & Modularized vim configurations to work like an IDE
 
-![Preview on Ubuntu 18.04](./images/preview.png)
+<p align="center">
+  <img src="demo.gif" width="800px">
+</p>
 
 ## Table of contents
 
