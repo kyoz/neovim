@@ -1,4 +1,4 @@
-# KYOZ NEOVIM
+# Kyoz Neovim
 > Cool & Modularized vim configurations to work like an IDE
 
 <p align="center">
