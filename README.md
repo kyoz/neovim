@@ -4,6 +4,9 @@
 <p align="center">
   <img src="demo.gif" width="800px">
 </p>
+<p align="center">(Sorry for low quality gif, i'v tried to optimize and reduce the demo.gif size. I'll update it later when i have time)</p>
+
+View [asciinema version](https://asciinema.org/a/UvMbGX98KPuJBpnTu8gOQREch) (without nerd font it look not too good)
 
 ## Table of contents
 
