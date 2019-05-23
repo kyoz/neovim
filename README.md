@@ -33,10 +33,12 @@
         * [Autocomplete Source](#autocomplete-source)
         * [Autocomplete Supporter](#autocomplete-supporters)
   * [Customize](#customize)
-    * [Structural](#structural)
+    * [Directory Structure](#directory-structure)
         * [Folders](#folders)
         * [Files](#files)
     * [Mappings](#mappings)
+        * [General](#general)
+        * [Plugins](#plugins)
   * [License](#license)
 ---
 
@@ -305,7 +307,7 @@ If you read my configuration, you'll see that i use [ncm2](https://github.com/nc
 
 ## Customize
 
-### Structural
+### Directory Structure
 
 There's no configurations suitable for everyone. Each one have different tastes.
 
@@ -354,6 +356,15 @@ So, in order to easily customize those configuration. You must understand the st
 | configs/lsp.vim          | Contain all settings relate to language server protocol
 
 ### Mappings
+
+#### General
+
+| Mapping          | Actions & Meaning                                         |
+|:-----------------|:----------------------------------------------------------|
+| <kbd>Space</kbd> | mapleader |
+| <kbd>\\</kbd>     | maplocalleader |
+
+#### Plugins
 
 ## License
 
