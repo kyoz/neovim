@@ -361,8 +361,17 @@ So, in order to easily customize those configuration. You must understand the st
 
 | Mapping          | Actions & Meaning                                         |
 |:-----------------|:----------------------------------------------------------|
-| <kbd>Space</kbd> | mapleader |
-| <kbd>\\</kbd>     | maplocalleader |
+| <kbd>space</kbd> | Leader key |
+| <kbd>\\</kbd>    | Local Leader key |
+| <kbd>jk</kbd>    | Exist insert mode faster |
+| <kbd>dd</kbd>    | Delete but don't store deleted lines in register |
+| <kbd>space</kbd><kbd>z</kbd> | Save and close current buffer |
+| <kbd>gb</kbd>    | Jump to next buffer |
+| <kbd>gB</kbd>    | Jump to previous buffer |
+| <kbd>ctrl</kbd><kbd>h</kbd> | Resize window (Reduce width) |
+| <kbd>ctrl</kbd><kbd>l</kbd> | Resize window (Expand width) |
+| <kbd>ctrl</kbd><kbd>j</kbd> | Resize window (Reduce height) |
+| <kbd>ctrl</kbd><kbd>k</kbd> | Resize window (Expand height) |
 
 #### Plugins
 
