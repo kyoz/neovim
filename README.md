@@ -3,14 +3,17 @@
 
 ![Preview on Ubuntu 18.04](./images/preview.png)
 
+## Table of contents
+
 ---
   * [Introduction](#introduction)
   * [Requirements](#requirements)
-  * [Installation](#installation)
+    * [System](#system)
     * [Neovim](#neovim)
     * [Nodejs](#nodejs)
     * [Providers](#providers)
-    * [Clone Configuration](#clone-configuration)
+  * [Installation](#installation)
+    * [Download](#download)
     * [Install Plugin](#install-plugins)
     * [Fonts](#fonts)
     * [Others](#others)
@@ -25,9 +28,19 @@
 
 ## Introduction
 
-Introduction goes here
+I'v falled in love with Vim in the first time i'v tried it. I love the way i can coding, writing without using mouse or trackpad to move the cursor arround...
+
+In the past, i just use VSCode as my main editor. If Vim doesn't exist in my life, i think VSCode definitely is the best (with me).
+
+There are times i'v quit using Vim cause it's so hard to customize and using, mostly because i can't integrate autocomplete for it. So i give up and back to using VSCode.
+
+But then i'v figure out that i can't life without Vim. I have to install [VSCodeVim](https://github.com/VSCodeVim/Vim) (An extension provide some Vim feature in VSCode). Although it work, but it lack a lot of Vim's features.
+
+Then i'm back with vim, this time i pay a lots of time to learn, to customize my vimrc. And now, i'm really happy that i can use Vim (Nvim) as my main editor with those configurations. :blush:
 
 ## Requirements
+
+### System
 
 Those configurations is only for **Neovim**, although most plugins work with **Vim** too, but i'v built this only for **Neovim**.
 
@@ -36,8 +49,6 @@ For **Vim**, i just have some minimal configurations in [my dotfiles](https://gi
 Those configurations work well on almost all OS i'v ever used (OSX, Linux, Window...).
 
 But as it scale, i haven't have times to check it all, for now i just use OSX at home and Linux at work. So i can only make sure it work well on OSX and Linux. If you have any problem with Window please open an issue.
-
-## Installation
 
 ### Neovim
 
@@ -82,9 +93,15 @@ Nvim Node.js client is also needed (for neovim to be able to communicate with pl
 npm install -g neovim
 ```
 
-### Clone Configuration
+## Installation
 
-Download everything and put em in the `.nvim` folder of yours. Or clone it with git:
+Before starting with this step, you must make sure that you'v read and install everything required in above steps.
+
+And make sure there's no ERROR showing when running `:checkhealth` in nvim.
+
+### Download
+
+Download everything in this repo and put em in the `.nvim` folder of yours. Or clone it with git:
 
 ```
 git clone git@github.com:banminkyoz/neovim.git ~/path_to_your_nvim_folder
@@ -95,11 +112,7 @@ git clone git@github.com:banminkyoz/neovim.git ~/.config/nvim
 
 ### Install Plugins
 
-Before starting with this step, you must make sure that you'v read and install everything required in above steps.
-
-And make sure there's no ERROR showing when running `:checkhealth` in nvim.
-
-When everything is ok. Open nvim and use `:PlugInstall` or `:PlugI` to install all plugins (There will be some error showing when you first running this, just enter to pass them all, and install the plugins).
+Open nvim and use `:PlugInstall` or `:PlugI` to install all plugins (There will be some error showing when you first running this, just enter to pass them all, and install the plugins).
 
 Quit and re-open nvim and now you have nvim with a lots of feature which can be your main IDE.
 
@@ -107,7 +120,7 @@ Quit and re-open nvim and now you have nvim with a lots of feature which can be 
 
 In order to make everything look cool as it have to (with vim-arline, nerd-tree icons...), we have to using patched fonts. You can [view some pathced fonts here](https://github.com/ryanoasis/nerd-fonts).
 
-There's a `/fonts` folder with patched Iosevka font, which i'm using now. You can use it too.
+There's a [/fonts](https://github.com/banminkyoz/neovim/tree/master/fonts/Iosevka) folder with patched Iosevka font, which i'm using now. You can use it too.
 
 I'v tried a lots of fonts, but this Iosevka font seem suitable for me, it's easy to read and doesn't make me lose focus when coding.
 
