@@ -15,7 +15,7 @@ Plug 'joshdick/onedark.vim' "------------------------------------- Onedark theme
 
 " }}}
 
-" TOOLBARS {{{
+" TOOLBAR {{{
 
 Plug 'bling/vim-airline' "---------------------------------- Status bar, Tabline
 Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
@@ -31,19 +31,18 @@ Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 
 " }}}
 
-" NAVIGATES {{{
+" NAVIGATE {{{
 
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "-------------------- Icon colors
 Plug 'ryanoasis/vim-devicons' "------------------------------------------- Icons
-Plug 'easymotion/vim-easymotion' "----------------- EastMotion to support search
+Plug 'easymotion/vim-easymotion' "----------- Jump around the screen like a boss
 
 " }}}
 
 " SYNTAX HIGHTLIGHT {{{
 
-Plug 'sheerun/vim-polyglot'
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax
+Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
 " Help colorize text color
 Plug 'ap/vim-css-color', {
@@ -97,6 +96,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'banminkyoz/ezbuf.vim' "------------------------- Fast and easy use buffers
 Plug 'banminkyoz/npm.vim' "-------------------- Work with npm more easier in Vim
+" Markdown live preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
 " }}}
