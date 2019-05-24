@@ -9,13 +9,13 @@
 "
 " CONFIG'S SOURCES {{{
 
-source $HOME/.config/nvim/configs/init.vim "---------------------- Pluggins list
-source $HOME/.config/nvim/configs/general.vim "----------------- General configs
-source $HOME/.config/nvim/configs/keys.vim "----------------------- Key bindings
-source $HOME/.config/nvim/configs/autocomplete.vim "------- Autocomplete configs
-source $HOME/.config/nvim/configs/lsp.vim "---- Language Server Protocal configs
-source $HOME/.config/nvim/configs/plugins.vim "---------------- Pluggins configs
-source $HOME/.config/nvim/configs/indent.vim "------------------- Indent configs
+runtime configs/init.vim "---------------------------------------- Pluggins list
+runtime configs/general.vim "----------------------------------- General configs
+runtime configs/keys.vim "----------------------------------------- Key bindings
+runtime configs/autocomplete.vim "------------------------- Autocomplete configs
+runtime configs/lsp.vim "---------------------- Language Server Protocal configs
+runtime configs/plugins.vim "---------------------------------- Pluggins configs
+runtime configs/indent.vim "------------------------------------- Indent configs
 
 " }}}
 
