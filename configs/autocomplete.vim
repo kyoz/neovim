@@ -22,6 +22,61 @@ set nobackup | set nowritebackup
 
 " }}}
 
+" EXTENSIONS {{{
+
+" Install coc extensions
+if match(&rtp, 'coc.nvim') >= 0
+    let s:languages = [
+        \ 'coc-html',
+        \ 'coc-css',
+        \ 'coc-tsserver',
+        \ 'coc-docker',
+        \ 'coc-gocode',
+        \ 'coc-json',
+        \ 'coc-python',
+        \ 'coc-rls',
+        \ 'coc-vimtex',
+        \ 'coc-vimlsp',
+        \ 'coc-svg',
+        \ 'coc-sh',
+        \ ]
+
+    let s:frameworks = [
+        \ 'coc-angular',
+        \ 'coc-vimlsp',
+        \ ]
+
+    let s:linters = [
+        \ 'coc-tslint',
+        \ 'coc-eslint',
+        \ 'coc-stylelint',
+        \ ]
+
+    let s:utils = [
+        \ 'coc-syntax',
+        \ 'coc-word',
+        \ 'coc-dictionary',
+        \ 'coc-lists',
+        \ 'coc-tag',
+        \ 'coc-emoji',
+        \ 'coc-github',
+        \ 'coc-snippets',
+        \ 'coc-calc',
+        \ 'coc-diagnostic',
+        \ 'coc-emmet',
+        \ 'coc-git',
+        \ 'coc-prettier'
+        \ ]
+
+    let s:extensions = s:languages + s:frameworks + s:linters + s:utils
+
+    let g:coc_global_extensions = s:extensions
+
+    call coc#add_extension()
+endif
+
+" }}}
+
 " MAPPINGS {{{
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -71,6 +126,9 @@ endfunction
 
 " coc-yank
 nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " }}}
 

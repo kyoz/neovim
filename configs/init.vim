@@ -34,9 +34,12 @@ Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 " NAVIGATE {{{
 
 Plug 'scrooloose/nerdtree' "------------------------------------------ Nerd Tree
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "-------------------- Icon colors
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "-- Nerdtree syntax & Icon colors
 Plug 'ryanoasis/vim-devicons' "------------------------------------------- Icons
 Plug 'easymotion/vim-easymotion' "----------- Jump around the screen like a boss
+Plug 'andymass/vim-matchup' "------------- Better % and highlight matching words
+Plug 'tommcdo/vim-exchange' "-------------------------------- Easy text exchange
+Plug 'rhysd/clever-f.vim' "-------------------------------- Make f more powerful
 
 " }}}
 
@@ -44,8 +47,10 @@ Plug 'easymotion/vim-easymotion' "----------- Jump around the screen like a boss
 
 Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
+Plug 'numirias/semshi', {'for':'python', 'do': ':UpdateRemotePlugins'}
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax	
 " Help colorize text color
+Plug 'guns/xterm-color-table.vim'
 Plug 'ap/vim-css-color', {
   \ 'for': [
     \ 'html',
@@ -55,6 +60,7 @@ Plug 'ap/vim-css-color', {
     \ 'less'
     \ ] }
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
+Plug 'MTDL9/vim-log-highlighting', {'for': 'log'} "----------------- For Vim Log
 
 " }}}
 
@@ -95,49 +101,22 @@ Plug 'prettier/vim-prettier', {
 " UTILS {{{
 
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
+Plug 'skywind3000/asyncrun.vim' "--------------- Run async shell commands in vim
 Plug 'banminkyoz/ezbuf.vim' "------------------------- Fast and easy use buffers
 Plug 'banminkyoz/npm.vim' "-------------------- Work with npm more easier in Vim
+Plug 'godlygeek/tabular', {'for': 'markdown'} "-------------- Alignment for text
+Plug 'lervag/vimtex', {'for': 'tex'} "------------------- For editing Latex file
+Plug 'dhruvasagar/vim-table-mode',{'for': 'markdown', 'do': ':TableFormat'}
 " Markdown live preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+Plug 'voldikss/vim-search-me' "------------------------ Search google within vim
+Plug 'tweekmonster/startuptime.vim', {'on': 'StartupTime'}
 
 " }}}
 
 " AUTOCOMPLETE {{{
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-
-" }}}
-
-" AUTOCOMPLETE EXTENTIONS {{{
-
-" Languages
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-sh', {'do': 'yarn install --frozen-lockfile'}
-
-" Frameworks
-Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
-
-" Useful
-Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-emmet', {'do': 'yarn install --frozen-lockfile'}
-Plug 'weirongxu/coc-calc', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-svg', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-yank', {'do': 'yarn install --frozen-lockfile'}
-Plug 'voldikss/coc-github', {'do': 'yarn install --frozen-lockfile'}
-Plug 'wix/import-cost', {'do': 'yarn install --frozen-lockfile'}
-
-" }}}
-
-" AUTOCOMPLETE SUPPORTERS {{{
-
-" Plug 'Shougo/neosnippet.vim'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile', 'frozen':1}
 
 " }}}
 
