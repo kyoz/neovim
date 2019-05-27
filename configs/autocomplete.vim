@@ -50,6 +50,7 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-tslint',
         \ 'coc-eslint',
         \ 'coc-stylelint',
+        \ 'coc-diagnostic',
         \ ]
 
     let s:utils = [
@@ -62,7 +63,6 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-github',
         \ 'coc-snippets',
         \ 'coc-calc',
-        \ 'coc-diagnostic',
         \ 'coc-emmet',
         \ 'coc-git',
         \ 'coc-prettier'
