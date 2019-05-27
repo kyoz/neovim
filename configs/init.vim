@@ -104,52 +104,40 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
 " AUTOCOMPLETE {{{
 
-Plug 'ncm2/ncm2' "------------------------------ Slim, Fast Completion Framework
-Plug 'roxma/nvim-yarp' "----------------------- Remote Plugin Framework for ncm2
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 " }}}
 
-" AUTOCOMPLETE SOURCES {{{
-
-" General
-Plug 'ncm2/ncm2-bufword' "----------------------------------------------- Buffer
-Plug 'fgrsnau/ncm2-otherbuf', {'branch': 'ncm2'} "-------------------- Other Buf
-Plug 'ncm2/ncm2-path' "---------------------------------------------------- Path
-Plug 'ncm2/ncm2-tagprefix' "------------------------------------ Html Tag Prefix
-Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax' "------------- Syntax source
-Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim' "--------- NeoInclude
-
+" AUTOCOMPLETE EXTENTIONS {{{
 
 " Languages
-Plug 'ncm2/ncm2-html-subscope' "---------------------------------- Html Subscope
-Plug 'ncm2/ncm2-cssomni' "-------------------------------------------------- CSS
-Plug 'ncm2/ncm2-markdown-subscope' "-------------------------- Markdown Subscope
-Plug 'ncm2/ncm2-tern', {'do': 'npm install'} "----------------------- Javascript
-Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
-Plug 'iamcco/vim-language-server' "----------------------------------- Vimscript
-Plug 'ncm2/ncm2-pyclang' "----------------------------------------------- C/ C++
-Plug 'ncm2/ncm2-vim-lsp' "----------- To connect completion between lsp and ncm2
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
+Plug 'josa42/coc-sh', {'do': 'yarn install --frozen-lockfile'}
 
-" Language Server Protocol
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp', { 'do': 'npm install -g
-    \ typescript
-    \ typescript-language-server
-    \ vscode-css-languageserver-bin
-    \ vscode-html-languageserver-bin
-    \ vscode-json-languageserver-bin
-    \ vim-language-server
-    \ bash-language-server
-    \ dockerfile-language-server-nodejs
-    \'}
+" Frameworks
+Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
+
+" Useful
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-emmet', {'do': 'yarn install --frozen-lockfile'}
+Plug 'weirongxu/coc-calc', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-svg', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yank', {'do': 'yarn install --frozen-lockfile'}
+Plug 'voldikss/coc-github', {'do': 'yarn install --frozen-lockfile'}
+Plug 'wix/import-cost', {'do': 'yarn install --frozen-lockfile'}
 
 " }}}
 
 " AUTOCOMPLETE SUPPORTERS {{{
 
-Plug 'ncm2/ncm2-neosnippet'
-Plug 'ncm2/float-preview.nvim'
-Plug 'Shougo/neosnippet.vim'
+" Plug 'Shougo/neosnippet.vim'
 
 " }}}
 

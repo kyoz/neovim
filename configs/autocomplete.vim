@@ -7,71 +7,77 @@
 "         __/ |
 "        |___/
 
-" NCM2 SETTINGS {{{
+" GENERAL {{{
 
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-set shortmess+=c
+set pumheight=10 "--------------------------------- limit autocomple candidates
 
-" }}}
+set hidden "------------------------- if hidden is not set, TextEdit might fail.
+set shortmess+=c "------------------- don't give |ins-completion-menu| messages.
+set updatetime=300 "------------ smaller updatetime for CursorHold & CursorHoldI
+set cmdheight=2 "----------------------------------- better display for messages
+set signcolumn=yes "------------------------------------ always show signcolumns
 
-" OMNIFUNC SETTINGS {{{
-
-set pumheight=10 "--------------------------------- Limit autocomple candidates
-
-" Html source
-au User Ncm2Plugin call ncm2#register_source({
-  \ 'name' : 'html',
-  \ 'priority': 9,
-  \ 'subscope_enable': 1,
-  \ 'scope': ['html'],
-  \ 'mark': 'html',
-  \ 'complete_pattern': ['\<'],
-  \ 'word_pattern': '[\w-]+',
-  \ 'on_complete': [ 'ncm2#on_complete#omni',
-                   \ 'htmlcomplete#CompleteTags'],
-  \ })
-
-" }}}
-
-" SNIPPETS SETTINGS {{{
-
-let g:neosnippet#enable_completed_snippet = 1
-" Not use default snippets
-let g:neosnippet#disable_runtime_snippets = {
-\   '_' : 1,
-\ }
-
-" Use my snippets instead :D
-let g:neosnippet#snippets_directory='$HOME/.config/nvim/snippets'
-
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-j> <Plug>(neosnippet_expand_or_jump)
-smap <C-j> <Plug>(neosnippet_expand_or_jump)
-xmap <C-j> <Plug>(neosnippet_expand_target)
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-" Press enter to trigger snippet expansion
-inoremap <silent> <expr> <CR> ncm2_neosnippet#expand_or("\<CR>", 'n')
+" Some servers have issues with backup files, see #649
+set nobackup | set nowritebackup
 
 " }}}
 
 " MAPPINGS {{{
 
-" Use <TAB> to select the popup menu (Forward and Backward):
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-rename)
+nmap <silent> gR <Plug>(coc-references)
+nmap <silent> ge <Plug>(coc-diagnostic-prev)
+nmap <silent> gE <Plug>(coc-diagnostic-next)
+xmap <silent> gf  <Plug>(coc-format-selected)
+nmap <silent> gf  <Plug>(coc-format-selected)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" }}}
+
+" EXTENSIONS SETTINGS {{{
+
+" coc-yank
+nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 
 " }}}
 
-" NCM2 FLOAT PREVIEW {{{
+" SNIPPETS SETTINGS {{{
 
-let g:float_preview#docked = 1
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " }}}
-

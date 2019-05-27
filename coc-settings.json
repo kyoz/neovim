@@ -1,0 +1,39 @@
+{
+  // coc settings
+  "coc.preferences.snippets.enable": true,
+  "coc.preferences.snippetStatusText": "🌈",
+  "coc.preferences.formatOnType": false,
+
+  // diagnostic
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.errorSign": "✖",
+  "diagnostic.enable": true,
+  "diagnostic.signOffset": 9999999,
+  "diagnostic.highlightOffset": 9999999,
+  "diagnostic.refreshOnInsertMode": true,
+
+  // suggest
+  "suggest.detailField": "abbr",
+  "suggest.detailMaxLength": 30,
+  "suggest.maxCompleteItemCount": 50,
+  "suggest.maxPreviewWidth": 80,
+  "suggest.triggerAfterInsertEnter": false,
+
+  // snippets
+  "snippets.extends": {
+    "cpp": [
+      "c"
+    ],
+    "javascriptreact": [
+      "javascript"
+    ],
+    "typescript": [
+      "javascript"
+    ]
+  },
+
+  // html
+  "html.suggest.angular1": false,   // use coc-angular instead
+}
