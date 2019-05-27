@@ -111,6 +111,7 @@ Plug 'dhruvasagar/vim-table-mode',{'for': 'markdown', 'do': ':TableFormat'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'voldikss/vim-search-me' "------------------------ Search google within vim
 Plug 'tweekmonster/startuptime.vim', {'on': 'StartupTime'}
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
 " }}}
 
