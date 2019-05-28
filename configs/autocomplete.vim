@@ -14,11 +14,22 @@ set pumheight=10 "--------------------------------- limit autocomple candidates
 set hidden "------------------------- if hidden is not set, TextEdit might fail.
 set shortmess+=c "------------------- don't give |ins-completion-menu| messages.
 set updatetime=300 "------------ smaller updatetime for CursorHold & CursorHoldI
-set cmdheight=2 "----------------------------------- better display for messages
+set cmdheight=1 "----------------------------------- better display for messages
 set signcolumn=yes "------------------------------------ always show signcolumns
 
 " Some servers have issues with backup files, see #649
 set nobackup | set nowritebackup
+
+" }}}
+
+" HIGHLIGHT {{{
+
+
+hi CocErrorSign  ctermfg=Red guifg=#ef8189
+hi CocWarningSign  ctermfg=Brown guifg=#e8b586
+hi CocInfoSign  ctermfg=Yellow guifg=#61afef
+hi CocHintSign  ctermfg=Blue guifg=#56b6c2
+
 
 " }}}
 

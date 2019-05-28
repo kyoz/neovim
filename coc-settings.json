@@ -6,9 +6,9 @@
 
   // diagnostic
   "diagnostic.infoSign": "i",
-  "diagnostic.hintSign": "➤",
-  "diagnostic.warningSign": "⚠",
-  "diagnostic.errorSign": "✖",
+  "diagnostic.hintSign": "*",
+  "diagnostic.warningSign": "!",
+  "diagnostic.errorSign": "x",
   "diagnostic.enable": true,
   "diagnostic.signOffset": 9999999,
   "diagnostic.highlightOffset": 9999999,
