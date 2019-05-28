@@ -72,7 +72,9 @@ if match(&rtp, 'coc.nvim') >= 0
 
     let g:coc_global_extensions = s:extensions
 
-    call coc#add_extension()
+    if exists('g:did_coc_loaded')
+        call coc#add_extension()
+    end
 endif
 
 " }}}
