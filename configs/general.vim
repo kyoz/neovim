@@ -144,7 +144,7 @@ set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 augroup folding_vim
   autocmd!
   autocmd FileType vim        setlocal foldmethod=marker
-  autocmd FileType neosnippet setlocal foldmethod=marker
+  autocmd FileType snippets   setlocal foldmethod=marker
 augroup END
 
 " }}}
