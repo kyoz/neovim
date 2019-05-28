@@ -74,7 +74,6 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-snippets',
         \ 'coc-calc',
         \ 'coc-emmet',
-        \ 'coc-git',
         \ 'coc-prettier'
         \ ]
 
