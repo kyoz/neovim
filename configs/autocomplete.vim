@@ -55,7 +55,6 @@ if match(&rtp, 'coc.nvim') >= 0
 
     let s:utils = [
         \ 'coc-syntax',
-        \ 'coc-word',
         \ 'coc-dictionary',
         \ 'coc-lists',
         \ 'coc-tag',
