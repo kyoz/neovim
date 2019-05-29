@@ -45,7 +45,6 @@
   },
 
   // html
-  "html.suggest.angular1": false,   // use coc-angular instead
   "html.suggest.ionic": true,
 
   // emoji
