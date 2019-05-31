@@ -7,56 +7,27 @@
 #         __/ |
 #        |___/
 
-snippet    ngIf
-abbr       Angular *ngIf
-options    word
+snippet if Angular *ngIf
   *ngIf="${1:expression}"
-
-snippet    ngFor
-abbr       Angular *ngFor
-options    word
+snippet for Angular *ngFor
   *ngFor="let ${1:item} of ${2:list}"
-
-snippet    ngSwitch
-abbr       Angular [ngSwitch]
-options    word
+snippet switch Angular [ngSwitch]
   <div [ngSwitch]="${1:expression}">
    <div *ngSwitchCase="expression_1">Case 1</div>
    <div *ngSwitchCase="expression_2">Case 2</div>
    <div *ngSwitchDefault>Default</div>
   </div>
-
-snippet    ngClass
-abbr       Angular [ngClass]
-options    word
+snippet class Angular [ngClass]
   [ngClass]="{ '${1:class}': ${2:expression} }"
-
-snippet    ngClasses
-abbr       Angular [ngClass] with multiple classes
-options    word
+snippet classes Angular [ngClass] with multiple classes
   [ngClass]="{ '${1:class}': ${2:expression}, '${3:class}': ${4:expression}}"
-
-snippet    ngStyle
-abbr       Angular [ngStyle]
-options    word
+snippet style Angular [ngStyle]
   [ngStyle]="{ '${1:style}': ${2:expression} }"
-
-snippet    ngModel
-abbr       Angular [ngModel]
-options    word
+snippet ngModel Angular [ngModel]
   [(ngModel)]="${1:binding}"
-
-snippet    ngRouterLink
-abbr       Angular routerLink
-options    word
+snippet routerLink Angular routerLink
   routerLink="/${1:routeName}"
-
-snippet    ngRouterLinkWithParams
-abbr       Angular routerLink with query params
-options    word
+snippet routerLinkWithParams Angular routerLink with query params
   [routerLink]="['/${1:routeName}']" [queryParams]="{ ${2:key}: ${3:value} }"
-
-snippet    ngRouterLinkActive
-abbr       Angular routerLinkActive
-options    word
+snippet routerLinkActive Angular routerLinkActive
   [routerLinkActive]="'is-active'"

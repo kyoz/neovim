@@ -9,97 +9,40 @@
 
 #  DEFINING {{{
 
-# Function
-snippet f
-	function ${1:name} {
-		${2:// Content}
+snippet f Function
+	function ${1:name}() {
+		${0}
 	}
-
-# Arrow function
-snippet af
+snippet af Arrow function
   (${1}) => {${2}}
-
-# Import Everything
-snippet ime
-	import * as ${2:alias} from '${1:path}'
-
-# Import
-snippet imp
-	import { ${2:module} } from '${1:path}';
-
-# Require
-snippet rq
-	require('${1:package}')
+snippet rq Require
+	const ${1} = require('${0}');
 
 #  }}}
 
-# ITERABLE {{{
+# IMPORT {{{
 
-# Iterating over iterable objects by index
-snippet for
-	for (let i = 0; i < ${1:array}.length; i++) {
-		${2:// Content}
-	}
-
-# Iterating over iterable objects by index (Reverse)
-snippet	forr
-	for (let i =	${1:array}.length - 1; i >= 0; i--) {
-		${2:// Content}
-	}
-
-# Iterating over property values of iterable objects
-snippet forin
-	for (const item in ${1:object}) {
-		${2:// Content}
-	}
-
-# Iterating over property names of iterable objects
-snippet forof
-	for (const item of ${1:object}) {
-		${2:// Content}
-	}
-
-# }}}
-
-# GET DOM ELEMENT {{{
-
-# Find HTML element by CSS selectors
-snippet	getAll
-	document.querySelectorAll('${1:selector}');
-
-# Find HTML element by id
-snippet	getId
-	document.getElementById('${1:id}');
-
-# Find HTML element by class name
-snippet	getClass
-	document.getElementsByClassName('${1:className}');
-
-# Find HTML element by tag name
-snippet	getTag
-	document.getElementByTagName('${1:tagName}');
+snippet ip Import
+	import { ${0} } from '${1:path}';
+snippet ipa Import all
+	import * as ${0} from '${1:path}';
 
 # }}}
 
 # CONDITIONS {{{
 
-# If statement
-snippet	iff
+snippet	if If statement
 	if (${1:condition}) {
-		${2:// Content}
+		${0}
 	}
-
-# If else statement
-snippet	ife
+snippet	ifelse If else statement
 	if (${1:condition}) {
-		${2:// If Content}
+		${2}
 	} else {
-		${3:// Else Content}
+		${3}
 	}
-
-# Perform different actions based on different conditions
-snippet	switch
-	switch(${1:statement}) {
+snippet	switch Perform different actions based on different conditions
+	switch(${1}) {
 		case valueOne:
 		  // Code block
 			break;
@@ -107,45 +50,68 @@ snippet	switch
 		  // Code block
 			break;
 		default:
-			${4:codeBlock}
+			${0}
 	}
+
+# }}}
+
+# ITERABLE {{{
+
+snippet for Iterating over iterable objects by index
+	for (let i = 0; i < ${1:array}.length; i++) {
+		${2:// Content}
+	}
+snippet	forr Iterating over iterable objects by index (Reverse)
+	for (let i =	${1:array}.length - 1; i >= 0; i--) {
+		${2:// Content}
+	}
+snippet forin Iterating over property values of iterable objects
+	for (const item in ${1}) {
+		${2:// Content}
+	}
+snippet forof Iterating over property names of iterable objects
+	for (const item of ${1}) {
+		${2:// Content}
+	}
+
+# }}}
+
+# GET DOM ELEMENT {{{
+
+snippet getAll Find HTML element by CSS selectors
+	document.querySelectorAll('${1:selector}');
+snippet	getId Find HTML element by id
+	document.getElementById('${1:id}');
+snippet	getClass Find HTML element by class name
+	document.getElementsByClassName('${1:className}');
+snippet	getTag Find HTML element by tag name
+	document.getElementByTagName('${1:tagName}');
 
 # }}}
 
 # CONSOLE LOG {{{
 
-# Console Log
-snippet	log
-	console.log(${1:logContent});
-
-# Log Error
-snippet	loge
-	console.error(${1:logContent});
-
-# Displays tabular data as a table
-snippet	logt
-	console.table(${1:logContent});
-
-# Log with color
-snippet	logc
-	console.log('%c ${1:logContent} ', 'color: #ff9400');
-
-# Log with background
-snippet	logbg
-	console.log('%c ${1:logContent} ', 'background: #222; color: #bada55');
+snippet	log Log to console
+	console.log(${0});
+snippet	loge Log error to console
+	console.error(${0});
+snippet	logt Log tabular data as a table
+	console.table(${0});
+snippet	logc Log with color
+	console.log('%c ${0} ', 'color: #ff9400');
+snippet	logbg Log with background
+	console.log('%c ${0} ', 'background: #222; color: #bada55');
 
 # }}}
 
 # INTERVAL & TIMEOUT {{{
 
-# Executes the given function after the specified delay miliseconds
-snippet	timeout
+snippet	timeout Executes the given function after the specified delay miliseconds
 	setTimeout(() => {
 		${2:// Content}
 	}, ${1:miliseconds})
 
-# Executes the given function after at specified intervals 
-snippet	interval
+snippet	interval Executes the given function after at specified intervals 
 	setInterval(() => {
 		${2:// Content}
 	}, ${1:miliseconds})

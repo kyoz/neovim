@@ -31,19 +31,6 @@
   "coc.source.dictionary.priority": 1,
   "coc.source.buffer.priority": 1,
 
-  // snippets
-  "snippets.extends": {
-    "cpp": [
-      "c"
-    ],
-    "javascriptreact": [
-      "javascript"
-    ],
-    "typescript": [
-      "javascript"
-    ]
-  },
-
   // html
   "html.suggest.ionic": true,
 

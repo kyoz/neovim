@@ -9,9 +9,7 @@
 
 # FORM CONTROLS {{{
 
-snippet    matAutocomplete
-abbr       NG Material Autocomplete
-options    head
+snippet matAutocomplete Material autocomplete
   <mat-form-field>
     <input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
@@ -20,44 +18,26 @@ options    head
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-
-snippet    matCheckbox
-abbr       NG Material Checkbox
-options    head
+snippet matCheckbox Material checkbox
   <mat-checkbox>Check me!</mat-checkbox>
-
-snippet    matDatepicker
-abbr       NG Material Datepicker
-options    head
+snippet matDatepicker Material datepicker
   <mat-form-field>
     <input matInput [matDatepicker]="picker" placeholder="Choose a date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-
-snippet    matFormfield
-abbr       NG Material Formfield
-options    head
+snippet matFormfield Material formfield
   <mat-form-field>${1}</mat-form-field>
-
-snippet    matInput
-abbr       NG Material Input
-options    head
+snippet matInput Material input
   <mat-form-field>
     <input matInput placeholder="Input">
   </mat-form-field>
-
-snippet    matRadioButton
-abbr       NG Material Radio Button
-options    head
+snippet matRadioButton Material radio button
   <mat-radio-group>
     <mat-radio-button value="1">Option 1</mat-radio-button>
     <mat-radio-button value="2">Option 2</mat-radio-button>
   </mat-radio-group>
-
-snippet    matSelect
-abbr       NG Material Select
-options    head
+snippet matSelect Material select
   <mat-form-field>
     <mat-select placeholder="Favorite food">
       <mat-option *ngFor="let food of foods" [value]="food.value">
@@ -65,33 +45,22 @@ options    head
       </mat-option>
     </mat-select>
   </mat-form-field>
-
-snippet    matSlider
-abbr       NG Material Slider
-options    head
+snippet matSlider Material slider
   <mat-slider></mat-slider>
-
-snippet    matSlideToggle
-abbr       NG Material Slide Toggle
-options    head
+snippet matSlideToggle Material slide toggle
   <mat-slide-toggle>Slide me!</mat-slide-toggle>
 
 # }}}
 
 # NAVIGATION {{{
 
-snippet    matMenu
-abbr       NG Material Menu
-options    head
+snippet matMenu Material menu
   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
   </mat-menu>
-
-snippet    matSidenav
-abbr       NG Material Sidenav
-options    head
+snippet matSidenav Material sidenav
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <p>Auto-resizing sidenav</p>
@@ -103,29 +72,18 @@ options    head
       </button>
     </div>
   </mat-drawer-container>
-
-snippet    matToolbar
-abbr       NG Material Toolbar
-options    head
+snippet matToolbar Material toolbar
   <mat-toolbar>My App</mat-toolbar>
 
 # }}}
 
 # LAYOUT {{{
 
-snippet    matCard
-abbr       NG Material Card
-options    head
+snippet matCard Material card
   <mat-card>Simple card</mat-card>
-
-snippet    matDivider
-abbr       NG Material Divider
-options    head
+snippet matDivider Material divider
   <mat-divider></mat-divider>
-
-snippet    matExpansionPanel
-abbr       NG Material Expansion Panel
-options    head
+snippet matExpansionPanel Material expansion panel
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -138,29 +96,20 @@ options    head
       </mat-form-field>
     </mat-expansion-panel>
   </mat-accordion>
-
-snippet    matGridList
-abbr       NG Material Grid List
-options    head
+snippet matGridList Material grid list
   <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile>1</mat-grid-tile>
     <mat-grid-tile>2</mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>
   </mat-grid-list>
-
-snippet    matListItem
-abbr       NG Material List Item
-options    head
+snippet matListItem Material list item
   <mat-list role="list">
     <mat-list-item>Item 1</mat-list-item>
     <mat-list-item>Item 2</mat-list-item>
     <mat-list-item>Item 3</mat-list-item>
   </mat-list>
-
-snippet    matStepper
-abbr       NG Material Stepper
-options    head
+snippet matStepper Material stepper
   <mat-horizontal-stepper #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
@@ -194,19 +143,13 @@ options    head
       </div>
     </mat-step>
   </mat-horizontal-stepper>
-
-snippet    matTabs
-abbr       NG Material Tabs
-options    head
+snippet matTabs Material tabs
   <mat-tab-group>
     <mat-tab label="First"> Content 1 </mat-tab>
     <mat-tab label="Second"> Content 2 </mat-tab>
     <mat-tab label="Third"> Content 3 </mat-tab>
   </mat-tab-group>
-
-snippet    matTree
-abbr       NG Material Tree
-options    head
+snippet matTree Material tree
   <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
       <button mat-icon-button disabled></button>
@@ -228,100 +171,58 @@ options    head
 
 # BUTTONS & INDICATORS {{{
 
-snippet    matButton
-abbr       NG Material Button
-options    head
+snippet matButton Material button
   <button mat-button>${1:text}</button>
-
-snippet    matRaisedButton
-abbr       NG Material Raised Button
-options    head
+snippet matRaisedButton Material raised button
   <button mat-raised-button>${1:text}</button>
-
-snippet    matStrokedButton
-abbr       NG Material Stroked Button
-options    head
+snippet matStrokedButton Material stroked button
   <button mat-stroked-button>${1:text}</button>
-
-snippet    matFlatButton
-abbr       NG Material Flat Button
-options    head
+snippet matFlatButton Material flat button
   <button mat-flat-button>${1:text}</button>
-
-snippet    matIconButton
-abbr       NG Material Icon Button
-options    head
+snippet matIconButton Material icon button
   <button mat-icon-button>
     <mat-icon>${1:icon}</mat-icon>
   </button>
-
-snippet    matFabButton
-abbr       NG Material Fab Button
-options    head
+snippet matFabButton Material fab button
   <button mat-fab>${1:text}</button>
-
-snippet    matFabIconButton
-abbr       NG Material Fab Icon Button
-options    head
+snippet matFabIconButton Material fab icon button
   <button mat-fab>
     <mat-icon>${1:icon}</mat-icon>
   </button>
-
-snippet    matButtonToggle
-abbr       NG Material Button Toggle
-options    head
+snippet matButtonToggle Material button toggle
   <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
     <mat-button-toggle value="bold">Bold</mat-button-toggle>
     <mat-button-toggle value="italic">Italic</mat-button-toggle>
     <mat-button-toggle value="underline">Underline</mat-button-toggle>
   </mat-button-toggle-group>
-
-snippet    matBadge
-abbr       NG Material Badge
-options    word
+snippet matBadge Material badge
   matBadge="${1:content}" matBadgePosition="${2:position}" matBadgeColor="${3:color}"
-
-snippet    matChip
-abbr       NG Material Chip
-options    head
+snippet matChip Material chip
   <mat-chip-list>
     <mat-chip>One fish</mat-chip>
     <mat-chip>Two fish</mat-chip>
     <mat-chip color="primary" selected>Primary fish</mat-chip>
     <mat-chip color="accent" selected>Accent fish</mat-chip>
   </mat-chip-list>
-
-snippet    matIcon
-abbr       NG Material Icon
-options    head
+snippet matIcon Material icon
   <mat-icon>${1:icon}</mat-icon>
-
-snippet    matProgressSpinner
-abbr       NG Material Progress Spinner
-options    head
+snippet matProgressSpinner Material progress spinner
   <mat-spinner mode="${1:determinate | indeterminate}" diameter="${2:number}" strokeWidth="${3:number}" color="${4:color}"></mat-spinner>
-
-snippet    matProgressBar
-abbr       NG Material Progress Bar
-options    head
+snippet matProgressBar Material progress bar
   <mat-progress-bar mode="${1:determinate | indeterminate | buffer | query}" color="${2:color}"></mat-progress-bar>
 
 # }}}
 
 # POPUPS & MODEL {{{
 
-snippet    matTooltip
-abbr       NG Material Tooltip
-options    word
+snippet matTooltip Material tooltip
   matTooltip="${1:info}" matTooltipPosition="${2:after | before | above | below | left | right}"
 
 # }}}
 
 # DATATABLE {{{
 
-snippet    matTable
-abbr       NG Material Table
-options    word
+snippet matTable Material table
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- Column 1 -->

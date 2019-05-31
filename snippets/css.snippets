@@ -1,0 +1,96 @@
+#  _   __
+# | | / /
+# | |/ / _   _  ___ ____
+# |    \| | | |/ _ \_  /  Author: Kyoz
+# | |\  \ |_| | (_) / /   Github: github.com/banminkyoz
+# \_| \_/\__, |\___/___|  Email : banminkyoz@gmail.com
+#         __/ |
+#        |___/
+
+# POSITION {{{
+
+snippet rel Relative position
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;${0}
+
+snippet abs Absolute position
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;${0}
+
+# }}}
+
+# MARGIN & PADDING {{{
+
+snippet pad Padding for all directions
+	padding-top: ${1:NUM}px;
+	padding-bottom: ${2:NUM}px;
+	padding-left: ${3:NUM}px;
+	padding-right: ${4:NUM}px;
+
+snippet mar Margin for all directions
+
+	margin-top: ${1:NUM}px;
+	margin-bottom: ${2:NUM}px;
+	margin-left: ${3:NUM}px;
+	margin-right: ${4:NUM}px;
+
+# }}}
+
+# ANIMATION {{{
+
+snippet anim Animation
+	animation: ${1:name} 3s linear;
+snippet frame Animation keyframes
+	@keyframes ${1:name} {
+		from { ${2} }
+		to { ${3} }
+	}
+snippet frames Animation with many keyframes
+	@keyframes ${1:name} {
+		0% { ${2} }
+		50%  { ${3} }
+		100%  { ${4} }
+	}
+
+# }}}
+
+# RESPONSIVE {{{
+
+snippet media:min-width If screen size is larger than..., then do...
+	@media only screen and (min-width: ${1:SIZE}px) {
+		${2}
+	}
+snippet media:max-width If screen size is smaller than... , then do...
+	@media only screen and (min-width: ${1:SIZE}px) {
+		${2}
+	}
+
+# }}}
+
+# FLEXBOX {{{
+
+snippet flex Flex layout
+	display: flex;
+	flex-direction: ${1:row | column | row-reverse | column-reverse};
+	flex-wrap: ${2:nowrap | wrap | wrap-reverse};
+	justify-content: ${3:flex-start | flex-end | center | space-between | space-around | space-evenly};
+	align-items: ${4:flex-start | flex-end | center | stretch | baseline};
+	align-content: ${4:flex-start | flex-end | center | stretch | space-between | space-around};
+
+# }}}
+
+# UTILS {{{
+
+snippet truncate Truncate string with ellipsis
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;${0}
+
+# }}}
+

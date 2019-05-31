@@ -7,17 +7,13 @@
 #         __/ |
 #        |___/
 
-snippet    ngClass
-abbr       Angular Class
-options    head
+snippet ngClass Angular Class
 	export class ${1:className} {
 
 		${2:classContent}
 	}
 
-snippet    ngService
-abbr       Angular Service
-options    head
+snippet ngService Angular Service
 	import { Injectable } from '@angular/core';
 
 	@Injectable()
@@ -25,10 +21,7 @@ options    head
 
   		constructor() { }
 	}
-
-snippet    ngPipe
-abbr       Angular Pipe
-options    head
+snippet ngPipe Angular Pipe
 	import { Pipe, PipeTransform } from '@angular/core';
 
 	@Pipe({
@@ -40,10 +33,7 @@ options    head
    			return null;
  		}
 	}
-
-snippet    ngGuard
-abbr       Angular Guard
-options    head
+snippet ngGuard Angular Guard
 	import { Injectable } from '@angular/core';
 	import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 	import { Observable } from 'rxjs/Observable';
@@ -56,22 +46,14 @@ options    head
     			return true;
   		}
 	}
-
-snippet    ngInterface
-abbr       Angular Interface
-options    head
+snippet ngInterface Angular Interface
 	export interface ${1:interfaceName} {
 	}
-
-snippet    ngEnum
-abbr       Angular Enum
+snippet ngEnum Angular Enum
 options    head
 	export enum ${1:enumEnum} {
 	}
-
-snippet    ngDirective
-abbr       Angular Directive
-options    head
+snippet ngDirective Angular Directive
 	import { Directive } from '@angular/core';
 
 	@Directive({
@@ -81,10 +63,7 @@ options    head
 
   	constructor() { }
 	}
-
-snippet    ngComponent
-abbr       Angular Component
-options    head
+snippet ngComponent Angular Component
 	import { Component } from '@angular/core';
 
 	@Component({
@@ -92,9 +71,7 @@ options    head
 		templateUrl: '${2:templateUrl}',
 		styleUrls: ['${3:styleUrl}']
 	})
-
-snippet    ngModule
-abbr       Angular Module
+snippet ngModule Angular Module
 options    head
 	import { NgModule } from '@angular/core';
 	import { CommonModule } from '@angular/common';
@@ -106,10 +83,7 @@ options    head
 		declarations: []
 	})
 	export class ${1:className} {  }
-
-snippet    ngRouterModule
-abbr       Angular Router Module
-options    head
+snippet ngRouterModule Angular Router Module
 	import { NgModule } from '@angular/core';
 	import { RouterModule, Routes } from '@angular/router';
 
@@ -136,11 +110,7 @@ options    head
 		]
 	})
 	export class ${1:routerName} { }
-
-snippet    ngRouter
-abbr       Angular Seperate Router
-options    head
-
+snippet ngRouter Angular Seperate Router
   import { NgModule } from '@angular/core';
   import { RouterModule, Routes } from '@angular/router';
 

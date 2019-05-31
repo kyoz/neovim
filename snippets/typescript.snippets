@@ -7,27 +7,19 @@
 #         __/ |
 #        |___/
 
-include javascript.snip
-include angular/typescript.snip
+extends javascript
+extends angular/typescript
 
-snippet		 c
-abbr			 Class
-options		 head
+snippet	c "Class"
 	class ${1:name} {
-		${2:// Content}
+		${0}
 	}
-
-snippet		 con
-abbr			 Constructor
-options		 head
+snippet	con "Constructor"
 	constructor() {
-		${1:// Content}
+		${0}
 	}
-
-snippet		 ec
-abbr			 Export Class
-options		 head
+snippet	ec "Export class"
 	export class ${1:name} {
-		${2:// Content}
+		${0}
 	}
 
