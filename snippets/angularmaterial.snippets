@@ -1,0 +1,245 @@
+#	_	 __
+# | | / /
+# | |/ / _	 _	___ ____
+# |		\| | | |/ _ \_	/	Author: Kyoz
+# | |\	\ |_| | (_) / /	 Github: github.com/banminkyoz
+# \_| \_/\__, |\___/___|	Email : banminkyoz@gmail.com
+#				 __/ |
+#				|___/
+
+# FORM CONTROLS {{{
+
+snippet matAutocomplete Material autocomplete
+	<mat-form-field>
+		<input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+		<mat-autocomplete #auto="matAutocomplete">
+			<mat-option *ngFor="let option of options" [value]="option">
+				{{option}}
+			</mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+snippet matCheckbox Material checkbox
+	<mat-checkbox>Check me!</mat-checkbox>
+snippet matDatepicker Material datepicker
+	<mat-form-field>
+		<input matInput [matDatepicker]="picker" placeholder="Choose a date">
+		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+		<mat-datepicker #picker></mat-datepicker>
+	</mat-form-field>
+snippet matFormfield Material formfield
+	<mat-form-field>${1}</mat-form-field>
+snippet matInput Material input
+	<mat-form-field>
+		<input matInput placeholder="Input">
+	</mat-form-field>
+snippet matRadioButton Material radio button
+	<mat-radio-group>
+		<mat-radio-button value="1">Option 1</mat-radio-button>
+		<mat-radio-button value="2">Option 2</mat-radio-button>
+	</mat-radio-group>
+snippet matSelect Material select
+	<mat-form-field>
+		<mat-select placeholder="Favorite food">
+			<mat-option *ngFor="let food of foods" [value]="food.value">
+				{{food.viewValue}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+snippet matSlider Material slider
+	<mat-slider></mat-slider>
+snippet matSlideToggle Material slide toggle
+	<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+# }}}
+
+# NAVIGATION {{{
+
+snippet matMenu Material menu
+	<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item>Item 1</button>
+		<button mat-menu-item>Item 2</button>
+	</mat-menu>
+snippet matSidenav Material sidenav
+	<mat-drawer-container class="example-container" autosize>
+		<mat-drawer #drawer class="example-sidenav" mode="side">
+			<p>Auto-resizing sidenav</p>
+		</mat-drawer>
+
+		<div class="example-sidenav-content">
+			<button type="button" mat-button (click)="drawer.toggle()">
+				Toggle sidenav
+			</button>
+		</div>
+	</mat-drawer-container>
+snippet matToolbar Material toolbar
+	<mat-toolbar>My App</mat-toolbar>
+
+# }}}
+
+# LAYOUT {{{
+
+snippet matCard Material card
+	<mat-card>Simple card</mat-card>
+snippet matDivider Material divider
+	<mat-divider></mat-divider>
+snippet matExpansionPanel Material expansion panel
+	<mat-accordion>
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>Personal data</mat-panel-title>
+				<mat-panel-description>Type your name and age</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<mat-form-field>
+				<input matInput placeholder="First name">
+			</mat-form-field>
+		</mat-expansion-panel>
+	</mat-accordion>
+snippet matGridList Material grid list
+	<mat-grid-list cols="2" rowHeight="2:1">
+		<mat-grid-tile>1</mat-grid-tile>
+		<mat-grid-tile>2</mat-grid-tile>
+		<mat-grid-tile>3</mat-grid-tile>
+		<mat-grid-tile>4</mat-grid-tile>
+	</mat-grid-list>
+snippet matListItem Material list item
+	<mat-list role="list">
+		<mat-list-item>Item 1</mat-list-item>
+		<mat-list-item>Item 2</mat-list-item>
+		<mat-list-item>Item 3</mat-list-item>
+	</mat-list>
+snippet matStepper Material stepper
+	<mat-horizontal-stepper #stepper>
+		<mat-step [stepControl]="firstFormGroup">
+			<form [formGroup]="firstFormGroup">
+				<ng-template matStepLabel>Fill out your name</ng-template>
+				<mat-form-field>
+					<input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+				</mat-form-field>
+				<div>
+					<button mat-button matStepperNext>Next</button>
+				</div>
+			</form>
+		</mat-step>
+		<mat-step [stepControl]="secondFormGroup">
+			<form [formGroup]="secondFormGroup">
+				<ng-template matStepLabel>Fill out your address</ng-template>
+				<mat-form-field>
+					<input matInput placeholder="Address" formControlName="secondCtrl" required>
+				</mat-form-field>
+				<div>
+					<button mat-button matStepperPrevious>Back</button>
+					<button mat-button matStepperNext>Next</button>
+				</div>
+			</form>
+		</mat-step>
+		<mat-step>
+			<ng-template matStepLabel>Done</ng-template>
+			You are now done.
+			<div>
+				<button mat-button matStepperPrevious>Back</button>
+				<button mat-button (click)="stepper.reset()">Reset</button>
+			</div>
+		</mat-step>
+	</mat-horizontal-stepper>
+snippet matTabs Material tabs
+	<mat-tab-group>
+		<mat-tab label="First"> Content 1 </mat-tab>
+		<mat-tab label="Second"> Content 2 </mat-tab>
+		<mat-tab label="Third"> Content 3 </mat-tab>
+	</mat-tab-group>
+snippet matTree Material tree
+	<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+		<mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+			<button mat-icon-button disabled></button>
+			{{node.filename}} : {{node.type}}
+		</mat-tree-node>
+
+		<mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+			<button mat-icon-button matTreeNodeToggle
+							[attr.aria-label]="'toggle ' + node.filename">
+				<mat-icon class="mat-icon-rtl-mirror">
+					{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+				</mat-icon>
+			</button>
+			{{node.filename}} : {{node.type}}
+		</mat-tree-node>
+	</mat-tree>
+
+# }}}
+
+# BUTTONS & INDICATORS {{{
+
+snippet matButton Material button
+	<button mat-button>${1:text}</button>
+snippet matRaisedButton Material raised button
+	<button mat-raised-button>${1:text}</button>
+snippet matStrokedButton Material stroked button
+	<button mat-stroked-button>${1:text}</button>
+snippet matFlatButton Material flat button
+	<button mat-flat-button>${1:text}</button>
+snippet matIconButton Material icon button
+	<button mat-icon-button>
+		<mat-icon>${1:icon}</mat-icon>
+	</button>
+snippet matFabButton Material fab button
+	<button mat-fab>${1:text}</button>
+snippet matFabIconButton Material fab icon button
+	<button mat-fab>
+		<mat-icon>${1:icon}</mat-icon>
+	</button>
+snippet matButtonToggle Material button toggle
+	<mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+		<mat-button-toggle value="bold">Bold</mat-button-toggle>
+		<mat-button-toggle value="italic">Italic</mat-button-toggle>
+		<mat-button-toggle value="underline">Underline</mat-button-toggle>
+	</mat-button-toggle-group>
+snippet matBadge Material badge
+	matBadge="${1:content}" matBadgePosition="${2:position}" matBadgeColor="${3:color}"
+snippet matChip Material chip
+	<mat-chip-list>
+		<mat-chip>One fish</mat-chip>
+		<mat-chip>Two fish</mat-chip>
+		<mat-chip color="primary" selected>Primary fish</mat-chip>
+		<mat-chip color="accent" selected>Accent fish</mat-chip>
+	</mat-chip-list>
+snippet matIcon Material icon
+	<mat-icon>${1:icon}</mat-icon>
+snippet matProgressSpinner Material progress spinner
+	<mat-spinner mode="${1:determinate | indeterminate}" diameter="${2:number}" strokeWidth="${3:number}" color="${4:color}"></mat-spinner>
+snippet matProgressBar Material progress bar
+	<mat-progress-bar mode="${1:determinate | indeterminate | buffer | query}" color="${2:color}"></mat-progress-bar>
+
+# }}}
+
+# POPUPS & MODEL {{{
+
+snippet matTooltip Material tooltip
+	matTooltip="${1:info}" matTooltipPosition="${2:after | before | above | below | left | right}"
+
+# }}}
+
+# DATATABLE {{{
+
+snippet matTable Material table
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+		<!-- Column 1 -->
+		<ng-container matColumnDef="position">
+			<th mat-header-cell *matHeaderCellDef> Col.1 </th>
+			<td mat-cell *matCellDef="let element"> {{element.position}} </td>
+		</ng-container>
+
+		<!-- Column 2 -->
+		<ng-container matColumnDef="position">
+			<th mat-header-cell *matHeaderCellDef> Col.2 </th>
+			<td mat-cell *matCellDef="let element"> {{element.position}} </td>
+		</ng-container>
+
+		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+	</table>
+
+# }}}

@@ -31,6 +31,15 @@
   "coc.source.dictionary.priority": 1,
   "coc.source.buffer.priority": 1,
 
+  // snippets
+  "snippets.extends": {
+    "scss": ["css"],
+    "sass": ["css"],
+    "less": ["css"],
+    "typescript": ["javascript", "angulartypescript"],
+    "html": ["angularhtml", "angularmaterial", "angularflexlayout"]
+  },
+
   // html
   "html.suggest.ionic": true,
 

@@ -1,0 +1,33 @@
+#  _   __
+# | | / /
+# | |/ / _   _  ___ ____
+# |    \| | | |/ _ \_  /  Author: Kyoz
+# | |\  \ |_| | (_) / /   Github: github.com/banminkyoz
+# \_| \_/\__, |\___/___|  Email : banminkyoz@gmail.com
+#         __/ |
+#        |___/
+
+snippet ngIf Angular *ngIf
+	*ngIf="${1:expression}"
+snippet ngFor Angular *ngFor
+	*ngFor="let ${1:item} of ${2:list}"
+snippet ngSwitch Angular [ngSwitch]
+	<div [ngSwitch]="${1:expression}">
+		<div *ngSwitchCase="expression_1">Case 1</div>
+		<div *ngSwitchCase="expression_2">Case 2</div>
+		<div *ngSwitchDefault>Default</div>
+	</div>
+snippet ngClass Angular [ngClass]
+	[ngClass]="{ '${1:class}': ${2:expression} }"
+snippet ngClasses Angular [ngClass] with multiple classes
+	[ngClass]="{ '${1:class}': ${2:expression}, '${3:class}': ${4:expression}}"
+snippet ngStyle Angular [ngStyle]
+  [ngStyle]="{ '${1:style}': ${2:expression} }"
+snippet ngModel Angular [ngModel]
+	[(ngModel)]="${1:binding}"
+snippet ngRouterLink Angular routerLink
+	routerLink="/${1:routeName}"
+snippet ngRouterLinkWithParams Angular routerLink with query params
+	[routerLink]="['/${1:routeName}']" [queryParams]="{ ${2:key}: ${3:value} }"
+snippet ngRouterLinkActive Angular routerLinkActive
+	[routerLinkActive]="'is-active'"
