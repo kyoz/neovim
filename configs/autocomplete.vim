@@ -146,6 +146,12 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+" imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+inoremap <silent><expr> <C-j>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 " }}}
