@@ -73,7 +73,8 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-snippets',
         \ 'coc-calc',
         \ 'coc-emmet',
-        \ 'coc-prettier'
+        \ 'coc-prettier',
+        \ 'coc-yank'
         \ ]
 
     let s:extensions = s:languages + s:frameworks + s:linters + s:utils
