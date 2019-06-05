@@ -209,3 +209,10 @@ let g:prettier#config#bracket_spacing = 'false'
 
 " }}}
 
+" VIM-MATCHUP {{{
+
+let g:matchup_matchpref = {}
+let g:matchup_matchpref.vue = {'tagnameonly': 1}
+let g:matchup_matchpref.html = {'tagnameonly': 1}
+
+" }}}
