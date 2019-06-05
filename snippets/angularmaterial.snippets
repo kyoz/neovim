@@ -9,7 +9,7 @@
 
 # FORM CONTROLS {{{
 
-snippet matAutocomplete Material autocomplete
+snippet matAutocomplete Material Autocomplete
 	<mat-form-field>
 		<input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
 		<mat-autocomplete #auto="matAutocomplete">
@@ -18,26 +18,26 @@ snippet matAutocomplete Material autocomplete
 			</mat-option>
 		</mat-autocomplete>
 	</mat-form-field>
-snippet matCheckbox Material checkbox
+snippet matCheckbox Material Checkbox
 	<mat-checkbox>Check me!</mat-checkbox>
-snippet matDatepicker Material datepicker
+snippet matDatepicker Material Datepicker
 	<mat-form-field>
 		<input matInput [matDatepicker]="picker" placeholder="Choose a date">
 		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 		<mat-datepicker #picker></mat-datepicker>
 	</mat-form-field>
-snippet matFormfield Material formfield
+snippet matFormfield Material Formfield
 	<mat-form-field>${1}</mat-form-field>
-snippet matInput Material input
+snippet matInput Material Input
 	<mat-form-field>
 		<input matInput placeholder="Input">
 	</mat-form-field>
-snippet matRadioButton Material radio button
+snippet matRadioButton Material Radio Button
 	<mat-radio-group>
 		<mat-radio-button value="1">Option 1</mat-radio-button>
 		<mat-radio-button value="2">Option 2</mat-radio-button>
 	</mat-radio-group>
-snippet matSelect Material select
+snippet matSelect Material Select
 	<mat-form-field>
 		<mat-select placeholder="Favorite food">
 			<mat-option *ngFor="let food of foods" [value]="food.value">
@@ -45,22 +45,22 @@ snippet matSelect Material select
 			</mat-option>
 		</mat-select>
 	</mat-form-field>
-snippet matSlider Material slider
+snippet matSlider Material Slider
 	<mat-slider></mat-slider>
-snippet matSlideToggle Material slide toggle
+snippet matSlideToggle Material Slide Toggle
 	<mat-slide-toggle>Slide me!</mat-slide-toggle>
 
 # }}}
 
 # NAVIGATION {{{
 
-snippet matMenu Material menu
+snippet matMenu Material Menu
 	<button mat-button [matMenuTriggerFor]="menu">Menu</button>
 	<mat-menu #menu="matMenu">
 		<button mat-menu-item>Item 1</button>
 		<button mat-menu-item>Item 2</button>
 	</mat-menu>
-snippet matSidenav Material sidenav
+snippet matSidenav Material Sidenav
 	<mat-drawer-container class="example-container" autosize>
 		<mat-drawer #drawer class="example-sidenav" mode="side">
 			<p>Auto-resizing sidenav</p>
@@ -72,18 +72,18 @@ snippet matSidenav Material sidenav
 			</button>
 		</div>
 	</mat-drawer-container>
-snippet matToolbar Material toolbar
+snippet matToolbar Material Toolbar
 	<mat-toolbar>My App</mat-toolbar>
 
 # }}}
 
 # LAYOUT {{{
 
-snippet matCard Material card
+snippet matCard Material Card
 	<mat-card>Simple card</mat-card>
-snippet matDivider Material divider
+snippet matDivider Material Divider
 	<mat-divider></mat-divider>
-snippet matExpansionPanel Material expansion panel
+snippet matExpansionPanel Material Expansion Panel
 	<mat-accordion>
 		<mat-expansion-panel>
 			<mat-expansion-panel-header>
@@ -96,20 +96,20 @@ snippet matExpansionPanel Material expansion panel
 			</mat-form-field>
 		</mat-expansion-panel>
 	</mat-accordion>
-snippet matGridList Material grid list
+snippet matGridList Material Grid List
 	<mat-grid-list cols="2" rowHeight="2:1">
 		<mat-grid-tile>1</mat-grid-tile>
 		<mat-grid-tile>2</mat-grid-tile>
 		<mat-grid-tile>3</mat-grid-tile>
 		<mat-grid-tile>4</mat-grid-tile>
 	</mat-grid-list>
-snippet matListItem Material list item
+snippet matListItem Material List Item
 	<mat-list role="list">
 		<mat-list-item>Item 1</mat-list-item>
 		<mat-list-item>Item 2</mat-list-item>
 		<mat-list-item>Item 3</mat-list-item>
 	</mat-list>
-snippet matStepper Material stepper
+snippet matStepper Material Stepper
 	<mat-horizontal-stepper #stepper>
 		<mat-step [stepControl]="firstFormGroup">
 			<form [formGroup]="firstFormGroup">
@@ -143,13 +143,13 @@ snippet matStepper Material stepper
 			</div>
 		</mat-step>
 	</mat-horizontal-stepper>
-snippet matTabs Material tabs
+snippet matTabs Material Tabs
 	<mat-tab-group>
 		<mat-tab label="First"> Content 1 </mat-tab>
 		<mat-tab label="Second"> Content 2 </mat-tab>
 		<mat-tab label="Third"> Content 3 </mat-tab>
 	</mat-tab-group>
-snippet matTree Material tree
+snippet matTree Material Tree
 	<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
 		<mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
 			<button mat-icon-button disabled></button>
@@ -171,58 +171,58 @@ snippet matTree Material tree
 
 # BUTTONS & INDICATORS {{{
 
-snippet matButton Material button
+snippet matButton Material Button
 	<button mat-button>${1:text}</button>
-snippet matRaisedButton Material raised button
+snippet matRaisedButton Material Raised Button
 	<button mat-raised-button>${1:text}</button>
-snippet matStrokedButton Material stroked button
+snippet matStrokedButton Material Stroked Button
 	<button mat-stroked-button>${1:text}</button>
-snippet matFlatButton Material flat button
+snippet matFlatButton Material Flat Button
 	<button mat-flat-button>${1:text}</button>
-snippet matIconButton Material icon button
+snippet matIconButton Material Icon Button
 	<button mat-icon-button>
 		<mat-icon>${1:icon}</mat-icon>
 	</button>
-snippet matFabButton Material fab button
+snippet matFabButton Material Fab Button
 	<button mat-fab>${1:text}</button>
-snippet matFabIconButton Material fab icon button
+snippet matFabIconButton Material Fab Icon Button
 	<button mat-fab>
 		<mat-icon>${1:icon}</mat-icon>
 	</button>
-snippet matButtonToggle Material button toggle
+snippet matButtonToggle Material Button Toggle
 	<mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
 		<mat-button-toggle value="bold">Bold</mat-button-toggle>
 		<mat-button-toggle value="italic">Italic</mat-button-toggle>
 		<mat-button-toggle value="underline">Underline</mat-button-toggle>
 	</mat-button-toggle-group>
-snippet matBadge Material badge
+snippet matBadge Material Badge
 	matBadge="${1:content}" matBadgePosition="${2:position}" matBadgeColor="${3:color}"
-snippet matChip Material chip
+snippet matChip Material Chip
 	<mat-chip-list>
 		<mat-chip>One fish</mat-chip>
 		<mat-chip>Two fish</mat-chip>
 		<mat-chip color="primary" selected>Primary fish</mat-chip>
 		<mat-chip color="accent" selected>Accent fish</mat-chip>
 	</mat-chip-list>
-snippet matIcon Material icon
+snippet matIcon Material Icon
 	<mat-icon>${1:icon}</mat-icon>
-snippet matProgressSpinner Material progress spinner
+snippet matProgressSpinner Material Progress Spinner
 	<mat-spinner mode="${1:determinate | indeterminate}" diameter="${2:number}" strokeWidth="${3:number}" color="${4:color}"></mat-spinner>
-snippet matProgressBar Material progress bar
+snippet matProgressBar Material Progress Bar
 	<mat-progress-bar mode="${1:determinate | indeterminate | buffer | query}" color="${2:color}"></mat-progress-bar>
 
 # }}}
 
 # POPUPS & MODEL {{{
 
-snippet matTooltip Material tooltip
+snippet matTooltip Material Tooltip
 	matTooltip="${1:info}" matTooltipPosition="${2:after | before | above | below | left | right}"
 
 # }}}
 
 # DATATABLE {{{
 
-snippet matTable Material table
+snippet matTable Material Table
 	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 		<!-- Column 1 -->
