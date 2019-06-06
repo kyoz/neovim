@@ -53,6 +53,7 @@ if match(&rtp, 'coc.nvim') >= 0
         \ ]
 
     let s:frameworks = [
+        \ 'coc-angular',
         \ 'coc-vimlsp',
         \ ]
 
