@@ -216,3 +216,9 @@ let g:matchup_matchpref.vue = {'tagnameonly': 1}
 let g:matchup_matchpref.html = {'tagnameonly': 1}
 
 " }}}
+
+" VIM-ILLUMINATE {{{
+
+hi link illuminatedWord Visual
+
+" }}}
