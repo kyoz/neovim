@@ -144,7 +144,7 @@ git clone git@github.com:kyoz/neovim.git ~/.config/nvim --depth 1
 
 ### Install Plugins
 
-Open nvim and use `:PlugInstall` or `:PlugI` to install all plugins (There will be some error showing when you first running this, just enter to pass them all, and install the plugins).
+Open nvim and use `:PlugInstall` or `:PlugI` to install all plugins (If there are errors showing when you first running this, just enter to pass them all).
 
 Quit and re-open nvim and now you have nvim with a lots of feature which can be your main IDE.
 
