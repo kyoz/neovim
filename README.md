@@ -188,7 +188,11 @@ If there's still error, please open and issue and let me know, i'm happy to help
 
 To provide autocomplete feature, i do use [coc.nvim](https://github.com/neoclide/coc.nvim). There's a lots of extensions (which support for more languages, frameworks, filetypes...)...you can see it all in [coc.nvim's Readme](https://github.com/neoclide/coc.nvim)
 
-There's also a version which using [ncm2](https://github.com/ncm2/ncm2) as autocomplete provider, you can [try it here](https://github.com/kyoz/neovim/tree/ncm2).
+**Why not use other autocomplete plugin like [deoplete](https://github.com/Shougo/deoplete.nvim), [ncm2](https://github.com/ncm2/ncm2) ?**
+
+Actually, i'v used deoplete and ncm2 for a long times. It's all work great. But then i know coc.nvim, i really like the way it manage the extensions. With coc's extensions, i can easily add more languages autocomplete, add more useful extenstions without any fear...
+
+There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can [try it here](https://github.com/kyoz/neovim/tree/ncm2).
 
 ### Plugins
 
