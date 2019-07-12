@@ -131,7 +131,9 @@ And make sure there's no ERROR showing when running `:checkhealth` in nvim.
 
 ### Download
 
-Download everything in this repo and put em in the `nvim` folder of yours (Usually it's in `~/.config/nvim`). Or clone it with git (make sure there no file's in `~/.config/nvim` or that folder does not exist for git to work):
+Download everything in this repo and put em in the `nvim` folder of yours (Usually it's in `~/.config/nvim`).
+
+Or clone it with git (make sure there no file's in `~/.config/nvim` or that folder does not exist for git to work):
 
 ```
 git clone git@github.com:kyoz/neovim.git ~/path_to_your_nvim_folder --depth 1
