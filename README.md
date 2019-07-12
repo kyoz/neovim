@@ -74,7 +74,7 @@ Then i'm back with vim, this time i pay a lots of time to learn, to customize my
 
 Those configurations is only for **Neovim**, although most plugins work with **Vim** too, but i'v built this only for **Neovim**.
 
-For **Vim**, i just have some minimal configurations in [my dotfiles](https://github.com/banminkyoz/dotfiles).
+For **Vim**, i just have some minimal configurations in [my dotfiles](https://github.com/kyoz/dotfiles).
 
 Those configurations work well on almost all OS i'v ever used (OSX, Linux, Window...).
 
@@ -134,10 +134,10 @@ And make sure there's no ERROR showing when running `:checkhealth` in nvim.
 Download everything in this repo and put em in the `.nvim` folder of yours. Or clone it with git:
 
 ```
-git clone git@github.com:banminkyoz/neovim.git ~/path_to_your_nvim_folder
+git clone git@github.com:kyoz/neovim.git ~/path_to_your_nvim_folder
 
 " Example
-git clone git@github.com:banminkyoz/neovim.git ~/.config/nvim
+git clone git@github.com:kyoz/neovim.git ~/.config/nvim
 ```
 
 ### Install Plugins
@@ -150,19 +150,19 @@ Quit and re-open nvim and now you have nvim with a lots of feature which can be 
 
 In order to make everything look cool as it have to (with vim-arline, nerd-tree icons...), we have to using patched fonts. You can [view some pathced fonts here](https://github.com/ryanoasis/nerd-fonts).
 
-There's a [/fonts](https://github.com/banminkyoz/neovim/tree/master/fonts/Iosevka) folder with patched Iosevka font, which i'm using now. You can use it too.
+There's a [/fonts](https://github.com/kyoz/neovim/tree/master/fonts/Iosevka) folder with patched Iosevka font, which i'm using now. You can use it too.
 
 I'v tried a lots of fonts, but this Iosevka font seem suitable for me, it's easy to read and doesn't make me lose focus when coding.
 
 ### Snippets
 
-I'v use [neosnippet](https://github.com/Shougo/neosnippet.vim) to provide snippets for Vim. You can view all the snippets i have in [snippets/](https://github.com/banminkyoz/neovim/tree/master/snippets) folder.
+I'v use [neosnippet](https://github.com/Shougo/neosnippet.vim) to provide snippets for Vim. You can view all the snippets i have in [snippets/](https://github.com/kyoz/neovim/tree/master/snippets) folder.
 
 Currently i just add some basic snippet with some languages i usually use: html, css, javascript, typescript....
 
-Because i use [Angular](http://angular.io), [Material Components](https://material.angular.io/) and [Flex layout](https://github.com/angular/flex-layout) a lots. I also create [snippets for em too](https://github.com/banminkyoz/neovim/tree/master/snippets/angular) :blush:. It's super useful.
+Because i use [Angular](http://angular.io), [Material Components](https://material.angular.io/) and [Flex layout](https://github.com/angular/flex-layout) a lots. I also create [snippets for em too](https://github.com/kyoz/neovim/tree/master/snippets/angular) :blush:. It's super useful.
 
-Just view some examples in my [snippets](https://github.com/banminkyoz/neovim/tree/master/snippets) and you'll know how to create your own snippets.
+Just view some examples in my [snippets](https://github.com/kyoz/neovim/tree/master/snippets) and you'll know how to create your own snippets.
 
 ### Others
 
@@ -261,8 +261,8 @@ If you read my configuration, you'll see that i use [ncm2](https://github.com/nc
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
 |[NLKNguyen/copy-cut-paste.vim](https://github.com/NLKNguyen/copy-cut-paste.vim) | Copy, Paste with Clipboard |
-|[banminkyoz/ezbuf.vim](https://github.com/banminkyoz/ezbuf.vim) | Fast and easy use buffers |
-|[banminkyoz/npm.vim](https://github.com/banminkyoz/npm.vim) | Work with npm more easier in Vim |
+|[kyoz/ezbuf.vim](https://github.com/kyoz/ezbuf.vim) | Fast and easy use buffers |
+|[kyoz/npm.vim](https://github.com/kyoz/npm.vim) | Work with npm more easier in Vim |
 |[iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown Live Preview |
 
 #### Autocomplete
@@ -367,7 +367,7 @@ So, in order to easily customize those configuration. You must understand the st
 
 #### General
 
-All general custom mappings is place in [configs/keys.vim](https://github.com/banminkyoz/neovim/blob/master/configs/keys.vim)
+All general custom mappings is place in [configs/keys.vim](https://github.com/kyoz/neovim/blob/master/configs/keys.vim)
 
 Leader key: <kbd>space</kbd>   
 Local leader key: <kbd>\\</kbd>
@@ -386,7 +386,7 @@ Local leader key: <kbd>\\</kbd>
 
 #### Plugins
 
-All plugins custom mappings is place in [configs/plugins.vim](https://github.com/banminkyoz/neovim/blob/master/configs/plugins.vim)
+All plugins custom mappings is place in [configs/plugins.vim](https://github.com/kyoz/neovim/blob/master/configs/plugins.vim)
 
 | Mapping                       | Mode |                                       |
 |:------------------------------|:-----|:--------------------------------------|
@@ -412,7 +412,7 @@ All plugins custom mappings is place in [configs/plugins.vim](https://github.com
 
 #### Autocomplete
 
-All autocomplete mappings is place in [configs/autocomplete.vim](https://github.com/banminkyoz/neovim/blob/master/configs/autocomplete.vim)
+All autocomplete mappings is place in [configs/autocomplete.vim](https://github.com/kyoz/neovim/blob/master/configs/autocomplete.vim)
 
 | Mapping                       | Mode |                                       |
 |:------------------------------|:-----|:--------------------------------------|
@@ -422,7 +422,7 @@ All autocomplete mappings is place in [configs/autocomplete.vim](https://github.
 
 #### Language Server Protocol
 
-All lsp mappings is place in [configs/lsp.vim](https://github.com/banminkyoz/neovim/blob/master/configs/lsp.vim)
+All lsp mappings is place in [configs/lsp.vim](https://github.com/kyoz/neovim/blob/master/configs/lsp.vim)
 
 | Mapping                       | Mode |                                       |
 |:------------------------------|:-----|:--------------------------------------|
