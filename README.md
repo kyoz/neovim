@@ -8,7 +8,7 @@
 
 View [asciinema version](https://asciinema.org/a/UvMbGX98KPuJBpnTu8gOQREch) (without nerd font it look not too good)
    
-Currently i'm using coc-nvim. But there's also a version using [ncm2](https://github.com/ncm2/ncm2), you can [try it here](https://github.com/kyoz/neovim/tree/ncm2).
+Currently i'm using [coc.nvim](https://github.com/neoclide/coc.nvim). But there's also a version using [ncm2](https://github.com/ncm2/ncm2), you can [try it here](https://github.com/kyoz/neovim/tree/ncm2).
 
 ## Table of contents
 
@@ -184,13 +184,13 @@ If there's still error, please open and issue and let me know, i'm happy to help
 - Python
 - Vimscript
 - C, C++ (Not use so much)
-- Bash, Dockerfile, Markdown...
+- Other files types like: Bash, Dockerfile, Markdown, Json...
 
 **Wait, why there's only a few languages ?**
 
-Currently, i'm a Frontend Developer, so i just working with this languages list. But i'll not stop, i'd love to give another languages a try too (Especially GoLang)...
+To provide autocomplete feature, i do use [coc.nvim](https://github.com/neoclide/coc.nvim). There's a lots of extensions (which support for more languages, frameworks, filetypes...)...you can see it all in [coc.nvim's Readme](https://github.com/neoclide/coc.nvim)
 
-If you read my configuration, you'll see that i use [ncm2](https://github.com/ncm2/ncm2) of [Roxma Sama](https://github.com/roxma) to integrated autocomplete feature. So if you want to install other languages, please read [ncm2 wiki](https://github.com/ncm2/ncm2/wiki).
+There's also a version which using [ncm2](https://github.com/ncm2/ncm2) as autocomplete provider, you can [try it here](https://github.com/kyoz/neovim/tree/ncm2).
 
 ### Plugins
 
@@ -271,49 +271,7 @@ If you read my configuration, you'll see that i use [ncm2](https://github.com/nc
 
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
-|[ncm2/ncm2](https://github.com/ncm2/ncm2) | Slim, Fast Completion Framework |
-|[roxma/nvim-yarp](https://github.com/roxma/nvim-yarp) | Remote Plugin Framework for ncm2 |
-
-#### Autocomplete Source
-
-##### General
-
-| Plugin       | Description                                                   |
-|:-------------|:--------------------------------------------------------------|
-|[ncm2/ncm2-bufword](https://github.com/ncm2/ncm2-bufword) | Buffer |
-|[fgrsnau/ncm2-otherbuf](https://github.com/fgrsnau/ncm2-otherbuf) | Other Buf |
-|[ncm2/ncm2-path](https://github.com/ncm2/ncm2-path) | Path |
-|[ncm2/ncm2-tagprefix](https://github.com/ncm2/ncm2-tagprefix) | Html Tag Prefix |
-|[ncm2/ncm2-syntax](https://github.com/ncm2/ncm2-syntax) | Syntax source |
-|[Shougo/neco-syntax](https://github.com/Shougo/neco-syntax) | Syntax source |
-|[ncm2/ncm2-neoinclude](https://github.com/ncm2/ncm2-neoinclude) | NeoInclude |
-|[Shougo/neoinclude.vim](https://github.com/Shougo/neoinclude.vim) | NeoInclude |
-
-##### Languages
-| Plugin       | Description                                                   |
-|:-------------|:--------------------------------------------------------------|
-|[ncm2/ncm2-html-subscope](https://github.com/ncm2/ncm2-html-subscope) | Html Subscope |
-|[ncm2/ncm2-cssomni](https://github.com/ncm2/ncm2-cssomni) | CSS |
-|[ncm2/ncm2-markdown-subscope](https://github.com/ncm2/ncm2-markdown-subscope) | Markdown Subscope |
-|[ncm2/ncm2-tern](https://github.com/ncm2/ncm2-tern) | Javascript |
-|[mhartington/nvim-typescript](https://github.com/mhartington/nvim-typescript) | Typescript |
-|[iamcco/vim-language-server](https://github.com/iamcco/vim-language-server) | Vimscript |
-|[ncm2/ncm2-pyclang](https://github.com/ncm2/ncm2-pyclang) | C/ C++ |
-|[ncm2/ncm2-vim-lsp](https://github.com/ncm2/ncm2-vim-lsp) | To connect completion between lsp and ncm2 |
-
-##### Language Server Protocol
-| Plugin       | Description                                                   |
-|:-------------|:--------------------------------------------------------------|
-|[prabirshrestha/async.vim](https://github.com/prabirshrestha/async.vim) | Normalize async job control api for vim and nvim |
-|[prabirshrestha/vim-lsp](https://github.com/prabirshrestha/vim-lsp) | Async language server protocol plugin for vim |
-
-### Autocomplete Supporters
-
-| Plugin       | Description                                                   |
-|:-------------|:--------------------------------------------------------------|
-|[Shougo/neosnippet.vim](https://github.com/Shougo/neosnippet.vim) | Add snippet support for vim |
-|[ncm2/ncm2-neosnippet](https://github.com/ncm2/ncm2-neosnippet) | Add neosnippet support for ncm2 |
-|[ncm2/float-preview.nvim](https://github.com/ncm2/float-preview.nvim) | Add float preview support for ncm2 |
+|[neoclide/coc.nvim](https://github.com/neoclide/coc.nvim) | Intellisense engine |
 
 ## Customize
 
