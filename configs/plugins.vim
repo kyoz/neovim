@@ -10,6 +10,7 @@
 " NERDTREE {{{
 
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
+let g:NERDTreeNaturalSort = 1
 
 " autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
 
