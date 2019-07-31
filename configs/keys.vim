@@ -41,6 +41,9 @@ nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
+" Disable ex mode
+nnoremap Q <Nop>
+
 " }}}
 
 " WINDOW RESIZE {{{
