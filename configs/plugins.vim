@@ -111,6 +111,10 @@ autocmd VimEnter *
 \ command! -bang -nargs=* Ag
 \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
+" Use o to open candidate in quickfix window
+autocmd BufReadPost quickfix nnoremap <buffer> o <CR>
+
+" Action mappings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
