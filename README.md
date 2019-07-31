@@ -217,7 +217,6 @@ There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
 |[junegunn/fzf.vim](https://github.com/junegunn/fzf.vim) | Fuzzy file finder (help jump to other files faster and easier) |
-|[mileszs/ack.vim](https://github.com/mileszs/ack.vim) | Do global search in vim with grep (Like global search in VSCode) |
 
 **Note**: I use [ack.vim](https://github.com/mileszs/ack.vim) to provide global search feature for Vim. If you found the the search is slow. You can use [the silver searcher](https://github.com/ggreer/the_silver_searcher) as the search engine for ack.vim.
 

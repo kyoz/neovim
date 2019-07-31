@@ -12,11 +12,6 @@
 let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
 let g:NERDTreeNaturalSort = 1
 
-" autocmd vimenter * silent! NERDTree "----------- Auto open NERDTree on starts up
-
-" Automatically open NERDTree on starts up if no files were specifed
-autocmd StdinReadPre * let s:std_in=1 "
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif
 
 highlight! link NERDTreeFlags NERDTreeDir
 
@@ -94,12 +89,27 @@ set noshowmode "----------------- Don't show mode (Normal, Insert...) in airline
 
 " FZF.VIM {{{
 
+" Custom ag command to ignore files in node_modules, .git and include hidden files
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
+
+" Just ignore .git folders
+command! -bang -nargs=? -complete=dir DefaultFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --skip-vcs-ignores --ignore .git -g "" ./node_modules'}, <bang>0)
+
 " Mappings
-nmap <leader>f :Files<cr>|     " fuzzy find files in the working directory
-nmap <leader>/ :BLines<cr>|    " fuzzy find lines in the current file
-nmap <leader>bl :Buffers<cr>|  " fuzzy find an open buffer
-nmap <leader>c :Commits<cr>|   " fuzzy find git commits
-" nmap <leader>a :Ag |           " fuzzy find text in the working directory
+nmap <leader>f        :Files<cr>
+nmap <leader>F        :DefaultFiles<cr>
+nmap <leader>l        :BLines<cr>
+nmap <leader>L        :Lines<cr>
+nmap <leader><leader> :Buffers<cr>
+nmap <leader>c        :Commits<cr>
+nmap <leader>a        :Ag<cr>
+
+" Remapping alt-a, alt-d to ctrl-a, ctrl-d to use on oxs
+autocmd VimEnter *
+\ command! -bang -nargs=* Ag
+\ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -113,7 +123,6 @@ let g:fzf_layout = { 'window': '-tabnew' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],
@@ -169,17 +178,6 @@ map <Leader>S <Plug>(easymotion-overwin-f2)
 " Powerful mapping, just type s, S, J, K is enough :))
 nmap s <Plug>(easymotion-overwin-f)
 nmap S <Plug>(easymotion-overwin-f2)
-
-" }}}
-
-" ACK.VIM {{{
-
-" Note: Replace Ack with Ack! to prevent replace NERDTRee when open
-cnoreabbrev Ack Ack!
-if executable('ag')
-  let g:ackprg = 'ag --nogroup --nocolor --column' "-------------- Use Ag instead
-endif
-nnoremap <Leader>a :Ack!<Space>
 
 " }}}
 

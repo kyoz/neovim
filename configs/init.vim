@@ -27,8 +27,6 @@ Plug 'tpope/vim-fugitive' "---------- Just use to show git status in Vim-Airline
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' "-------------------------------------------- fzf in vim
-" Use with the silver searcher (https://github.com/ggreer/the_silver_searcher)
-Plug 'mileszs/ack.vim' "-------------------------------- Search in vim with grep
 
 " }}}
 
