@@ -92,27 +92,46 @@ set noshowmode "----------------- Don't show mode (Normal, Insert...) in airline
 
 " }}}
 
-" CTRL-P {{{
-
-let g:ctrlp_working_path_mode = 'ra' "--------------- Set local working diretory
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip "---------- Ignore file on MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe "------------- Ignore file on Window
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*node_modules*,*.jpg,*.png,*.svg,*.ttf,*.woff,*.woff3,*.eot
-
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$' " ----- Ignore file, folders
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
-
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
+" FZF.VIM {{{
 
 " Mappings
-let g:ctrlp_map = '<C-p>' "----------------------- CtrlP Default command mapping
-let g:ctrlp_cmd = 'CtrlP'
+nmap <leader>f :Files<cr>|     " fuzzy find files in the working directory
+nmap <leader>/ :BLines<cr>|    " fuzzy find lines in the current file
+nmap <leader>bl :Buffers<cr>|  " fuzzy find an open buffer
+nmap <leader>c :Commits<cr>|   " fuzzy find git commits
+" nmap <leader>a :Ag |           " fuzzy find text in the working directory
 
-" Map for faster buffer selection
-nnoremap <Leader>bl :CtrlPBuffer<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': '-tabnew' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+" Hide statusline when open fzf
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " }}}
 
