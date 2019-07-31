@@ -353,8 +353,13 @@ All plugins custom mappings is place in [configs/plugins.vim](https://github.com
 
 | Mapping                       | Mode |                                       |
 |:------------------------------|:-----|:--------------------------------------|
-| <kbd>ctrl</kbd><kbd>p</kbd>   | n | Open Ctrl-P |
-| <kbd>space</kbd><kbd>a</kbd>  | n | Start global search with ack.vim |
+| <kbd>space</kbd><kbd>space</kbd> | n | Open fzf to search buffers |
+| <kbd>space</kbd><kbd>f</kbd> | n | Open fzf to search files (not include node_modules, files & folder in .gitignore...) |
+| <kbd>space</kbd><kbd>F</kbd> | n | Open fzf to search all files |
+| <kbd>space</kbd><kbd>l</kbd> | n | Open fzf to search for line in current buffer |
+| <kbd>space</kbd><kbd>L</kbd> | n | Open fzf to search for line in all buffers |
+| <kbd>space</kbd><kbd>c</kbd> | n | Open fzf to search for git's commits |
+| <kbd>space</kbd><kbd>a</kbd>  | n | Start global search with ag |
 | <kbd>space</kbd><kbd>b</kbd><kbd>x</kbd>  | n | Close current buffer |
 | <kbd>space</kbd><kbd>b</kbd><kbd>X</kbd>  | n | Close all buffers |
 | <kbd>space</kbd><kbd>b</kbd><kbd>o</kbd>  | n | Close other buffers |
