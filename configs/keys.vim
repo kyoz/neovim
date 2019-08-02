@@ -20,14 +20,13 @@ inoremap jk <ESC>l
 nnoremap d "_d
 vnoremap d "_d
 
-" Save and close current buffer
-nnoremap <leader>z :wa<CR>:bd<CR>
+" Save all buffers
+nnoremap <leader>w :wa<CR>
 " }}}
 
 " BUFFER MOTIONS {{{
 nnoremap gB :bprevious <CR> 
 nnoremap gb :bnext <CR>
-
 " }}}
 
 " DISABLED {{{

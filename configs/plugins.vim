@@ -252,3 +252,24 @@ let g:vcool_ins_rgba_map = '<localleader>C'
 
 " }}}
 
+
+" GOYO.VIM {{{
+
+nnoremap <Leader>z :Goyo<CR>
+
+" }}}
+
+" LIMELIGHT {{{
+
+" Config color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Itegrate with Goyo.vim
+autocmd! User GoyoEnter Limelight
+" autocmd! User GoyoLeave Limelight!
+" A workaround for https://github.com/junegunn/goyo.vim/issues/160
+autocmd! User GoyoLeave silent! source $HOME/.config/nvim/init.vim
+
+" }}}
+

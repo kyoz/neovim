@@ -112,6 +112,8 @@ Plug 'tweekmonster/startuptime.vim', {'on': 'StartupTime'}
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 Plug 'RRethy/vim-illuminate' "--- Auto highlight other uses of word under cursor
 Plug 'KabbAmine/vCoolor.vim' "------------------------------------- Color picker
+Plug 'junegunn/goyo.vim' "---------------------- Distraction-free writing in Vim
+Plug 'junegunn/limelight.vim' "----------------------- Hyperfocus-writing in Vim
 
 " }}}
 
