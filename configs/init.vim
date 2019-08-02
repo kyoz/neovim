@@ -72,7 +72,6 @@ Plug 'tpope/vim-commentary' "------------------------------- Comment code faster
 Plug 'tpope/vim-repeat' "------------------------------ dot repeat with pluggins
 Plug 'Yggdroot/indentLine' "---------------------------- Indent code with v-line
 Plug 'wellle/targets.vim' "--------------------- Provides additional text object
-Plug 'terryma/vim-expand-region' "------------------- Expand region, Use + and -
 Plug 'mg979/vim-visual-multi' "--------------------------------- Multiple Cursor
 Plug 'mattn/emmet-vim' "------------------------------------------ Emmet for vim
 
