@@ -101,8 +101,8 @@ Plug 'prettier/vim-prettier', {
 
 Plug 'NLKNguyen/copy-cut-paste.vim' "---------------- Copy, Paste with Clipboard
 Plug 'skywind3000/asyncrun.vim' "--------------- Run async shell commands in vim
-Plug 'kyoz/ezbuf.vim' "------------------------- Fast and easy use buffers
-Plug 'kyoz/npm.vim' "-------------------- Work with npm more easier in Vim
+Plug 'kyoz/ezbuf.vim' "------------------------------- Fast and easy use buffers
+Plug 'kyoz/npm.vim' "-------------------------- Work with npm more easier in Vim
 Plug 'godlygeek/tabular', {'for': 'markdown'} "-------------- Alignment for text
 Plug 'lervag/vimtex', {'for': 'tex'} "------------------- For editing Latex file
 Plug 'dhruvasagar/vim-table-mode',{'for': 'markdown', 'do': ':TableFormat'}
@@ -112,6 +112,7 @@ Plug 'voldikss/vim-search-me' "------------------------ Search google within vim
 Plug 'tweekmonster/startuptime.vim', {'on': 'StartupTime'}
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 Plug 'RRethy/vim-illuminate' "--- Auto highlight other uses of word under cursor
+Plug 'KabbAmine/vCoolor.vim' "------------------------------------- Color picker
 
 " }}}
 

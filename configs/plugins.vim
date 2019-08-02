@@ -244,3 +244,11 @@ let g:matchup_matchpref.html = {'tagnameonly': 1}
 hi link illuminatedWord Visual
 
 " }}}
+
+" VCOOLOR {{{
+
+let g:vcoolor_map        = '<localleader>c'
+let g:vcool_ins_rgba_map = '<localleader>C'
+
+" }}}
+
