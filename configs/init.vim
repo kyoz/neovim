@@ -11,7 +11,7 @@ call plug#begin('~/.config/nvim/plugged') "---------------------- Start vim plug
 
 " COLORS, THEMES {{{
 
-Plug 'joshdick/onedark.vim' "------------------------------------- Onedark theme
+" Plug 'joshdick/onedark.vim' "------------------------------------- Onedark theme
 
 " }}}
 
@@ -44,7 +44,7 @@ Plug 'rhysd/clever-f.vim' "-------------------------------- Make f more powerful
 
 " SYNTAX HIGHTLIGHT {{{
 
-Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
+" Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
 Plug 'numirias/semshi', {'for':'python', 'do': ':UpdateRemotePlugins'}
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax	

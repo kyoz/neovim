@@ -34,7 +34,7 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 " let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 let g:onedark_termcolors=256
-:silent! colorscheme onedark "-------------------------------- Set onedark theme
+:silent! colorscheme purify "--------------------------------- Set onedark theme
 hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
 
 " }}}
@@ -152,6 +152,12 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 let g:indentLine_char = '┆'
 
+augroup indentLine_config
+    autocmd!
+    autocmd InsertEnter *.json setlocal concealcursor=
+    autocmd InsertLeave *.json setlocal concealcursor=inc
+augroup END
+
 " }}}
 
 " EMMET {{{
@@ -251,7 +257,6 @@ let g:vcoolor_map        = '<localleader>c'
 let g:vcool_ins_rgba_map = '<localleader>C'
 
 " }}}
-
 
 " GOYO.VIM {{{
 
