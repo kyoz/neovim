@@ -12,14 +12,14 @@ call plug#begin('~/.config/nvim/plugged') "---------------------- Start vim plug
 " COLORS, THEMES {{{
 
 Plug 'joshdick/onedark.vim'
-Plug 'kyoz/purify', { 'rtp': 'vim/' }
+Plug 'kyoz/purify', { 'rtp': 'vim' }
 
 " }}}
 
 " TOOLBAR {{{
 
 Plug 'bling/vim-airline' "---------------------------------- Status bar, Tabline
-Plug 'vim-airline/vim-airline-themes' "---------------------  Vim-Airline Themes
+Plug 'vim-airline/vim-airline-themes' "- Vim-Airline Themes (To use tabline ext)
 Plug 'tpope/vim-fugitive' "---------- Just use to show git status in Vim-Airline
 
 " }}}

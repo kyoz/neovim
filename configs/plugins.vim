@@ -41,14 +41,13 @@ hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
 
 " AIRLINE {{{
 
+let g:airline_theme='purify' "--------------------------- Set status bar's theme
+let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
 let g:airline_section_c = '%t' "--filename "-------------- Only show file's name
-let g:airline#extensions#tabline#enabled = 1 "------------------- Enable tabline
-let g:airline#extensions#tabline#fnamemod = ':t' "--- Just show file name in tab
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]' "- Hide format type
 
-let g:airline_theme='onedark' "-------------------------- Set status bar's theme
-let g:airline_powerline_fonts = 1 "----------- Just work with patched NERD fonts
-
+let g:airline#extensions#tabline#enabled = 1 "------------------- Enable tabline
+let g:airline#extensions#tabline#fnamemod = ':t' "--- Just show file name in tab
 let g:airline#extensions#tabline#enabled=1 "--------- Buffers at the top as tabs
 let g:airline#extensions#tabline#show_tab_type=1 "---------- Don't show tab type
 
@@ -95,7 +94,7 @@ command! -bang -nargs=? -complete=dir Files
 
 " Just ignore .git folders
 command! -bang -nargs=? -complete=dir DefaultFiles
-  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --skip-vcs-ignores --ignore .git -g "" ./node_modules'}, <bang>0)
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --skip-vcs-ignores --ignore .git -g ""'}, <bang>0)
 
 " Mappings
 nmap <leader>f        :Files<cr>
