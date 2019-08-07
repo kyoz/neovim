@@ -45,12 +45,8 @@ Plug 'rhysd/clever-f.vim' "-------------------------------- Make f more powerful
 
 " SYNTAX HIGHTLIGHT {{{
 
-" Plug 'sheerun/vim-polyglot' "-------- Syntax for almost all languages that exist
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
-Plug 'numirias/semshi', {'for':'python', 'do': ':UpdateRemotePlugins'}
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } "------- Markdown's Syntax	
 " Help colorize text color
-Plug 'guns/xterm-color-table.vim'
 Plug 'ap/vim-css-color', {
   \ 'for': [
     \ 'html',
@@ -117,6 +113,7 @@ Plug 'tweekmonster/startuptime.vim', {'on': 'StartupTime'}
 
 " Colors
 Plug 'KabbAmine/vCoolor.vim' "------------------------------------- Color picker
+Plug 'guns/xterm-color-table.vim'
 
 " Focus
 Plug 'junegunn/goyo.vim' "---------------------- Distraction-free writing in Vim
