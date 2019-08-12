@@ -12,9 +12,6 @@
 let mapleader = "\<Space>" 
 let maplocalleader = "\\"
 
-" Use jk to exit insert mode instead of esc
-inoremap jk <ESC>l
-
 " Use black hole for delete. Don't want to store in register with dd.
 " For cut, use visual and x instead
 nnoremap d "_d
