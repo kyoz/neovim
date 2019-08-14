@@ -123,6 +123,8 @@ Nvim Node.js client is also needed (for neovim to be able to communicate with pl
 npm install -g neovim
 ```
 
+For clipboard support you must install xclip or xclipboard
+
 ## Installation
 
 Before starting with this step, you must make sure that you'v read and install everything required in above steps.
