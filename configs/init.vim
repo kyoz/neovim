@@ -127,7 +127,7 @@ Plug 'voldikss/vim-search-me' "------------------------ Search google within vim
 
 " AUTOCOMPLETE {{{
 
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile', 'frozen':1}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " }}}
 
