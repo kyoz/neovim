@@ -46,6 +46,7 @@ Plug 'rhysd/clever-f.vim' "-------------------------------- Make f more powerful
 " SYNTAX HIGHTLIGHT {{{
 
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }"  Typescript's Syntax
+
 " Help colorize text color
 Plug 'ap/vim-css-color', {
   \ 'for': [
@@ -57,6 +58,9 @@ Plug 'ap/vim-css-color', {
     \ ] }
 Plug 'Valloric/MatchTagAlways' "------- Always highlights the XML/HTML tags that enclose your cursor location
 Plug 'MTDL9/vim-log-highlighting', {'for': 'log'} "----------------- For Vim Log
+
+" Frameworks
+Plug 'MaxMEllon/vim-jsx-pretty' "----------------------------------------- React
 
 " }}}
 
