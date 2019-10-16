@@ -66,6 +66,15 @@ set previewheight=3 "------------------------------------ Smaller preview height
 
 " }}}
 
+" FILE TYPES {{{
+
+augroup language_react
+    autocmd!
+    autocmd bufnewfile,bufread *.tsx set filetype=javascriptreact
+augroup END
+
+" }}}
+
 " SYNTAX {{{
 
 syntax on "---------------------------------------------- Enable Syntax for Code
