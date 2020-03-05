@@ -43,7 +43,9 @@ if match(&rtp, 'coc.nvim') >= 0
         \ 'coc-tsserver',
         \ 'coc-docker',
         \ 'coc-gocode',
+        \ 'coc-java',
         \ 'coc-json',
+        \ 'coc-phpls',
         \ 'coc-python',
         \ 'coc-rls',
         \ 'coc-vimtex',
@@ -54,6 +56,7 @@ if match(&rtp, 'coc.nvim') >= 0
 
     let s:frameworks = [
         \ 'coc-angular',
+        \ 'coc-vetur',
         \ 'coc-vimlsp',
         \ ]
 
