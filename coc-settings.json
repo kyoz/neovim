@@ -33,11 +33,14 @@
 
   // snippets
   "snippets.extends": {
+    "html": ["html-ng", "html-ng-material", "html-ng-flexlayout", "html-react"],
     "scss": ["css"],
     "sass": ["css"],
     "less": ["css"],
-    "typescript": ["javascript", "angulartypescript"],
-    "html": ["angularhtml", "angularmaterial", "angularflexlayout"]
+    "javascript": ["javascript", "react"],
+    "typescript": ["javascript", "typescript", "react", "angular"],
+    "vim": ["vim"],
+    "json": ["json"]
   },
 
   // html
