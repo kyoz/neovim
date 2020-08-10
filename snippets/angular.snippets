@@ -64,12 +64,13 @@ snippet ngDirective Angular Directive
 		constructor() { }
 	}
 snippet ngComponent Angular Component
-	import { Component } from '@angular/core';
+	import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 	@Component({
 		selector: '${1:selectorName}',
 		templateUrl: '${2:templateUrl}',
-		styleUrls: ['${3:styleUrl}']
+		styleUrls: ['${3:styleUrl}'],
+		changeDetection: ChangeDetectionStrategy
 	})
 snippet ngModule Angular Module
 options		head
