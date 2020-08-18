@@ -132,6 +132,12 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 " }}}
 
+" NNN.VIM {{{
+
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
+
+" }}}
+
 " INDENT LINE {{{
 
 let g:indentLine_char = '┆'

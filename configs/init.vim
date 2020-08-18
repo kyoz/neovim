@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive' "---------- Just use to show git status in Vim-Airline
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' "-------------------------------------------- fzf in vim
+Plug 'mcchrish/nnn.vim'
 
 " }}}
 
