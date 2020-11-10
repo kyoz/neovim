@@ -41,6 +41,7 @@ Plug 'easymotion/vim-easymotion' "----------- Jump around the screen like a boss
 Plug 'andymass/vim-matchup' "------------- Better % and highlight matching words
 Plug 'tommcdo/vim-exchange' "-------------------------------- Easy text exchange
 Plug 'rhysd/clever-f.vim' "-------------------------------- Make f more powerful
+Plug 'kevinhwang91/rnvimr'
 
 " }}}
 
