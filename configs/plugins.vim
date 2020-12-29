@@ -268,3 +268,9 @@ autocmd! User GoyoLeave silent! source $HOME/.config/nvim/init.vim
 
 " }}}
 
+" VIM-BROWSER_SEARCH {{{
+
+nmap <silent> <localleader>s <Plug>SearchNormal
+vmap <silent> <localleader>s <Plug>SearchVisual
+
+" }}}

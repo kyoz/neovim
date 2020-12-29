@@ -204,7 +204,7 @@ There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can
 
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
-|[onedark.vim](https://github.com/joshdick/onedark.vim) | Dark color scheme inspired by Atom's One Dark syntax theme |
+|[kyoz/purify](https://github.com/kyoz/purify) | rainbow Clean & vibrant color schemes for Vim, Terminals... |
 
 #### Toolbar
 
@@ -227,19 +227,22 @@ There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
 |[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | Nerd Tree (View your folders in tree visualization like in VSCode) |
-|[ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | Filetype icons for NerdTree |
 |[tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) | Colors for NerdTree's icons |
+|[ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | Filetype icons for NerdTree |
 |[easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | Jump around the screen like a boss |
+|[andymass/vim-matchup](https://github.com/andymass/vim-matchup) | Better % and highlight matching words |
+|[tommcdo/vim-exchange](https://github.com/tommcdo/vim-exchange) | Easy text exchange |
+|[rhysd/clever-f.vim'](https://github.com/rhysd/clever-f.vim) | Make f more powerful |
 
 #### Syntax Hightlight
 
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
-|[sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) | Syntax for almost all language that exist |
 |[leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim) | Typescript's Syntax |
-|[plasticboy/vim-markdown](plasticboy/vim-markdown) | Markdown's Syntax	]
 |[ap/vim-css-color](https://github.com/ap/vim-css-color) | Help colorize text color |
 |[Valloric/MatchTagAlways](https://github.com/Valloric/MatchTagAlways) | Always highlights the XML/HTML tags that enclose your cursor location |
+|[MTDL9/vim-log-highlighting](https://github.com/MTDL9/vim-log-highlighting) | Syntax highlighting for generic log files in VIM |
+|[MaxMEllon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty) | JSX and TSX syntax pretty highlighting for vim (Use for React & RN) |
 
 #### Faster Code
 
@@ -252,7 +255,6 @@ There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can
 |[tpope/vim-repeat](https://github.com/tpope/vim-repeat) | dot repeat with pluggins |
 |[Yggdroot/indentLine](https://github.com/Yggdroot/indentLine) | Indent code with v-line |
 |[wellle/targets.vim](https://github.com/wellle/targets.vim) | Provides additional text object |
-|[terryma/vim-expand-region](https://github.com/terryma/vim-expand-region) | Expand region, Use + and - |
 |[mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) | Multiple Cursor |
 |[mattn/emmet-vim](https://github.com/mattn/emmet-vim) | Emmet for vim |
 
@@ -268,9 +270,22 @@ There's also a version which using [ncm2](https://github.com/ncm2/ncm2), you can
 | Plugin       | Description                                                   |
 |:-------------|:--------------------------------------------------------------|
 |[NLKNguyen/copy-cut-paste.vim](https://github.com/NLKNguyen/copy-cut-paste.vim) | Copy, Paste with Clipboard |
+|[skywind3000/asyncrun.vim](https://github.com/skywind3000/asyncrun.vim) | Run async shell commands in vim |
 |[kyoz/ezbuf.vim](https://github.com/kyoz/ezbuf.vim) | Fast and easy use buffers |
 |[kyoz/npm.vim](https://github.com/kyoz/npm.vim) | Work with npm more easier in Vim |
+|[segeljakt/vim-silicon](https://github.com/segeljakt/vim-silicon) | Vim plugin for generating images of source code using silicon |
 |[iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown Live Preview |
+|[godlygeek/tabular'](https://github.com/godlygeek/tabular) | Text filtering and alignment |
+|[dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) | VIM Table Mode for instant table creation |
+|[lervag/vimtex](https://github.com/lervag/vimtex) | A modern Vim and neovim filetype plugin for LaTeX files |
+|[yardnsm/vim-import-cost'](https://github.com/yardnsm/vim-import-cost) | Display the import size of the JavaScript packages in Vim! |
+|[tweekmonster/startuptime.vim](https://github.com/tweekmonster/startuptime.vim) | Breakdown Vim's --startuptime output |
+|[KabbAmine/vCoolor.vim](https://github.com/KabbAmine/vCoolor.vim) | Simple color selector/picker for Vim |
+|[guns/xterm-color-table.vim](https://github.com/guns/xterm-color-table.vim) | All 256 xterm colors with their RGB equivalents, right in Vim! |
+|[junegunn/goyo.vim](https://github.com/junegunn/goyo.vim) | Distraction-free writing in Vim |
+|[junegunn/limelight.vim](https://github.com/junegunn/limelight.vim) | All the world's indeed a stage and we are merely players |
+|[RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate) | Auto highlighting other uses of the word under the cursor |
+|[voldikss/vim-search-me](https://github.com/voldikss/vim-browser-search) | Perform a quick web search for the text selected in (Neo)Vim |
 
 #### Autocomplete
 
