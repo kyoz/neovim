@@ -387,6 +387,7 @@ All plugins custom mappings is place in [configs/plugins.vim](https://github.com
 | <kbd>space</kbd><kbd>k</kbd>  | n | Start Easymotion (search above rows) |
 | <kbd>space</kbd><kbd>m</kbd>  | n | Open markdown live preview (When in markdown file buffer) |
 | <kbd>space</kbd><kbd>t</kbd>  | n | Toggle NerdTree |
+| <kbd>space</kbd><kbd>z</kbd>  | n | Toggle Focus Writing Mode |
 | <kbd>g</kbd><kbd>w</kbd>  | n | Run AirWrap |
 | <kbd>,</kbd><kbd>,</kbd>  | n | Run Emmet |
 | <kbd>Q</kbd><kbd>C</kbd>  | n | Copy whole line to system clipboard |
@@ -394,6 +395,9 @@ All plugins custom mappings is place in [configs/plugins.vim](https://github.com
 | <kbd>Q</kbd><kbd>X</kbd>  | n | Cut whole line to system clipboard |
 | <kbd>Q</kbd><kbd>X</kbd>  | v | Cut selected text to system clipboard |
 | <kbd>Q</kbd><kbd>V</kbd>  | n | Paste from system clipboard |
+| <kbd>\</kbd><kbd>c</kbd>  | n | Color Picker (hex) |
+| <kbd>\</kbd><kbd>C</kbd>  | n | Color Picker (rgb) |
+| <kbd>\</kbd><kbd>s</kbd>  | v | Search selected text with Google |
 
 #### Autocomplete
 
