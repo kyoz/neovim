@@ -17,6 +17,10 @@ let maplocalleader = "\\"
 nnoremap d "_d
 vnoremap d "_d
 
+" also for yank
+" replace currently selected text with default register without yanking it
+vnoremap <leader>p "_dP
+
 " Save all buffers
 nnoremap <leader>w :wa<CR>
 " }}}
