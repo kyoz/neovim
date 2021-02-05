@@ -32,10 +32,8 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 " COLORS SOLARIZED {{{
 
-" let g:onedark_terminal_italics = 1 "---------------------- Italic comment's code
 let g:onedark_termcolors=256
-:silent! colorscheme purify "--------------------------------- Set onedark theme
-hi Normal guibg=NONE ctermbg=NONE "---------------- Transparent background color
+:silent! colorscheme purify
 
 " }}}
 
