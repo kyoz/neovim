@@ -62,6 +62,7 @@ Plug 'MTDL9/vim-log-highlighting', {'for': 'log'} "----------------- For Vim Log
 
 " Frameworks
 Plug 'MaxMEllon/vim-jsx-pretty' "----------------------------------------- React
+Plug 'habamax/vim-godot' "-------------------------------------------------Godot
 
 " }}}
 
