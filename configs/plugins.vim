@@ -11,7 +11,7 @@
 
 " use the same n³ session within a vim session
 let g:nnn#session = 'local'
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
+let g:nnn#layout = { 'window': { 'width': 0.4, 'height': 0.6, 'highlight': 'Debug' } }
 
 
 " Disable default mappings
