@@ -7,24 +7,33 @@
 "         __/ |
 "        |___/
 
-" NERDTREE {{{
+" NNN {{{
 
-let g:NERDTreeWinSize=30 "-------------------------------------- Default columns
-let g:NERDTreeNaturalSort = 1
+" use the same n³ session within a vim session
+let g:nnn#session = 'local'
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
 
 
-highlight! link NERDTreeFlags NERDTreeDir
+" Disable default mappings
+let g:nnn#set_default_mappings = 0
 
-" Mappings
-noremap <Leader>t :NERDTreeToggle<CR> "----------------------------- NERDTree Toggle
+" Set custom mappings
+" Start n³ in the current file's directory
+nnoremap <leader>t :NnnPicker<CR>
+
+let g:nnn#action = {
+      \ '<S-t>': 'tab split',
+      \ '<S-v>': 'split',
+      \ '<S-h>': 'vsplit',
+      \ 'o'    : ':e' ,
+      \ 'l'    : ':e' }
+
 
 " }}}
 
 " DEVICIONS {{{
 
 " Fix folders and files weird align
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
@@ -127,12 +136,6 @@ let g:fzf_commits_log_options = '--color --graph --pretty=format:"%Cred%h%Creset
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
-" }}}
-
-" NNN.VIM {{{
-
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
 
 " }}}
 
