@@ -133,6 +133,7 @@ Plug 'voldikss/vim-search-me' "------------------------ Search google within vim
 " AUTOCOMPLETE {{{
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 
 " }}}
 
