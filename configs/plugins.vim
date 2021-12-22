@@ -19,14 +19,12 @@ let g:nnn#set_default_mappings = 0
 
 " Set custom mappings
 " Start n³ in the current file's directory
-nnoremap <leader>t :NnnPicker<CR>
+nnoremap <leader>t :NnnPicker -o<CR>
 
 let g:nnn#action = {
       \ '<S-t>': 'tab split',
       \ '<S-v>': 'split',
-      \ '<S-h>': 'vsplit',
-      \ 'o'    : ':e' ,
-      \ 'l'    : ':e' }
+      \ '<S-h>': 'vsplit' }
 
 
 " }}}
